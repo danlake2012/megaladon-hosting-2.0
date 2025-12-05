@@ -4,9 +4,10 @@ import Tile from '../../components/Tile'
 export default function Hero(){
   return (
     <section id="home" className="py-24 bg-gradient-to-b from-[#020817] to-[#061023]">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* One long-width hero tile */}
-        <div className="p-6 md:p-10 rounded-2xl bg-[#08101a] border border-white/5 shadow-lg overflow-hidden flex flex-col md:flex-row items-stretch gap-6">
+      {/* make the hero tile background full-bleed while keeping inner content centered */}
+      <div className="w-full">
+        <div className="w-full bg-[#08101a] border-t border-b border-white/5 shadow-lg overflow-hidden">
+          <div className="max-w-7xl mx-auto px-6 p-6 md:p-10 flex flex-col md:flex-row items-stretch gap-6">
 
           {/* Shark visual on the left (keeps aspect and doesn't overflow) */}
           <div className="flex-shrink-0 w-full md:w-5/12 lg:w-4/12 flex items-center justify-center bg-black/5 rounded-lg overflow-hidden">
@@ -34,6 +35,7 @@ export default function Hero(){
             </div>
           </div>
 
+          </div>
         </div>
       </div>
     </section>
