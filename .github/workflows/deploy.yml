@@ -18,9 +18,10 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
+        # Install devDependencies too so `next build` and TypeScript checks succeed
         # Prefer deterministic installs with package-lock, but fall back to npm install
         # if no lockfile exists (some branches might not include package-lock.json yet).
-        run: npm ci || npm install
+        run: npm ci --include=dev || npm install --include=dev
 
       - name: Build & export static site
         run: |
