@@ -4,3 +4,9 @@ dist/
 *.log
 .DS_Store
 /.sftp.json
+
+# ignore accidental private keys from project root
+ssh
+ssh.pub
+megaladon-hosting
+megaladon-hosting.pub
