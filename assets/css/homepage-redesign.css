@@ -1,0 +1,10 @@
+/* Homepage redesign tile layout (1 large + 6 small) */
+.featured-grid{padding:3rem 0;background:var(--bg-elev-1, #0b0f13);}
+.featured-grid .container{display:grid;grid-template-columns:1fr;gap:16px;}
+@media(min-width:900px){.featured-grid .container{grid-template-columns:2fr 1fr;grid-auto-rows:1fr;}}
+.big-tile{background:linear-gradient(135deg, #032, #045);color:#fff;padding:2rem;border-radius:10px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;min-height:240px;}
+.small-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:0;}
+.small-tile{background:#0f1720;color:#fff;padding:14px;border-radius:8px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;min-height:100px;}
+.small-tile h3{margin:0 0 6px;font-size:1rem}
+.small-tile p{margin:0;font-size:0.88rem;color:hsla(0,0%,100%,0.8)}
+@media(max-width:899px){.featured-grid .container{grid-template-columns:1fr}.small-grid{grid-template-columns:repeat(2,1fr);}}
