@@ -24,7 +24,10 @@ export default function Navbar(){
   },[])
 
   return (
-    <header className={`fixed w-full z-50 transition-all ${scrolled? 'backdrop-blur-sm bg-black/60 shadow-lg':''}`}>
+    // Use `sticky` so the header remains in the document flow and only pins to the top
+    // when the page scrolls — this is less intrusive than `fixed` and avoids content
+    // being overlapped. Keep the existing scrolled effects for background & blur.
+    <header className={`sticky top-0 w-full z-50 transition-all ${scrolled? 'backdrop-blur-sm bg-black/60 shadow-lg':''}`}>
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center gap-4">
         <a className="flex items-center gap-3" href="#home">
           <img src="/assets/images/shark.jpg" alt="logo" className="h-8 rounded-md" />
