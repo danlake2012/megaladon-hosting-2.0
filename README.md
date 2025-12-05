@@ -198,15 +198,21 @@ megaladonhosting/
 └── README.md                       # This file
 ```
 
-## 🚀 Deploy Scripts
+## 🚀 Deploy Scripts (secure)
 
-The project includes automated deployment tools:
+Deployment via FTP is deprecated and has been removed due to safety concerns.
+Use the secure SSH + rsync helpers instead — they upload a timestamped release
+and switch the `current` symlink atomically on the server so partial writes
+cannot break the site.
 
-- `deploy.sh` - Auto-deploy to server via lftp/FTP
-- `watch-deploy.sh` - Watch files and auto-deploy on changes
-- `filezilla-deploy.sh` - Helper for FileZilla manual uploads
+Key scripts:
 
-See [README-deploy.md](README-deploy.md) for deployment instructions.
+- `deploy_tools/ssh_rsync_deploy.sh` — recommended: upload a directory to the
+	remote host (creates `releases/<ts>` and switches `current` atomically).
+- `deploy_tools/atomic_deploy.sh` — helper for atomic file swaps on the server.
+
+See [README-deploy.md](README-deploy.md) for the updated deployment instructions
+and follow the GitHub Actions workflow to set up CI-based auto-deploys.
 
 ---
 

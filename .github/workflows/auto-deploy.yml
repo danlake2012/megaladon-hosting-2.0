@@ -1,0 +1,49 @@
+name: Auto Deploy (SSH + rsync)
+
+on:
+  push:
+    branches: [ main, homepage-redesign ]
+
+jobs:
+  deploy:
+    name: Deploy to server via SSH/rsync
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Load SSH key
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Install rsync
+        run: sudo apt-get update && sudo apt-get install -y rsync
+
+      - name: Add target host to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.DEPLOY_HOST }} >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+
+      - name: Run deploy helper
+        env:
+          RSYNC_RSH: ssh
+        run: |
+          # `DEPLOY_TARGET` should be in the form user@host:/abs/path/to/public_html
+          if [ -z "${{ secrets.DEPLOY_TARGET }}" ]; then
+            echo "Missing DEPLOY_TARGET secret (user@host:/path). Aborting." >&2
+            exit 2
+          fi
+          ./deploy_tools/ssh_rsync_deploy.sh . "${{ secrets.DEPLOY_TARGET }}"
+
+      - name: Smoke-check (optional)
+        run: |
+          echo "Deployed to ${{ secrets.DEPLOY_TARGET }} — make sure your server serves the new 'current' symlink at the webroot."
+
+# Notes:
+# - Add the following repository secrets in Settings → Secrets and variables → Actions:
+#   SSH_PRIVATE_KEY (the deploy key's private key), DEPLOY_HOST (hostname only), DEPLOY_TARGET (user@host:/abs/path)
+# - The SSH key must be recognized on the remote host (added to ~/.ssh/authorized_keys for the deploy user).
