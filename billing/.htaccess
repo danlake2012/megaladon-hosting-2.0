@@ -1,9 +1,9 @@
-# Block indexing via X-Robots-Tag header
+# Block indexing for billing subdomain via X-Robots-Tag
 <IfModule mod_headers.c>
     Header set X-Robots-Tag "noindex, nofollow"
 </IfModule>
 
-# Serve our robots file if the webserver honors it
+# Serve billing-specific robots file
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteRule ^robots\.txt$ robots.txt [L]

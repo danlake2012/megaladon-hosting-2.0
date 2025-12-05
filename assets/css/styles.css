@@ -36,6 +36,7 @@
 }
 *{box-sizing:border-box}
 html,body{height:100%}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased}
 .container{max-width:var(--max-width);margin:0 auto;padding:28px}
 
@@ -50,6 +51,7 @@ body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial; background:var(
 @media (max-width:600px){.logo img.logo-img{height:30px}}
 .nav{display:flex;gap:16px;margin-left:12px}
 .nav a{color:var(--text);opacity:0.85;text-decoration:none;padding:6px 8px;border-radius:6px}
+.nav a.active{background:linear-gradient(90deg,var(--accent),#00d1f5);color:#021018;opacity:1}
 .nav a:hover{background:var(--hover-bg)}
 .header-cta{margin-left:auto;display:flex;gap:10px}
 .nav-toggle{display:none}
@@ -108,6 +110,32 @@ body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial; background:var(
 }
 .hero-visual .hero-overlay{position:absolute;inset:0;background:transparent;pointer-events:none}
 
+/* Hero steps tiles */
+.hero-steps{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+.hero-steps .step{display:flex;align-items:center;gap:10px;padding:14px;border-radius:12px;background:var(--tile-bg);border:1px solid var(--tile-border);box-shadow:0 12px 30px var(--tile-shadow);text-decoration:none;color:var(--text);min-width:160px;transition:transform .18s ease, box-shadow .18s ease}
+.hero-steps .step .step-emoji{font-size:20px;opacity:0.96}
+.hero-steps .step .step-title{font-weight:700}
+.hero-steps .step:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(0,0,0,0.45)}
+
+/* Generic tile system */
+.tile{display:block}
+.tile.card{border-radius:14px;padding:18px;background:linear-gradient(180deg,var(--glass), rgba(0,0,0,0.03));border:1px solid var(--tile-border);box-shadow:0 10px 40px rgba(0,0,0,0.55);transition:transform .25s ease, box-shadow .25s ease}
+.tile.card:hover{transform:translateY(-8px);box-shadow:0 30px 80px rgba(0,0,0,0.6)}
+
+/* tile collection/grid */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tiles .tile{padding:18px;border-radius:12px;background:var(--tile-bg);border:1px solid var(--tile-border);box-shadow:0 10px 30px var(--tile-shadow)}
+
+/* responsive tooltip-ish CTA style */
+.btn-primary.glow{box-shadow:0 6px 20px rgba(0,216,216,0.12), 0 0 20px rgba(6,182,212,0.06)}
+
+/* sticky header style change on scroll */
+.site-header.scrolled{background:linear-gradient(180deg, rgba(2,6,10,0.9), rgba(2,6,10,0.85));box-shadow:0 8px 30px rgba(0,0,0,0.6);border-bottom:1px solid rgba(255,255,255,0.03)}
+
+/* section reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease, transform .55s cubic-bezier(.2,.9,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+
 /* trust strip */
 .trust-strip{border-top:1px solid var(--border-weak);border-bottom:1px solid var(--border-weak);padding:12px 0;background:linear-gradient(90deg, rgba(6,182,212,0.02), rgba(251,113,133,0.01))}
 .trust-grid{display:flex;gap:18px;justify-content:space-between}
@@ -160,6 +188,7 @@ body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial; background:var(
   .hero-visual{width:100%;min-height:220px}
   .hero-img{height:100%;}
   .plan-cards{grid-template-columns:repeat(1,1fr)}
+  .tiles{grid-template-columns:repeat(1,1fr)}
   .feature-grid{grid-template-columns:repeat(1,1fr)}
   .test-cards{flex-direction:column}
   .nav{display:none}

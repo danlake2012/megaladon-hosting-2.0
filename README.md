@@ -147,10 +147,10 @@ npx serve -l 8080 .
  - Recommended sizes: SVG is best. For raster images, provide a 2x width (e.g. 240–480px) and compress to under ~150KB where possible.
  - Favicon: place a favicon at `assets/images/favicon-32.png` or `assets/images/favicon.ico`.
  - To have me add your shark logo now, upload the image here and I'll place it into the project and wire it up.
- - Hero image: upload a bold hero image at `assets/images/shark-hero-2.jpg` (or `shark-hero-2.webp`). The homepage will use `shark-hero-2.webp` if present, otherwise it falls back to `shark-hero-2.jpg`.
- - If you want, I can optimize `shark-hero-2.jpg` and export a compressed `shark-hero-2.webp` for improved performance.
- - Hero image: upload a bold hero image at `assets/images/shark-hero-2.jpg` (or `shark-hero-2.webp`). The homepage will use `shark-hero-alpha.webp` / `shark-hero-alpha.png` (transparent foreground if present), otherwise it falls back to `shark-hero-1200.jpg` and `shark-hero-2.jpg`.
- - I generated transparent variants `shark-hero-alpha.png` and `shark-hero-alpha.webp`, a mid-size `shark-hero-1200.jpg`, and a small blurred placeholder `shark-hero-lqip.txt` (base64). The transparent mask was a best-effort attempt and produced a blurry result — I reverted the homepage to the crisp ready-to-use `shark-hero-1200.jpg` for best visual quality. If you want a pixel-perfect alpha I can manually touch up the mask or create a vector variant.
+ - Hero image: upload a bold hero image at `assets/images/mega-hero.jpg` (or `mega-hero.webp`). The homepage will use `mega-hero.webp` if present, otherwise it falls back to `mega-hero.jpg`.
+ - If you want, I can optimize `mega-hero.jpg` and export a compressed `mega-hero.webp` for improved performance.
+ - Hero image: upload a bold hero image at `assets/images/mega-hero.jpg` (or `mega-hero.webp`). The homepage can optionally use `mega-hero-alpha.webp` / `mega-hero-alpha.png` (transparent foreground if present), otherwise it falls back to `mega-hero-1200.jpg` and `mega-hero.jpg`.
+ - I previously generated transparent variants `mega-hero-alpha.png` and `mega-hero-alpha.webp`, a mid-size `mega-hero-1200.jpg`, and a small blurred placeholder `mega-hero-lqip.txt` (base64). If you'd like me to regenerate or touch up any of these variants for the new hero, I can.
 
 ## Favicon — Shark Image
 
@@ -198,21 +198,44 @@ megaladonhosting/
 └── README.md                       # This file
 ```
 
-## 🚀 Deploy Scripts (secure)
+## 🚀 Deploy Scripts
 
-Deployment via FTP is deprecated and has been removed due to safety concerns.
-Use the secure SSH + rsync helpers instead — they upload a timestamped release
-and switch the `current` symlink atomically on the server so partial writes
-cannot break the site.
+The project includes automated deployment tools:
 
-Key scripts:
+- `deploy.sh` - Auto-deploy to server via lftp/FTP
+- `watch-deploy.sh` - Watch files and auto-deploy on changes
+- `filezilla-deploy.sh` - Helper for FileZilla manual uploads
 
-- `deploy_tools/ssh_rsync_deploy.sh` — recommended: upload a directory to the
-	remote host (creates `releases/<ts>` and switches `current` atomically).
-- `deploy_tools/atomic_deploy.sh` — helper for atomic file swaps on the server.
+---
 
-See [README-deploy.md](README-deploy.md) for the updated deployment instructions
-and follow the GitHub Actions workflow to set up CI-based auto-deploys.
+## 🎯 New — Next.js app (homepage-redesign)
+
+This repository now contains a Next.js + Tailwind prototype of the new single-page, tile-based homepage on branch `homepage-redesign`.
+
+Where to find it:
+- App source: `app/` (Next.js app router)
+- Components: `components/`
+- Styles: `styles/globals.css`
+
+Local dev (recommended):
+
+```bash
+# install deps then run dev server
+npm ci
+npm run dev
+```
+
+Production (static export):
+
+```bash
+npm run build
+npm run export
+# static files will be in ./out/ — these can be rsynced to your webroot
+```
+
+If you want me to finish/optimize the Next app and replace the live root, tell me and I’ll proceed (already scaffolded). If you prefer to keep the old static site as a fallback I left backups under `/backups/`.
+
+See [README-deploy.md](README-deploy.md) for deployment instructions.
 
 ---
 

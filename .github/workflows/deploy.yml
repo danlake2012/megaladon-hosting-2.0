@@ -1,0 +1,48 @@
+name: Auto Deploy to Server (rsync over SSH)
+
+on:
+  push:
+    branches: [ homepage-redesign ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build & export static site
+        run: |
+          npm run build
+          npm run export || true
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Ensure known_hosts entry
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p ${SSH_PORT:-22} -H ${SSH_HOST} >> ~/.ssh/known_hosts
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+
+      - name: Rsync exported site to server
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          TARGET_DIR: ${{ secrets.TARGET_DIR }}
+        run: |
+          echo "Deploying exported site to $SSH_USER@$SSH_HOST:$TARGET_DIR"
+          rsync -avz --delete --exclude='.git' --exclude='node_modules' -e "ssh -p ${SSH_PORT:-22}" ./out/ $SSH_USER@${SSH_HOST}:${TARGET_DIR}
