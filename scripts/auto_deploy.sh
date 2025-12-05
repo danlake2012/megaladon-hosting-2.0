@@ -52,7 +52,7 @@ if [ "$CREATE_DIRS" -eq 1 ]; then
   ssh $SSH_OPTS ${SSH_USER}@${SSH_HOST} "mkdir -p '${TARGET_DIR}' || true"
 fi
 
-RSYNC_CMD=( rsync -az --delete --exclude '.git' --exclude 'node_modules' -e "ssh $SSH_OPTS" ./ ${SSH_USER}@${SSH_HOST}:${TARGET_DIR} )
+RSYNC_CMD=( rsync -az --delete --exclude '.git' --exclude 'node_modules' --exclude '.deploy_keys' -e "ssh $SSH_OPTS" ./ ${SSH_USER}@${SSH_HOST}:${TARGET_DIR} )
 
 if [ "$DRY_RUN" -eq 1 ]; then
   echo "Dry run: ${RSYNC_CMD[*]}"
