@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg: #020817;
+  --accent: #06B6D4;
+  --teal: #00E1D8;
+}
+
+html,body{height:100%}
+body{background:var(--bg);color:#E5E7EB;font-family:Inter,system-ui,Arial;margin:0}
+
+.tile{display:block}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease, transform .55s cubic-bezier(.2,.9,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+
+.card{border-radius:12px}
+
+/* specific tweaks */
+.hero-steps .tile{min-height:84px}
