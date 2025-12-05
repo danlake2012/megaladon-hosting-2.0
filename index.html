@@ -15,24 +15,29 @@
                 <link rel="stylesheet" href="assets/css/homepage-redesign.css">
 	</head>
 	<body data-theme="dark">
-		<header class="site-header sticky">
-			<div class="container header-row">
-				<a class="logo" href="index.html">
-					<img class="logo-img" src="/assets/images/logo-120x40.png" alt="Megaladon Hosting logo" onerror="this.onerror=null;this.src='/assets/images/logo.png'"/>
-					<span class="logo-text">Megaladon Hosting 2025</span>
+		<!-- navbar-redesign: mini shark, in-page anchors, CTA -->
+		<header class="navbar-unique" role="banner">
+			<div class="container navbar-inner">
+				<a class="brand" href="#hero" aria-label="Megaladon Home">
+					<img class="shark-mini" src="/assets/images/new-shark-logo.png" alt="Megaladon mini shark logo" onerror="this.onerror=null;this.src='/assets/images/logo-120x40.png'" />
+					<span class="brand-text">Megaladon</span>
 				</a>
-				<nav class="nav">
-					<a href="index.html">Home</a>
-					<a href="pricing/index.html">Pricing</a>
-					<a href="domains/index.html">Domains</a>
-					<a href="about/index.html">About</a>
-					<a href="support/index.html">Support</a>
-				</nav>
-				<button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-				<div class="header-cta">
+
+								<ul class="nav nav-links" role="navigation" aria-label="Main navigation">
+					<li><a href="#hero">Home</a></li>
+					<li><a href="#plans">Plans</a></li>
+					<li><a href="#domains">Domains</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#kb">KB</a></li>
+					<li><a href="#support">Support</a></li>
+				</ul>
+
+				<div class="header-cta-inline" aria-hidden="false">
 					<a class="btn btn-ghost" data-whmcs-client>Login</a>
 					<a class="btn btn-primary" href="pricing/index.html">Get Hosting</a>
 				</div>
+
+				<button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
 			</div>
 		</header>
 
