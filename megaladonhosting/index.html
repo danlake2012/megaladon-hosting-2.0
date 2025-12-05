@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Megaladon Hosting — Shark-Fast Hosting for Serious Websites</title>
+    <meta name="description" content="Shark-Fast hosting, free SSL, cPanel, and veteran-owned support. Get started today." />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico">
+    <!-- local fallbacks for file:// or subfolder preview -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon-64.png">
+    <!-- Preload optimized hero image for faster paint (use the site hero) -->
+    <link rel="preload" as="image" href="/assets/images/shark-hero.jpg">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body data-theme="dark">
+    <header class="site-header sticky">
+      <div class="container header-row">
+        <a class="logo" href="index.html">
+          <img class="logo-img" src="assets/images/shark.jpg" alt="Megaladon Hosting logo" onerror="this.onerror=null;this.src='assets/images/logo-placeholder.svg'"/>
+          <span class="logo-text">Megaladon Hosting</span>
+        </a>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="pricing/index.html">Pricing</a>
+          <a href="domains/index.html">Domains</a>
+          <a href="about/index.html">About</a>
+          <a href="support/index.html">Support</a>
+        </nav>
+        <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <div class="header-cta">
+          <a class="btn btn-ghost" data-whmcs-client>Login</a>
+          <a class="btn btn-primary" href="pricing/index.html">Get Hosting</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1>Shark-Fast Hosting for Serious Websites</h1>
+            <p class="lead">Ditch slow, bloated hosts. Megaladon Hosting gives you lightning-fast servers, free SSL, and human support that actually answers — so your site can finally breathe.</p>
+            <div class="hero-ctas">
+              <a class="btn btn-cta" href="pricing/index.html">Get Hosting Now</a>
+              <a class="btn btn-ghost" href="#plans">View Plans</a>
+            </div>
+            <!-- Instant-visibility tile for the hero image (useful for verification & fallbacks) -->
+            <div class="hero-tile" aria-hidden="true" title="Hero preview"></div>
+            <p class="trust">99.9% uptime • Free SSL • cPanel access</p>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <picture>
+              <!-- Responsive hero image: prefer webp if available -->
+                <!-- Reverted to the sharp mid-size JPEG to avoid blur from alpha conversion -->
+                <!-- use absolute path to the site hero image -->
+                <img class="hero-img" src="/assets/images/shark-hero.jpg" alt="Shark wave background" loading="eager" />
+            </picture>
+            <!-- Foreground subject (transparent PNG or webp) sits above background. Add your transparent version as mega-hero-alpha.png or mega-hero-alpha.webp in assets/images/ -->
+            <picture class="hero-subject-picture" aria-hidden="true">
+              <!-- transparent subject not present; fallback to the site hero image until a transparent subject is provided -->
+              <img class="hero-subject" src="/assets/images/shark-hero.jpg" alt="" />
+            </picture>
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <!-- Temporary visual tile inside hero-visual to make the hero image obvious immediately -->
+            <div class="hero-tile-visual" aria-hidden="true" title="Hero preview visual"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip">
+        <div class="container trust-grid">
+          <div class="trust-item">⚙️ cPanel</div>
+          <div class="trust-item">🔒 Free SSL</div>
+          <div class="trust-item">⏱ 99.9% Uptime</div>
+          <div class="trust-item">💬 24/7 Support</div>
+        </div>
+      </section>
+
+      <section id="plans" class="plans container">
+        <h2>Hosting Plans</h2>
+        <p class="sub">Simple plans that scale — built for performance, backups, and reliability.</p>
+        <div class="plan-cards">
+          <article class="plan card">
+            <div class="plan-head">
+              <div class="plan-name">Reef Starter</div>
+              <div class="plan-sub">Perfect for portfolios & small sites.</div>
+              <div class="plan-price">$3.99<span>/mo</span></div>
+            </div>
+            <ul class="features">
+              <li>1 Website</li>
+              <li>20 GB SSD Storage</li>
+              <li>Unmetered Bandwidth</li>
+              <li>Free SSL Certificate</li>
+              <li>cPanel Access</li>
+            </ul>
+            <a class="btn btn-outline" data-whmcs-pid="1">Get Reef Starter</a>
+          </article>
+
+          <article class="plan card popular">
+            <div class="badge">Most Popular</div>
+            <div class="plan-head">
+              <div class="plan-name">Creator Current</div>
+              <div class="plan-sub">For growing creators & small businesses.</div>
+              <div class="plan-price">$7.99<span>/mo</span></div>
+            </div>
+            <ul class="features">
+              <li>Up to 5 Websites</li>
+              <li>50 GB SSD Storage</li>
+              <li>Unmetered Bandwidth</li>
+              <li>Free SSL Certificates</li>
+              <li>Daily Backups</li>
+              <li>Free Basic Site Migration</li>
+            </ul>
+            <a class="btn btn-primary" data-whmcs-pid="2">Choose Creator Current</a>
+          </article>
+
+          <article class="plan card">
+            <div class="plan-head">
+              <div class="plan-name">Apex Predator</div>
+              <div class="plan-sub">For agencies, stores & high-traffic sites.</div>
+              <div class="plan-price">$19.99<span>/mo</span></div>
+            </div>
+            <ul class="features">
+              <li>Unlimited Websites</li>
+              <li>150 GB NVMe Storage</li>
+              <li>Unmetered Bandwidth</li>
+              <li>Free SSL Certificates</li>
+              <li>Unlimited Email Accounts</li>
+              <li>Priority Support</li>
+            </ul>
+            <a class="btn btn-outline" data-whmcs-pid="3">Get Apex Predator</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="features container">
+        <h3>Why Megaladon?</h3>
+        <div class="feature-grid">
+          <div class="feature">
+            <div class="icon">⚡</div>
+            <h4>Speed that bites back</h4>
+            <p>Our optimized servers and SSD storage keep your pages snappy so visitors stay — and buy.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">🛠️</div>
+            <h4>No-BS control with cPanel</h4>
+            <p>Full cPanel access, one-click WordPress installs, and the freedom to manage your site your way.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">🔒</div>
+            <h4>Free SSL on every plan</h4>
+            <p>Every Megaladon Hosting plan comes with free SSL so your site stays secure and trusted.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">🤝</div>
+            <h4>Human, veteran-owned support</h4>
+            <p>Real people, real answers. No endless bot loops or outsourced confusion.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="domain-search">
+        <div class="container">
+          <h3>Lock Down Your Perfect Domain</h3>
+          <p class="sub">Search thousands of domains — .com, .net, .org, and more. Register in minutes and launch with Megaladon-level speed.</p>
+          <form id="domainForm" class="domain-form" action="/domains" method="get">
+            <input id="domainInput" name="q" type="text" placeholder="yourperfectsite" aria-label="domain name" />
+            <select id="tldSelect" aria-label="TLD selector">
+              <option value=".com">.com</option>
+              <option value=".net">.net</option>
+              <option value=".org">.org</option>
+              <option value=".io">.io</option>
+            </select>
+            <button type="submit" class="btn btn-cta">Search Domains</button>
+          </form>
+          <small class="note">Search redirects to your WHMCS domain checker (configurable).</small>
+        </div>
+      </section>
+
+      <section class="testimonials container">
+        <h3>Clients who swim faster</h3>
+        <div class="test-cards">
+          <blockquote class="test">"Switched from a slow host — our site loads in half the time." <cite>— Alex R., Creator</cite></blockquote>
+          <blockquote class="test">"Reliable uptime and support that actually helps." <cite>— Jordan T., Store Owner</cite></blockquote>
+          <blockquote class="test">"Migration was painless and fast — thanks Megaladon team." <cite>— Casey L., Agency</cite></blockquote>
+        </div>
+      </section>
+
+      <section class="faq container">
+        <h4>Frequently asked questions</h4>
+        <details>
+          <summary>Can you migrate my existing website?</summary>
+          <p>Yes — we provide free basic site migrations for Creator Current and above. For complex setups we'll quote a custom migration.</p>
+        </details>
+        <details>
+          <summary>Do you offer a money-back guarantee?</summary>
+          <p>We offer a 30-day money-back policy on new shared hosting accounts. See Terms of Service for details.</p>
+        </details>
+        <details>
+          <summary>Can I upgrade plans later?</summary>
+          <p>Yes — easily upgrade in the client area. Upgrades are prorated automatically by WHMCS.</p>
+        </details>
+        <details>
+          <summary>Do all plans include SSL?</summary>
+          <p>Yes — all shared plans include free SSL from Let's Encrypt and auto-renewal via cPanel's integration.</p>
+        </details>
+      </section>
+
+      <section class="cta container final-cta">
+        <h3>Ready to stop drowning in downtime?</h3>
+        <p>Pick your plan and let Megaladon Hosting handle the rest.</p>
+        <a class="btn btn-primary large" href="pricing/index.html">View Hosting Plans</a>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="brand">Megaladon Hosting • Shark-Fast Hosting for Serious Websites</div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="pricing/index.html">Pricing</a>
+          <a href="domains/index.html">Domains</a>
+          <a href="about/index.html">About</a>
+          <a href="support/index.html">Support</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </nav>
+        <div class="copyright">© <span id="year"></span> Megaladon Hosting</div>
+      </div>
+    </footer>
+
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

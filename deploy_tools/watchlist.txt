@@ -1,0 +1,7 @@
+/index.html
+/assets/css/styles.css
+/assets/js/main.js
+/assets/js/config.js
+/billing/templates/megaladon/header.tpl
+/billing/templates/six/header.tpl
+/billing/templates/twenty-one/header.tpl

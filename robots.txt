@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# This blocks all web crawlers (including Google) from indexing any pages on this site.
+# Upload to the website root (example: /public_html/robots.txt) to take effect.

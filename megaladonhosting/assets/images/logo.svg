@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- logo.svg for the megaladonhosting site — references the same directory's shark.jpg so the logo is the shark image -->
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="80" viewBox="0 0 240 80" preserveAspectRatio="xMidYMid slice">
+  <!-- rounded border only — transparent background so the shark shows clearly -->
+  <rect width="100%" height="100%" fill="none" stroke="#0b6efd" stroke-width="2" rx="8"/>
+  <!-- use absolute path so this SVG shows the shark regardless of which folder the page is served from -->
+  <image href="/assets/images/shark.jpg" x="0" y="0" width="240" height="80" preserveAspectRatio="xMidYMid slice" style="display:block;" />
+  <title>Megaladon</title>
+  <desc>Shark logo for the Megaladon hosting site</desc>
+</svg>

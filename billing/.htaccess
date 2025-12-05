@@ -1,0 +1,10 @@
+# Block indexing via X-Robots-Tag header
+<IfModule mod_headers.c>
+    Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>
+
+# Serve our robots file if the webserver honors it
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^robots\.txt$ robots.txt [L]
+</IfModule>

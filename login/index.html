@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Login — Megaladon Hosting</title>
+    <script src="../assets/js/config.js"></script>
+    <script>
+      // JS redirect to central whmcsBase so you can change in one place.
+      (function(){
+        var base = (window.MEGALADON && window.MEGALADON.whmcsBase) ? window.MEGALADON.whmcsBase : 'https://billing.megaladonhosting.com';
+        var dest = base + '/clientarea.php';
+        // short delay so page shows for a moment
+        setTimeout(function(){ window.location.href = dest; }, 80);
+      })();
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="../assets/images/favicon-64.png">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+  </head>
+  <body class="dark">
+    <main class="container" style="padding-top:120px;text-align:center">
+      <h1>Client Login</h1>
+      <p>Redirecting to your WHMCS Client Area… If you are not redirected, <a data-whmcs-client>click here to go to the client area</a>.</p>
+    <script src="../assets/js/main.js"></script>
+    </main>
+  </body>
+</html>

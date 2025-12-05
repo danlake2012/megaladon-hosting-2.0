@@ -1,0 +1,123 @@
+/* Megaladon Cart - theme overrides for standard_cart order form
+   Designed to be loaded via cart.tpl and viewcart.tpl to style default WHMCS cart.
+   - Dark theme matching MegaladonHosting.com
+   - Clean cards, sticky order summary, mobile responsive
+*/
+:root{
+  --bg-outer: #020d18;
+  --bg-card: #0e1a26;
+  --bg-sidebar: #0b1621;
+  --border-muted: #1c2a3a;
+  --text-primary: #e6f4ff;
+  --text-secondary: #c7d6e2;
+  --accent: #0aa8e8; /* fallback */
+  --accent-alt: #06B6D4;
+  --accent-hover: #087db4;
+  --link: #34c9ff;
+}
+
+/* Page wrapper */
+#order-standard_cart {
+  background: var(--bg-outer) !important;
+  color: var(--text-primary) !important;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Global container */
+#order-standard_cart .contentarea,
+#order-standard_cart .container,
+#order-standard_cart #main-body {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 28px 20px !important;
+}
+
+/* Two column layout */
+.mg-cart-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (max-width: 880px){
+  .mg-cart-grid{ grid-template-columns: 1fr; }
+}
+
+/* Main left column */
+.mg-main {
+  background: transparent;
+}
+
+/* Cards */
+.mg-card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-muted) !important;
+  border-radius: 10px !important;
+  padding: 20px !important;
+  box-shadow: 0 6px 20px rgba(2,8,16,0.5) !important;
+}
+
+.mg-card h2, .mg-card h3 { color: var(--text-primary) !important; margin: 0 0 12px 0; }
+.mg-card p { color: var(--text-secondary) !important; }
+
+/* Product line items */
+.mg-product { display:flex; gap:12px; align-items:center; padding:12px; border-radius:8px; }
+.mg-product + .mg-product { margin-top:12px; }
+.mg-product .mg-product-title { font-weight:600; color:var(--accent) }
+
+/* Remove default blue outlines / glow */
+#order-standard_cart .panel-accent,
+#order-standard_cart .panel-highlight,
+#order-standard_cart .panel.panel-accent,
+#order-standard_cart .panel.panel-highlight {
+  border-color: var(--border-muted) !important; 
+  box-shadow: none !important;
+}
+
+/* Sidebar summary */
+.mg-summary {
+  position: sticky; top: 90px; align-self: start;
+  background: var(--bg-sidebar) !important;
+  border: 1px solid var(--border-muted) !important;
+  padding: 20px !important;
+  border-radius: 10px !important;
+}
+.mg-summary .mg-plan { font-weight: 700; color: var(--text-primary); }
+.mg-summary .mg-amount { color: var(--accent-alt); font-weight:800; font-size:1.2rem }
+
+/* Buttons */
+.mg-btn { display:inline-block; background: linear-gradient(90deg,var(--accent-alt),var(--accent)) !important; color: #002; border-radius:8px; padding:10px 18px; font-weight:700; border:0; text-decoration:none; }
+.mg-btn:hover { background: var(--accent-hover) !important; transform: translateY(-1px); }
+
+/* Inputs */
+.mg-input, input, select, textarea { background: #12202d !important; border: 1px solid #223344 !important; color: #d9efff !important; padding:8px 12px; border-radius:6px; }
+.mg-input:focus, input:focus, select:focus, textarea:focus { outline: none !important; box-shadow: 0 0 0 4px rgba(6,182,212,0.08) !important; border-color: var(--accent) !important; }
+
+/* Links */
+#order-standard_cart a { color: var(--link) !important; }
+#order-standard_cart a:hover { text-decoration: underline; }
+
+/* Category / actions list */
+.mg-categories .list-group-item { background: transparent !important; border: none !important; color: var(--text-secondary) !important; padding:10px 12px; border-radius:6px; }
+.mg-categories .list-group-item.active { background: rgba(10,168,232,0.08) !important; color: var(--text-primary); border: 1px solid rgba(10,168,232,0.14) !important; }
+
+/* Tables */
+#order-standard_cart table { width:100%; border-collapse: collapse; color:var(--text-secondary); }
+#order-standard_cart th, #order-standard_cart td { padding: 12px 8px; border-bottom: 1px solid rgba(255,255,255,0.03); }
+#order-standard_cart thead th { color: var(--accent); font-weight:700; }
+
+/* Alerts */
+.mg-alert { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.04); color:var(--text-secondary); padding:12px; border-radius:8px; }
+
+/* Tiny helpers */
+.mg-ghost { background: transparent; border: 1px dashed rgba(255,255,255,0.02); padding:10px; border-radius:8px; }
+
+/* ensure forms don't use boxy default bootstrap */
+#order-standard_cart .panel, #order-standard_cart .panel .panel-heading { box-shadow:none; }
+
+/* remove nested panels unexpected margin */
+#order-standard_cart .panel .panel { margin: 0; }
+
+/* final safety: force any inline white backgrounds to our card color */
+#order-standard_cart *[style*="background: white"], #order-standard_cart *[style*="#fff"], #order-standard_cart *[style*="#ffffff"] { background: var(--bg-card) !important; color: var(--text-primary) !important; }
