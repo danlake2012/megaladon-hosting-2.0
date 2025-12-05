@@ -19,3 +19,22 @@ body{background:var(--bg);color:#E5E7EB;font-family:Inter,system-ui,Arial;margin
 
 /* specific tweaks */
 .hero-steps .tile{min-height:84px}
+
+/* floating icon animation used by tiles */
+.animate-float{animation:floaty 6s ease-in-out infinite}
+@keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+
+/* shark cursor for linkable elements */
+.shark-cursor, a, .tile.block{cursor: url('/assets/images/new-shark-logo.png') 16 16, pointer}
+
+/* 3D cube style (simple CSS cube inside a tile) */
+.cube-scene{perspective:500px}
+.cube{width:86px;height:86px;transform-style:preserve-3d;transform:rotateX(-12deg) rotateY(18deg);transition:transform .5s ease}
+.cube-face{position:absolute;width:86px;height:86px;border-radius:6px;background:linear-gradient(135deg,#06202a,#08303a);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.85);font-weight:700}
+.cube-face.front{transform:translateZ(43px)}
+.cube-face.right{transform:rotateY(90deg) translateZ(43px)}
+.cube-face.top{transform:rotateX(90deg) translateZ(43px)}
+.cube:hover{transform:rotateX(-6deg) rotateY(26deg) translateY(-4px)}
+
+/* ensure clickable tiles show the shark cursor on hover */
+.tile.block:hover{cursor: url('/assets/images/new-shark-logo.png') 16 16, pointer}

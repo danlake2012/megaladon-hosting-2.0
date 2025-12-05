@@ -21,22 +21,34 @@ export default function Hero(){
 
           {/* Right side: H1 on top, rest of the content beneath it */}
           <div className="flex-1 flex flex-col justify-center text-white">
-            <h1 className="text-3xl md:text-5xl font-extrabold leading-tight">Start Your Website Today — Fast, Secure Veteran-Owned Hosting</h1>
-
-            <div className="mt-4 text-lg text-white/80 max-w-2xl">
-              <p>Domain registration, lightning-fast hosting, email, and free SSL — everything you need to get online quickly and reliably.</p>
-
-              <div className="mt-6 flex flex-wrap gap-3 items-center">
-                <a href="#hosting-plans" className="inline-block px-5 py-3 rounded-lg bg-gradient-to-r from-accent to-teal font-semibold text-black">Get Hosting</a>
-                <a href="#kb" className="inline-block px-4 py-2 rounded-lg border border-white/10 text-sm">Learn How To Start</a>
+            {/* long H1 tile (separate long tile) */}
+            <div className="w-full mb-6">
+              <div className="p-8 rounded-xl bg-[#071018] border-2 border-cyan-400/30 shadow-inner">
+                <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-white">Start Your Website Today — Fast, Secure Veteran-Owned Hosting</h1>
+                <p className="mt-3 text-white/80 max-w-2xl">Domain registration, lightning-fast hosting, email, and free SSL — everything you need to get online quickly and reliably.</p>
               </div>
+            </div>
 
-              <div className="mt-6 grid grid-cols-2 gap-4 max-w-sm">
-                <Tile title="Choose Your Domain" icon="✔" href="#domains" />
-                <Tile title="Select Hosting Plan" icon="🚀" href="#hosting" />
-                <Tile title="Build Your Website" icon="🎨" href="#hosting" />
-                <Tile title="Launch & Grow" icon="📈" href="#cta" />
-              </div>
+            {/* three square tiles under the long tile */}
+            <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {/* Shark card (square) */}
+              <Tile href="#home" title="Meet the Shark" icon={<span className="text-2xl">🦈</span>} floatIcon={<span className="text-xl">🦈</span>} square />
+
+              {/* Domain search (square) */}
+              <Tile href="#domains" title="Domain Search" icon={<span className="text-2xl">🔎</span>} floatIcon={<span className="text-xl">🔎</span>} square />
+
+              {/* 3D cube explaining how to start */}
+              <a href="#kb" className="tile block shark-cursor">
+                <div className="p-4 rounded-xl bg-[#08101a] border-2 border-cyan-400/35 shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-3 flex items-center justify-center" style={{minHeight: '160px'}}>
+                  <div className="cube-scene">
+                    <div className="cube">
+                      <div className="cube-face front">Start</div>
+                      <div className="cube-face right">Build</div>
+                      <div className="cube-face top">Launch</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
 

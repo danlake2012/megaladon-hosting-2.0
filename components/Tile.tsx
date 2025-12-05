@@ -4,21 +4,28 @@ type TileProps = {
   title: string
   description?: string
   icon?: React.ReactNode
+  floatIcon?: React.ReactNode
+  square?: boolean
   href?: string
   cta?: string
 }
 
-export default function Tile({ title, description, icon, href, cta }: TileProps){
+export default function Tile({ title, description, icon, floatIcon, square, href, cta }: TileProps){
   const Inner = (
-    <div className="p-6 rounded-xl bg-[#08101a] border-2 border-cyan-400/35 shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-3"> 
+    <div className={`p-6 ${square ? 'aspect-square flex items-center justify-center' : ''} rounded-xl bg-[#08101a] border-2 border-cyan-400/35 shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-3 relative`}> 
       <div className="mb-3 text-xl font-bold">{icon && <span className="mr-2">{icon}</span>} {title}</div>
       {description && <p className="text-sm text-white/80 mb-4">{description}</p>}
       {cta && <div className="text-sm font-semibold text-cyan-400">{cta}</div>}
+      {floatIcon && (
+        <div className="absolute -top-4 -right-4 w-11 h-11 bg-[#06121A]/60 rounded-full flex items-center justify-center text-cyan-400 shadow-lg animate-float">
+          {floatIcon}
+        </div>
+      )}
     </div>
   )
 
   if(href){
-    return <a href={href} className="tile block transition-colors hover:border-cyan-300">{Inner}</a>
+    return <a href={href} className="tile block transition-colors hover:border-cyan-300 shark-cursor">{Inner}</a>
   }
   return <div className="tile">{Inner}</div>
 }
