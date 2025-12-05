@@ -1,0 +1,4 @@
+Test file for auto uploader
+Created: 2025-12-02
+User: dan
+Notes: This is a lightweight test for the automatic uploader tool. Remove when done.

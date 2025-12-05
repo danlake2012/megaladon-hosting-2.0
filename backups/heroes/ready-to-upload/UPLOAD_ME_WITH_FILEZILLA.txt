@@ -1,0 +1,32 @@
+Upload instructions — 'shark-hero-2' package
+
+Files included:
+- shark-hero-2.jpg
+- shark-hero-2.webp
+
+Where to upload (choose one or both depending on what you want to update):
+1) Static homepage (main site)
+   Remote path: /public_html/megaladonhosting/assets/images/
+
+2) WHMCS theme (client area)
+   Remote path: /public_html/billing/templates/megaladon/images/
+   OR to the active theme's images folder if the active WHMCS theme is different.
+
+FileZilla tips:
+- Use Host: megaladonhosting.com  Username: danlake2012  Port: 21  (your FTP password)
+- Protocol: FTP  Encryption: Start with "Require explicit FTP over TLS" — if fails use "Only use plain FTP (insecure)"
+- Transfer Mode: Passive
+- Drag the files from this local folder (ready-to-upload/shark-hero-2) into the remote path above.
+- If FileZilla prompts for overwrite, select "Overwrite" to replace the file on the server.
+
+Verify the upload after transfer:
+1) Right-click the uploaded file on the server and Refresh
+2) Confirm file size and timestamp match
+3) Visit: https://your-domain.example/assets/images/shark-hero-2.jpg (replace with your domain) and expect HTTP 200 and the new image
+
+If the homepage still shows the previous image, try:
+- Hard refresh in browser (Ctrl/Cmd + Shift + R)
+- Purge CDN cache if you use one (Cloudflare, etc.)
+- Clear WHMCS Smarty cache: Admin → Utilities → System Cleanup → Empty Template Cache (if applicable)
+
+If you'd like, I can upload these for you via CLI (scp/rsync) — provide server path and SSH access or I can guide you through a live FileZilla session.

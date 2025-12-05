@@ -1,0 +1,3 @@
+{
+  "_disabled": "This file contained SFTP credentials and has been removed from the repository for safety.\nIf you need to keep connection settings, store them outside version control and use secure environment variables or SSH key auth.\nDO NOT restore credentials into the repository."
+}

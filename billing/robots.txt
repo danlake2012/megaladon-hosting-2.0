@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# This blocks all web crawlers from indexing any pages under the billing subdomain.
+# Upload to the billing document root (example: /public_html/billing/robots.txt) to take effect.

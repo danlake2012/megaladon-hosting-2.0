@@ -1,0 +1,29 @@
+Upload instructions — 'mega-hero' package
+
+Files expected (you can upload one or both):
+- mega-hero.jpg   (full-size JPEG for browsers that don't support webp)
+- mega-hero.webp  (optimized webp for modern browsers)
+
+Where to upload (choose one or both depending on where you want the hero):
+1) Main public site (homepage)
+   Remote path: /public_html/assets/images/
+
+2) WHMCS client area theme
+   Remote path: /public_html/billing/templates/megaladon/images/
+
+FileZilla quick tips
+- Host: megaladonhosting.com
+- Username: danlake2012
+- Port: 21 (or 22 for SFTP — use whichever you prefer when connecting)
+- Protocol: FTP (port 21) or SFTP (port 22)
+- Transfer Mode: Passive
+
+After uploading
+1) Verify the file shows in the server directory and matches size/timestamp
+2) Visit the page and hard refresh (Ctrl/Cmd + Shift + R) or clear CDN cache
+3) If you want me to verify and clear caches for you, say so and I can do that via the same connection.
+
+Notes
+- Because the repo now references "mega-hero.jpg" + "mega-hero.webp" in index.html / assets/css / assets/js, uploading these files under the paths above will make the homepage use them immediately (after cache clear).
+
+If you'd like me to upload the file for you, either attach it here or give me SSH access and I will place it in the right location and verify.
