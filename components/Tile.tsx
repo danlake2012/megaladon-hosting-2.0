@@ -12,7 +12,7 @@ type TileProps = {
 
 export default function Tile({ title, description, icon, floatIcon, square, href, cta }: TileProps){
   const Inner = (
-    <div className={`p-6 ${square ? 'aspect-square flex items-center justify-center' : ''} rounded-xl bg-[#08101a] border-2 border-cyan-400/35 shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-3 relative`}> 
+    <div className={`p-6 ${square ? 'w-[250px] h-[250px] flex items-center justify-center' : ''} rounded-xl bg-[#08101a] border-2 border-cyan-400/35 shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-3 relative`}> 
       <div className="mb-3 text-xl font-bold">{icon && <span className="mr-2">{icon}</span>} {title}</div>
       {description && <p className="text-sm text-white/80 mb-4">{description}</p>}
       {cta && <div className="text-sm font-semibold text-cyan-400">{cta}</div>}
