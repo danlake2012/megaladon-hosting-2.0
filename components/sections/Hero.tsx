@@ -3,15 +3,20 @@ import Tile from '../../components/Tile'
 
 export default function Hero(){
   return (
-    <section id="home" className="py-24 bg-gradient-to-b from-[#020817] to-[#061023]">
-      {/* make the hero tile background full-bleed while keeping inner content centered */}
+    // make the hero full-screen (min-h-screen) but keep the tile centered and not full-bleed
+    <section id="home" className="min-h-screen flex items-center bg-gradient-to-b from-[#020817] to-[#061023] py-12">
       <div className="w-full">
-        <div className="w-full bg-[#08101a] border-t border-b border-white/5 shadow-lg overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6 p-6 md:p-10 flex flex-col md:flex-row items-stretch gap-6">
+        <div className="max-w-7xl mx-auto px-6 py-10">
+          {/* card-like hero tile (contained, not full-bleed) with cyan border */}
+          <div className="w-full bg-[#08101a] rounded-3xl border-2 border-cyan-400/30 shadow-lg overflow-hidden">
+            <div className="px-6 p-6 md:p-10 flex flex-col md:flex-row items-stretch gap-6">
 
           {/* Shark visual on the left (keeps aspect and doesn't overflow) */}
-          <div className="flex-shrink-0 w-full md:w-5/12 lg:w-4/12 flex items-center justify-center bg-black/5 rounded-lg overflow-hidden">
-            <img src="/assets/images/shark-hero.jpg" alt="Shark hero" className="block w-full h-full object-cover object-center max-h-[520px] md:max-h-[640px]" />
+          <div className="flex-shrink-0 w-full md:w-5/12 lg:w-4/12 flex items-center justify-center rounded-lg overflow-hidden border-2 border-cyan-400/40 bg-gradient-to-r from-black/0 via-black/5 to-black/0 p-4">
+            {/* smaller horizontal rectangle for the shark image, now clearly framed with cyan border and smaller height */}
+            <div className="w-full h-44 md:h-56 lg:h-64 xl:h-72 2xl:h-80 flex items-center justify-center bg-black/0 rounded-xl overflow-hidden">
+              <img src="/assets/images/shark-hero.jpg" alt="Shark hero" className="w-auto max-w-full max-h-full object-contain" />
+            </div>
           </div>
 
           {/* Right side: H1 on top, rest of the content beneath it */}
@@ -35,6 +40,7 @@ export default function Hero(){
             </div>
           </div>
 
+            </div>
           </div>
         </div>
       </div>
