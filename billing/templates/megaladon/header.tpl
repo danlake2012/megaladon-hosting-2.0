@@ -14,6 +14,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{$WEB_ROOT}/templates/{$template}/images/favicon-32.png">
     <link rel="icon" type="image/png" sizes="64x64" href="{$WEB_ROOT}/templates/{$template}/images/favicon-64.png">
     {* Also include shark.jpg as an alternative favicon so cart pages can use the shark logo *}
+    <!-- prefer a vector logo for crisp scaling, keep shark.jpg as a fallback if present -->
+    <link rel="icon" type="image/svg+xml" href="{$WEB_ROOT}/templates/{$template}/images/logo.svg">
     <link rel="icon" type="image/png" sizes="any" href="{$WEB_ROOT}/templates/{$template}/images/shark.jpg">
     <link rel="shortcut icon" href="{$WEB_ROOT}/templates/{$template}/images/favicon.ico">
     
@@ -221,13 +223,13 @@ ul.nav,
 {* ========================================
    MEGALADON HEADER & NAVIGATION
    ======================================== *}
-<header class="site-header sticky" style="background: #0b1621; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 12px 0; position: sticky; top: 0; z-index: 1000;">
+<header class="site-header sticky" style="background: #0b1621; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 12px 0; position: fixed; top: 0; left: 0; right: 0; width:100%; z-index: 1000;">
     <div class="container">
         <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
             
             {* Logo *}
             <a class="logo" href="{$WEB_ROOT}/index.php" style="display: flex; align-items: center; gap: 10px; font-family: 'Poppins', sans-serif; font-weight: 700; color: #e6eef6; text-decoration: none; font-size: 20px;">
-                <img src="{$WEB_ROOT}/templates/{$template}/images/shark.jpg" alt="{$companyname}" style="height: 36px; border-radius: 6px;" onerror="this.style.display='none'"/>
+                <img src="{$WEB_ROOT}/templates/{$template}/images/logo.svg" alt="{$companyname}" style="height: 36px; border-radius: 6px;" onerror="this.src='{$WEB_ROOT}/templates/{$template}/images/logo.png'"/>
                 <span class="logo-text">{$companyname}</span>
             </a>
             
@@ -276,6 +278,9 @@ ul.nav,
         </div>
     </div>
 </header>
+
+<!-- spacer so fixed header doesn't overlap page content -->
+<div class="site-header-spacer" style="height:72px;display:block;width:100%"></div>
 
 <!-- When on WHMCS order form (cart), keep the site header visible but hide ONLY its nav/cta so we don't get two navbars; logo/favicons stay visible -->
 <script>

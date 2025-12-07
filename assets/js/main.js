@@ -139,7 +139,8 @@ document.addEventListener('DOMContentLoaded', function(){
     // The site will ever only need to fall back to the shark JPG or placeholder in most installs.
     // Try the existing `shark.jpg` first to avoid triggering multiple HEAD requests for files that aren't present
     // on many installs (logo.svg/logo.png/logo.webp). This reduces noisy 404s in the network/console.
-    var paths = ['assets/images/shark.jpg','assets/images/logo.svg','assets/images/logo.png','assets/images/logo.webp','assets/images/logo-placeholder.svg'];
+    // prefer the vector logo first — fallback to png/webp then the legacy shark.jpg if absolutely required
+    var paths = ['assets/images/logo.svg','assets/images/logo.png','assets/images/logo.webp','assets/images/shark.jpg','assets/images/logo-placeholder.svg'];
 
     function check(url){
       return fetch(url, {method:'HEAD'})
@@ -167,9 +168,9 @@ document.addEventListener('DOMContentLoaded', function(){
     if(heroImg.complete && heroImg.naturalWidth > 0){ heroImg.classList.add('visible'); return; }
     heroImg.addEventListener('load', function(){ heroImg.classList.add('visible'); });
     heroImg.addEventListener('error', function(){
-      // try webp fallback if the browser failed to load jpg
-      var alt = new Image(); alt.src = '/assets/images/shark-hero.jpg';
-      alt.onload = function(){ heroImg.src = alt.src; heroImg.classList.add('visible'); };
+      // hero image failed to load — we won't fallback to the shark asset (removed)
+      // leave the hero blank or let CSS background/placeholder take over
+      console.warn('Hero image failed to load; no fallback asset will be used.');
     });
   })();
 

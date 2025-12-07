@@ -39,10 +39,12 @@ html,body{height:100%}
 body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased}
 .container{max-width:var(--max-width);margin:0 auto;padding:28px}
 
-/* header */
 .site-header{background:transparent; border-bottom:1px solid var(--border-weak);}                                                                                          
 .header-row{display:flex;align-items:center;gap:16px}
-.site-header.sticky{position:sticky;top:0;z-index:60}
+/* make site-header truly fixed to keep the header visible throughout full scroll */
+.site-header.sticky{position:fixed;top:0;left:0;right:0;width:100%;z-index:1000;height:72px}
+/* ensure content sits below the fixed header */
+body{padding-top:72px}
 .logo{font-family:Poppins,system-ui,sans-serif;font-weight:700;color:var(--text);text-decoration:none;font-size:18px}
 .logo {display:flex;align-items:center;gap:10px}
 .logo img.logo-img{height:36px;width:auto;display:block;border-radius:6px}
@@ -76,7 +78,7 @@ body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial; background:var(
   .hero-tile{
   margin-top:16px;
   width:140px;height:100px;border-radius:10px;overflow:hidden;background-color:var(--tile-bg);border:1px solid var(--tile-border);
-  box-shadow:0 8px 20px var(--tile-shadow);background-image:url('/assets/images/shark-hero.jpg');background-size:cover;background-position:center;flex-shrink:0
+  box-shadow:0 8px 20px var(--tile-shadow);background-image:none;background-size:cover;background-position:center;flex-shrink:0; background: linear-gradient(180deg, rgba(2,8,11,0.45), rgba(4,8,14,0.6));
 }
 
 @media (max-width:960px){
@@ -91,8 +93,8 @@ body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial; background:var(
 
 /* foreground subject (transparent PNG/WebP) — centered and responsive */
 .hero-subject-picture{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;
-  /* background fallback: use the site hero image (alpha layer optional) */
-  background-image: url('/assets/images/shark-hero.jpg');
+  /* background fallback: keep empty — no shark tile here */
+  background-image: none;
   background-position: center; background-repeat: no-repeat; background-size: contain;}
 .hero-subject{max-width:82%;max-height:82%;width:auto;height:auto;object-fit:contain;opacity:1;transition:opacity .45s ease,transform .45s cubic-bezier(.2,.9,.2,1);transform:translateY(0);}
 .hero-subject.visible{opacity:1;transform:translateY(0)}
@@ -102,7 +104,7 @@ body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial; background:var(
   .hero-subject{max-width:92%;max-height:72%;transform:translateY(4%)}
 
   /* visual tile placed inside hero-visual (guaranteed visible in the hero area) */
-  .hero-tile-visual{position:absolute;right:18px;bottom:18px;width:220px;height:140px;border-radius:12px;overflow:hidden;border:1px solid var(--tile-border);background-image:url('/assets/images/shark-hero.jpg');background-size:cover;background-position:center;box-shadow:0 20px 50px var(--tile-shadow);z-index:1}
+  .hero-tile-visual{position:absolute;right:18px;bottom:18px;width:220px;height:140px;border-radius:12px;overflow:hidden;border:1px solid var(--tile-border);background-image:none;background-size:cover;background-position:center;box-shadow:0 20px 50px var(--tile-shadow);z-index:1;background:linear-gradient(180deg, rgba(4,8,14,0.6), rgba(8,12,20,0.55));}
   .hero-tile-visual::after{content:'Preview';position:absolute;left:8px;bottom:8px;color:var(--text);font-weight:700;padding:4px 8px;border-radius:6px;background:var(--tile-preview-bg);font-size:12px}
   @media (max-width:960px){ .hero-tile-visual{display:none} }
 }

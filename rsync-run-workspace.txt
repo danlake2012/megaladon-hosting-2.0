@@ -1,0 +1,576 @@
+sending incremental file list
+*deleting   old.html
+.d..tpog... ./
+<f+++++++++ .gitignore
+            104 100%    0.00kB/s    0:00:00              104 100%    0.00kB/s    0:00:00 (xfr#1, to-chk=322/324)
+<f+++++++++ .htaccess
+            281 100%  274.41kB/s    0:00:00              281 100%  274.41kB/s    0:00:00 (xfr#2, to-chk=321/324)
+<f+++++++++ .~lock.hostinger.pub#
+             73 100%   71.29kB/s    0:00:00               73 100%   71.29kB/s    0:00:00 (xfr#3, to-chk=320/324)
+<f+++++++++ .~lock.ssh.pub#
+             73 100%   71.29kB/s    0:00:00               73 100%   71.29kB/s    0:00:00 (xfr#4, to-chk=319/324)
+<f+++++++++ NEXTJS-SERVER-SETUP.md
+          3,076 100%    2.93MB/s    0:00:00            3,076 100%    2.93MB/s    0:00:00 (xfr#5, to-chk=318/324)
+<f+++++++++ README-deploy.md
+          3,421 100%    3.26MB/s    0:00:00            3,421 100%    3.26MB/s    0:00:00 (xfr#6, to-chk=317/324)
+<f+++++++++ README.md
+         11,398 100%   10.87MB/s    0:00:00           11,398 100%   10.87MB/s    0:00:00 (xfr#7, to-chk=316/324)
+<f+++++++++ WHMCS-INTEGRATION.md
+          2,477 100%    2.36MB/s    0:00:00            2,477 100%    2.36MB/s    0:00:00 (xfr#8, to-chk=315/324)
+<f+++++++++ cart.php
+          6,256 100%    5.97MB/s    0:00:00            6,256 100%    5.97MB/s    0:00:00 (xfr#9, to-chk=314/324)
+<f+++++++++ deploy.sh
+          6,062 100%    5.78MB/s    0:00:00            6,062 100%    5.78MB/s    0:00:00 (xfr#10, to-chk=313/324)
+<f+++++++++ favicon.ico
+            702 100%  685.55kB/s    0:00:00              702 100%  685.55kB/s    0:00:00 (xfr#11, to-chk=312/324)
+<f+++++++++ hostinger
+            411 100%  401.37kB/s    0:00:00              411 100%  401.37kB/s    0:00:00 (xfr#12, to-chk=311/324)
+<f+++++++++ hostinger.pub
+            106 100%  103.52kB/s    0:00:00              106 100%  103.52kB/s    0:00:00 (xfr#13, to-chk=310/324)
+<f+++++++++ index.html
+         16,885 100%   16.10MB/s    0:00:00           16,885 100%   16.10MB/s    0:00:00 (xfr#14, to-chk=309/324)
+<f+++++++++ new-shark-logo.png
+            452 100%  441.41kB/s    0:00:00              452 100%  441.41kB/s    0:00:00 (xfr#15, to-chk=308/324)
+<f+++++++++ next-env.d.ts
+            267 100%  260.74kB/s    0:00:00              267 100%  260.74kB/s    0:00:00 (xfr#16, to-chk=307/324)
+<f+++++++++ next.config.js
+            590 100%  576.17kB/s    0:00:00              590 100%  576.17kB/s    0:00:00 (xfr#17, to-chk=306/324)
+<f+++++++++ package-lock.json
+         32,768  44%   31.25MB/s    0:00:00           73,741 100%   70.32MB/s    0:00:00 (xfr#18, to-chk=305/324)
+<f+++++++++ package.json
+            552 100%  539.06kB/s    0:00:00              552 100%  539.06kB/s    0:00:00 (xfr#19, to-chk=304/324)
+<f+++++++++ postcss.config.js
+             80 100%   78.12kB/s    0:00:00               80 100%   78.12kB/s    0:00:00 (xfr#20, to-chk=303/324)
+<f+++++++++ privacy.html
+            823 100%  803.71kB/s    0:00:00              823 100%  803.71kB/s    0:00:00 (xfr#21, to-chk=302/324)
+<f+++++++++ robots.txt
+            195 100%  190.43kB/s    0:00:00              195 100%  190.43kB/s    0:00:00 (xfr#22, to-chk=301/324)
+<f+++++++++ rsync-dryrun-workspace.txt
+         12,508 100%   11.93MB/s    0:00:00           12,508 100%   11.93MB/s    0:00:00 (xfr#23, to-chk=300/324)
+<f+++++++++ rsync-run-workspace.txt
+          3,345 100%    3.19MB/s    0:00:00            3,345 100%    3.19MB/s    0:00:00 (xfr#24, to-chk=299/324)
+<f+++++++++ server.js
+          1,330 100%    1.27MB/s    0:00:00            1,330 100%    1.27MB/s    0:00:00 (xfr#25, to-chk=298/324)
+<f+++++++++ ssh
+            411 100%  401.37kB/s    0:00:00              411 100%  401.37kB/s    0:00:00 (xfr#26, to-chk=297/324)
+<f+++++++++ ssh.pub
+            103 100%  100.59kB/s    0:00:00              103 100%  100.59kB/s    0:00:00 (xfr#27, to-chk=296/324)
+<f+++++++++ tailwind.config.js
+            274 100%  267.58kB/s    0:00:00              274 100%  267.58kB/s    0:00:00 (xfr#28, to-chk=295/324)
+<f+++++++++ terms.html
+            819 100%  799.80kB/s    0:00:00              819 100%  799.80kB/s    0:00:00 (xfr#29, to-chk=294/324)
+<f+++++++++ tsconfig.json
+            681 100%  665.04kB/s    0:00:00              681 100%  665.04kB/s    0:00:00 (xfr#30, to-chk=293/324)
+<f+++++++++ whmcs_theme_snippet.html
+          2,611 100%    2.49MB/s    0:00:00            2,611 100%    2.49MB/s    0:00:00 (xfr#31, to-chk=292/324)
+cd+++++++++ .deploy_keys/
+<f+++++++++ .deploy_keys/megaladon_deploy
+            432 100%   38.35kB/s    0:00:00              432 100%   38.35kB/s    0:00:00 (xfr#32, to-chk=262/324)
+<f+++++++++ .deploy_keys/megaladon_deploy.pub
+            115 100%   10.21kB/s    0:00:00              115 100%   10.21kB/s    0:00:00 (xfr#33, to-chk=261/324)
+cd+++++++++ .github/
+cd+++++++++ .github/workflows/
+<f+++++++++ .github/workflows/auto-deploy.yml
+          1,672 100%  148.44kB/s    0:00:00            1,672 100%  148.44kB/s    0:00:00 (xfr#34, to-chk=259/324)
+<f+++++++++ .github/workflows/deploy.yml
+          1,681 100%  149.24kB/s    0:00:00            1,681 100%  149.24kB/s    0:00:00 (xfr#35, to-chk=258/324)
+cd+++++++++ about/
+<f+++++++++ about/index.html
+          3,396 100%  301.49kB/s    0:00:00            3,396 100%  301.49kB/s    0:00:00 (xfr#36, to-chk=257/324)
+cd+++++++++ app/
+<f+++++++++ app/globals.css
+          6,797 100%  603.43kB/s    0:00:00            6,797 100%  603.43kB/s    0:00:00 (xfr#37, to-chk=256/324)
+<f+++++++++ app/layout.tsx
+            904 100%   80.26kB/s    0:00:00              904 100%   80.26kB/s    0:00:00 (xfr#38, to-chk=255/324)
+<f+++++++++ app/page.tsx
+          1,028 100%   91.26kB/s    0:00:00            1,028 100%   91.26kB/s    0:00:00 (xfr#39, to-chk=254/324)
+cd+++++++++ assets/
+cd+++++++++ assets/css/
+<f+++++++++ assets/css/homepage-redesign.css
+          2,739 100%  243.16kB/s    0:00:00            2,739 100%  243.16kB/s    0:00:00 (xfr#40, to-chk=250/324)
+<f+++++++++ assets/css/styles.css
+         11,930 100%    1.03MB/s    0:00:00           11,930 100%    1.03MB/s    0:00:00 (xfr#41, to-chk=249/324)
+cd+++++++++ assets/images/
+<f+++++++++ assets/images/favicon-32.png
+          1,824 100%  161.93kB/s    0:00:00            1,824 100%  161.93kB/s    0:00:00 (xfr#42, to-chk=248/324)
+<f+++++++++ assets/images/favicon-64.png
+          5,233 100%  464.58kB/s    0:00:00            5,233 100%  425.86kB/s    0:00:00 (xfr#43, to-chk=247/324)
+<f+++++++++ assets/images/favicon.ico
+            702 100%   57.13kB/s    0:00:00              702 100%   57.13kB/s    0:00:00 (xfr#44, to-chk=246/324)
+<f+++++++++ assets/images/logo-120x40.png
+         11,202 100%  911.62kB/s    0:00:00           11,202 100%  911.62kB/s    0:00:00 (xfr#45, to-chk=245/324)
+<f+++++++++ assets/images/logo-120x40.webp
+          2,456 100%  199.87kB/s    0:00:00            2,456 100%  199.87kB/s    0:00:00 (xfr#46, to-chk=244/324)
+<f+++++++++ assets/images/logo-240x80.png
+         32,768  83%    2.60MB/s    0:00:00           39,236 100%    3.12MB/s    0:00:00 (xfr#47, to-chk=243/324)
+<f+++++++++ assets/images/logo-240x80.webp
+          6,660 100%  541.99kB/s    0:00:00            6,660 100%  541.99kB/s    0:00:00 (xfr#48, to-chk=242/324)
+<f+++++++++ assets/images/logo-placeholder.svg
+            595 100%   48.42kB/s    0:00:00              595 100%   48.42kB/s    0:00:00 (xfr#49, to-chk=241/324)
+<f+++++++++ assets/images/logo-test.svg
+          1,118 100%   90.98kB/s    0:00:00            1,118 100%   90.98kB/s    0:00:00 (xfr#50, to-chk=240/324)
+<f+++++++++ assets/images/logo.png
+            452 100%   36.78kB/s    0:00:00              452 100%   36.78kB/s    0:00:00 (xfr#51, to-chk=239/324)
+<f+++++++++ assets/images/logo.svg
+          1,118 100%   90.98kB/s    0:00:00            1,118 100%   90.98kB/s    0:00:00 (xfr#52, to-chk=238/324)
+<f+++++++++ assets/images/logo.webp
+            445 100%   36.21kB/s    0:00:00              445 100%   36.21kB/s    0:00:00 (xfr#53, to-chk=237/324)
+<f+++++++++ assets/images/mega-hero.jpg
+         32,768   1%    2.60MB/s    0:00:00        2,579,307 100%   10.51MB/s    0:00:00 (xfr#54, to-chk=236/324)
+<f+++++++++ assets/images/new-shark-logo.png
+         32,768  83%  136.75kB/s    0:00:00           39,236 100%  163.75kB/s    0:00:00 (xfr#55, to-chk=235/324)
+<f+++++++++ assets/images/shark-cursor-emoji.svg
+            455 100%    1.89kB/s    0:00:00              455 100%    1.89kB/s    0:00:00 (xfr#56, to-chk=234/324)
+<f+++++++++ assets/images/shark-cursor.cur
+          1,508 100%    6.27kB/s    0:00:00            1,508 100%    6.27kB/s    0:00:00 (xfr#57, to-chk=233/324)
+<f+++++++++ assets/images/shark-cursor.png
+          1,486 100%    6.18kB/s    0:00:00            1,486 100%    6.18kB/s    0:00:00 (xfr#58, to-chk=232/324)
+<f+++++++++ assets/images/shark-cursor.svg
+            608 100%    2.53kB/s    0:00:00              608 100%    2.53kB/s    0:00:00 (xfr#59, to-chk=231/324)
+<f+++++++++ assets/images/shark-hero-lqip.txt
+            979 100%    4.07kB/s    0:00:00              979 100%    4.07kB/s    0:00:00 (xfr#60, to-chk=230/324)
+<f+++++++++ assets/images/shark-hero.jpg
+         32,768   1%  136.17kB/s    0:00:18        2,579,307 100%    2.74MB/s    0:00:00 (xfr#61, to-chk=229/324)
+<f+++++++++ assets/images/shark.jpg
+         32,768   1%   35.60kB/s    0:00:51          524,288  27%  499.03kB/s    0:00:02        1,883,518 100%    1.34MB/s    0:00:01 (xfr#62, to-chk=228/324)
+cd+++++++++ assets/js/
+<f+++++++++ assets/js/config.js
+          1,220 100%    3.78kB/s    0:00:00            1,220 100%    3.78kB/s    0:00:00 (xfr#63, to-chk=227/324)
+<f+++++++++ assets/js/main.js
+         13,590 100%   42.13kB/s    0:00:00           13,590 100%   42.13kB/s    0:00:00 (xfr#64, to-chk=226/324)
+cd+++++++++ backups/
+<f+++++++++ backups/index.html.before-homepage-redesign-20251205T011155Z.html
+          3,869 100%   11.99kB/s    0:00:00            3,869 100%   11.99kB/s    0:00:00 (xfr#65, to-chk=225/324)
+<f+++++++++ backups/old_assets_css_styles.css
+            172 100%    0.53kB/s    0:00:00              172 100%    0.53kB/s    0:00:00 (xfr#66, to-chk=224/324)
+<f+++++++++ backups/old_assets_js_main.js
+            138 100%    0.43kB/s    0:00:00              138 100%    0.43kB/s    0:00:00 (xfr#67, to-chk=223/324)
+<f+++++++++ backups/old_index.html
+         13,289 100%   41.07kB/s    0:00:00           13,289 100%   41.07kB/s    0:00:00 (xfr#68, to-chk=222/324)
+cd+++++++++ blog/
+<f+++++++++ blog/index.html
+              0 100%    0.00kB/s    0:00:00 (xfr#69, to-chk=221/324)
+cd+++++++++ blog/fast-hosting-matters-speed-impacts-seo/
+<f+++++++++ blog/fast-hosting-matters-speed-impacts-seo/index.html
+              0 100%    0.00kB/s    0:00:00 (xfr#70, to-chk=217/324)
+cd+++++++++ blog/how-ssl-works-and-why-you-need-it/
+<f+++++++++ blog/how-ssl-works-and-why-you-need-it/index.html
+              0 100%    0.00kB/s    0:00:00 (xfr#71, to-chk=216/324)
+cd+++++++++ blog/how-to-choose-web-hosting-2025/
+<f+++++++++ blog/how-to-choose-web-hosting-2025/index.html
+              0 100%    0.00kB/s    0:00:00 (xfr#72, to-chk=215/324)
+cd+++++++++ components/
+<f+++++++++ components/ClientEnhance.tsx
+            515 100%    1.59kB/s    0:00:00              515 100%    1.59kB/s    0:00:00 (xfr#73, to-chk=214/324)
+<f+++++++++ components/Navbar.tsx
+          2,451 100%    7.57kB/s    0:00:00            2,451 100%    7.57kB/s    0:00:00 (xfr#74, to-chk=213/324)
+<f+++++++++ components/StickyCTAs.tsx
+          1,547 100%    4.78kB/s    0:00:00            1,547 100%    4.78kB/s    0:00:00 (xfr#75, to-chk=212/324)
+<f+++++++++ components/Tile.tsx
+          1,265 100%    3.91kB/s    0:00:00            1,265 100%    3.91kB/s    0:00:00 (xfr#76, to-chk=211/324)
+<f+++++++++ components/WHMCSPlans.tsx
+          4,519 100%   13.97kB/s    0:00:00            4,519 100%   13.97kB/s    0:00:00 (xfr#77, to-chk=210/324)
+cd+++++++++ components/sections/
+<f+++++++++ components/sections/AboutShark.tsx
+          7,856 100%   24.28kB/s    0:00:00            7,856 100%   24.28kB/s    0:00:00 (xfr#78, to-chk=208/324)
+<f+++++++++ components/sections/CTA.tsx
+            658 100%    2.03kB/s    0:00:00              658 100%    2.03kB/s    0:00:00 (xfr#79, to-chk=207/324)
+<f+++++++++ components/sections/Domains.tsx
+          2,937 100%    9.08kB/s    0:00:00            2,937 100%    9.08kB/s    0:00:00 (xfr#80, to-chk=206/324)
+<f+++++++++ components/sections/FAQ.tsx
+          6,745 100%   20.84kB/s    0:00:00            6,745 100%   20.84kB/s    0:00:00 (xfr#81, to-chk=205/324)
+<f+++++++++ components/sections/Hero.tsx
+          3,890 100%   12.02kB/s    0:00:00            3,890 100%   12.02kB/s    0:00:00 (xfr#82, to-chk=204/324)
+<f+++++++++ components/sections/Hosting.tsx
+          1,442 100%    4.46kB/s    0:00:00            1,442 100%    4.46kB/s    0:00:00 (xfr#83, to-chk=203/324)
+<f+++++++++ components/sections/KB.tsx
+          6,103 100%   18.86kB/s    0:00:00            6,103 100%   18.86kB/s    0:00:00 (xfr#84, to-chk=202/324)
+<f+++++++++ components/sections/Support.tsx
+          5,718 100%   17.67kB/s    0:00:00            5,718 100%   17.67kB/s    0:00:00 (xfr#85, to-chk=201/324)
+<f+++++++++ components/sections/WhyChooseUs.tsx
+         14,049 100%   43.28kB/s    0:00:00           14,049 100%   43.28kB/s    0:00:00 (xfr#86, to-chk=200/324)
+cd+++++++++ contact/
+<f+++++++++ contact/index.html
+              0 100%    0.00kB/s    0:00:00 (xfr#87, to-chk=199/324)
+cd+++++++++ content/
+<f+++++++++ content/content-brief.md
+              0 100%    0.00kB/s    0:00:00 (xfr#88, to-chk=198/324)
+<f+++++++++ content/product-template.csv
+              0 100%    0.00kB/s    0:00:00 (xfr#89, to-chk=197/324)
+cd+++++++++ deploy_tools/
+<f+++++++++ deploy_tools/README-ssh-deploy.md
+          2,037 100%    6.28kB/s    0:00:00            2,037 100%    6.28kB/s    0:00:00 (xfr#90, to-chk=196/324)
+<f+++++++++ deploy_tools/atomic_deploy.sh
+            624 100%    1.92kB/s    0:00:00              624 100%    1.92kB/s    0:00:00 (xfr#91, to-chk=195/324)
+<f+++++++++ deploy_tools/deploy_server.sh
+          2,636 100%    8.12kB/s    0:00:00            2,636 100%    8.12kB/s    0:00:00 (xfr#92, to-chk=194/324)
+<f+++++++++ deploy_tools/index.html
+          3,869 100%   11.92kB/s    0:00:00            3,869 100%   11.92kB/s    0:00:00 (xfr#93, to-chk=193/324)
+<f+++++++++ deploy_tools/restore_all_from_backup.sh
+            887 100%    2.73kB/s    0:00:00              887 100%    2.73kB/s    0:00:00 (xfr#94, to-chk=192/324)
+<f+++++++++ deploy_tools/ssh_rsync_deploy.sh
+          3,268 100%   10.07kB/s    0:00:00            3,268 100%   10.07kB/s    0:00:00 (xfr#95, to-chk=191/324)
+<f+++++++++ deploy_tools/watchdog.sh
+          4,980 100%   15.34kB/s    0:00:00            4,980 100%   15.34kB/s    0:00:00 (xfr#96, to-chk=190/324)
+<f+++++++++ deploy_tools/watchdog_once.sh
+              0 100%    0.00kB/s    0:00:00 (xfr#97, to-chk=189/324)
+<f+++++++++ deploy_tools/watchlist.txt
+            190 100%    0.59kB/s    0:00:00              190 100%    0.59kB/s    0:00:00 (xfr#98, to-chk=188/324)
+cd+++++++++ deploy_tools/legacy/
+<f+++++++++ deploy_tools/legacy/deploy.ftp.disabled.sh
+            547 100%    1.69kB/s    0:00:00              547 100%    1.69kB/s    0:00:00 (xfr#99, to-chk=186/324)
+cd+++++++++ domains/
+<f+++++++++ domains/index.html
+          8,696 100%   26.79kB/s    0:00:00            8,696 100%   26.79kB/s    0:00:00 (xfr#100, to-chk=185/324)
+cd+++++++++ images/
+<f+++++++++ images/logo-120x40.png
+         10,059 100%   30.99kB/s    0:00:00           10,059 100%   30.99kB/s    0:00:00 (xfr#101, to-chk=184/324)
+<f+++++++++ images/logo-120x40.webp
+          2,582 100%    7.95kB/s    0:00:00            2,582 100%    7.95kB/s    0:00:00 (xfr#102, to-chk=183/324)
+<f+++++++++ images/logo-240x80.png
+         32,768  91%  100.95kB/s    0:00:00           35,801 100%  110.29kB/s    0:00:00 (xfr#103, to-chk=182/324)
+<f+++++++++ images/logo-240x80.webp
+          7,222 100%   22.25kB/s    0:00:00            7,222 100%   22.25kB/s    0:00:00 (xfr#104, to-chk=181/324)
+<f+++++++++ images/logo.png
+         32,768  91%  100.95kB/s    0:00:00           35,801 100%  109.94kB/s    0:00:00 (xfr#105, to-chk=180/324)
+<f+++++++++ images/logo.svg
+          1,118 100%    3.43kB/s    0:00:00            1,118 100%    3.43kB/s    0:00:00 (xfr#106, to-chk=179/324)
+<f+++++++++ images/logo.webp
+          7,222 100%   22.18kB/s    0:00:00            7,222 100%   22.18kB/s    0:00:00 (xfr#107, to-chk=178/324)
+<f+++++++++ images/mega-hero.jpg
+         32,768  16%  100.63kB/s    0:00:01          196,608 100%  514.75kB/s    0:00:00 (xfr#108, to-chk=177/324)
+<f+++++++++ images/new-shark-logo.png
+              0 100%    0.00kB/s    0:00:00 (xfr#109, to-chk=176/324)
+cd+++++++++ kb/
+<f+++++++++ kb/README.md
+              0 100%    0.00kB/s    0:00:00 (xfr#110, to-chk=175/324)
+<f+++++++++ kb/index.php
+              0 100%    0.00kB/s    0:00:00 (xfr#111, to-chk=174/324)
+<f+++++++++ kb/lib.php
+              0 100%    0.00kB/s    0:00:00 (xfr#112, to-chk=173/324)
+<f+++++++++ kb/view.php
+              0 100%    0.00kB/s    0:00:00 (xfr#113, to-chk=172/324)
+cd+++++++++ kb/admin/
+<f+++++++++ kb/admin/create.php
+              0 100%    0.00kB/s    0:00:00 (xfr#114, to-chk=167/324)
+<f+++++++++ kb/admin/edit.php
+              0 100%    0.00kB/s    0:00:00 (xfr#115, to-chk=166/324)
+<f+++++++++ kb/admin/index.php
+              0 100%    0.00kB/s    0:00:00 (xfr#116, to-chk=165/324)
+<f+++++++++ kb/admin/login.php
+              0 100%    0.00kB/s    0:00:00 (xfr#117, to-chk=164/324)
+<f+++++++++ kb/admin/logout.php
+              0 100%    0.00kB/s    0:00:00 (xfr#118, to-chk=163/324)
+cd+++++++++ kb/assets/
+<f+++++++++ kb/assets/style.css
+              0 100%    0.00kB/s    0:00:00 (xfr#119, to-chk=162/324)
+cd+++++++++ kb/data/
+<f+++++++++ kb/data/kb.json
+              0 100%    0.00kB/s    0:00:00 (xfr#120, to-chk=161/324)
+cd+++++++++ kb/teletran1/
+<f+++++++++ kb/teletran1/config.php
+              0 100%    0.00kB/s    0:00:00 (xfr#121, to-chk=160/324)
+<f+++++++++ kb/teletran1/create.php
+              0 100%    0.00kB/s    0:00:00 (xfr#122, to-chk=159/324)
+<f+++++++++ kb/teletran1/edit.php
+              0 100%    0.00kB/s    0:00:00 (xfr#123, to-chk=158/324)
+<f+++++++++ kb/teletran1/index.php
+              0 100%    0.00kB/s    0:00:00 (xfr#124, to-chk=157/324)
+<f+++++++++ kb/teletran1/login.php
+              0 100%    0.00kB/s    0:00:00 (xfr#125, to-chk=156/324)
+<f+++++++++ kb/teletran1/logout.php
+              0 100%    0.00kB/s    0:00:00 (xfr#126, to-chk=155/324)
+cd+++++++++ login/
+<f+++++++++ login/index.html
+          1,443 100%    3.78kB/s    0:00:00            1,443 100%    3.78kB/s    0:00:00 (xfr#127, to-chk=154/324)
+cd+++++++++ megaladonhosting/
+<f+++++++++ megaladonhosting/index.html
+         11,800 100%   30.89kB/s    0:00:00           11,800 100%   30.89kB/s    0:00:00 (xfr#128, to-chk=153/324)
+cd+++++++++ megaladonhosting/assets/
+cd+++++++++ megaladonhosting/assets/css/
+<f+++++++++ megaladonhosting/assets/css/styles.css
+         10,016 100%   26.22kB/s    0:00:00           10,016 100%   26.22kB/s    0:00:00 (xfr#129, to-chk=148/324)
+cd+++++++++ megaladonhosting/assets/images/
+<f+++++++++ megaladonhosting/assets/images/logo-120x40.png
+              0 100%    0.00kB/s    0:00:00 (xfr#130, to-chk=147/324)
+<f+++++++++ megaladonhosting/assets/images/logo-120x40.webp
+              0 100%    0.00kB/s    0:00:00 (xfr#131, to-chk=146/324)
+<f+++++++++ megaladonhosting/assets/images/logo-240x80.png
+              0 100%    0.00kB/s    0:00:00 (xfr#132, to-chk=145/324)
+<f+++++++++ megaladonhosting/assets/images/logo-240x80.webp
+              0 100%    0.00kB/s    0:00:00 (xfr#133, to-chk=144/324)
+<f+++++++++ megaladonhosting/assets/images/logo.png
+            396 100%    1.04kB/s    0:00:00              396 100%    1.04kB/s    0:00:00 (xfr#134, to-chk=143/324)
+<f+++++++++ megaladonhosting/assets/images/logo.svg
+            800 100%    2.09kB/s    0:00:00              800 100%    2.09kB/s    0:00:00 (xfr#135, to-chk=142/324)
+<f+++++++++ megaladonhosting/assets/images/logo.webp
+            391 100%    1.02kB/s    0:00:00              391 100%    1.02kB/s    0:00:00 (xfr#136, to-chk=141/324)
+<f+++++++++ megaladonhosting/assets/images/mega-hero.jpg
+         32,768   1%   85.79kB/s    0:00:29        2,579,307 100%    2.56MB/s    0:00:00 (xfr#137, to-chk=140/324)
+<f+++++++++ megaladonhosting/assets/images/shark-hero.jpg
+         32,768   1%   33.37kB/s    0:01:16          262,144  10%  250.00kB/s    0:00:09        2,579,307 100%    1.55MB/s    0:00:01 (xfr#138, to-chk=139/324)
+cd+++++++++ megaladonhosting/assets/js/
+<f+++++++++ megaladonhosting/assets/js/main.js
+         10,879 100%   19.01kB/s    0:00:00           10,879 100%   19.01kB/s    0:00:00 (xfr#139, to-chk=138/324)
+cd+++++++++ out/
+<f+++++++++ out/404.html
+          2,009 100%    3.51kB/s    0:00:00            2,009 100%    3.51kB/s    0:00:00 (xfr#140, to-chk=137/324)
+<f+++++++++ out/index.html
+         32,768  70%   57.25kB/s    0:00:00           46,639 100%   81.48kB/s    0:00:00 (xfr#141, to-chk=136/324)
+<f+++++++++ out/index.txt
+         21,057 100%   36.79kB/s    0:00:00           21,057 100%   36.79kB/s    0:00:00 (xfr#142, to-chk=135/324)
+cd+++++++++ out/_next/
+cd+++++++++ out/_next/LE7uDp3M5j3K2l01ZLjS9/
+cd+++++++++ out/_next/static/
+cd+++++++++ out/_next/static/LE7uDp3M5j3K2l01ZLjS9/
+<f+++++++++ out/_next/static/LE7uDp3M5j3K2l01ZLjS9/_buildManifest.js
+            224 100%    0.39kB/s    0:00:00              224 100%    0.39kB/s    0:00:00 (xfr#143, to-chk=127/324)
+<f+++++++++ out/_next/static/LE7uDp3M5j3K2l01ZLjS9/_ssgManifest.js
+             80 100%    0.14kB/s    0:00:00               80 100%    0.14kB/s    0:00:00 (xfr#144, to-chk=126/324)
+cd+++++++++ out/_next/static/chunks/
+<f+++++++++ out/_next/static/chunks/596-955bcbfa1a4581c7.js
+         32,768  32%   57.25kB/s    0:00:01          100,048 100%  174.47kB/s    0:00:00 (xfr#145, to-chk=125/324)
+<f+++++++++ out/_next/static/chunks/fd9d1056-2a48348db6e9e5e0.js
+         32,768  20%   57.14kB/s    0:00:02          160,771 100%  279.86kB/s    0:00:00 (xfr#146, to-chk=124/324)
+<f+++++++++ out/_next/static/chunks/framework-8883d1e9be70c3da.js
+         32,768  23%   57.04kB/s    0:00:01          140,102 100%  233.08kB/s    0:00:00 (xfr#147, to-chk=123/324)
+<f+++++++++ out/_next/static/chunks/main-7b6c92342d1ce45a.js
+         32,768  33%   54.51kB/s    0:00:01           98,821 100%  164.12kB/s    0:00:00 (xfr#148, to-chk=122/324)
+<f+++++++++ out/_next/static/chunks/main-app-8c836f162ad33665.js
+            419 100%    0.70kB/s    0:00:00              419 100%    0.70kB/s    0:00:00 (xfr#149, to-chk=121/324)
+<f+++++++++ out/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js
+         32,768  35%   54.42kB/s    0:00:01           91,381 100%  144.63kB/s    0:00:00 (xfr#150, to-chk=120/324)
+<f+++++++++ out/_next/static/chunks/webpack-1b675cef4cb6dec2.js
+          3,464 100%    5.48kB/s    0:00:00            3,464 100%    5.48kB/s    0:00:00 (xfr#151, to-chk=119/324)
+cd+++++++++ out/_next/static/chunks/app/
+<f+++++++++ out/_next/static/chunks/app/layout-ffb8cdfe2f72f612.js
+            224 100%    0.35kB/s    0:00:00              224 100%    0.35kB/s    0:00:00 (xfr#152, to-chk=116/324)
+<f+++++++++ out/_next/static/chunks/app/page-9c9f0895a67cfdfc.js
+          8,399 100%   13.29kB/s    0:00:00            8,399 100%   13.29kB/s    0:00:00 (xfr#153, to-chk=115/324)
+cd+++++++++ out/_next/static/chunks/pages/
+<f+++++++++ out/_next/static/chunks/pages/_app-52924524f99094ab.js
+            280 100%    0.44kB/s    0:00:00              280 100%    0.44kB/s    0:00:00 (xfr#154, to-chk=114/324)
+<f+++++++++ out/_next/static/chunks/pages/_error-c92d5c4bb2b49926.js
+            247 100%    0.39kB/s    0:00:00              247 100%    0.39kB/s    0:00:00 (xfr#155, to-chk=113/324)
+cd+++++++++ out/_next/static/css/
+<f+++++++++ out/_next/static/css/f79aa9d2dc938616.css
+         23,564 100%   37.30kB/s    0:00:00           23,564 100%   37.30kB/s    0:00:00 (xfr#156, to-chk=112/324)
+cd+++++++++ out/assets/
+cd+++++++++ out/assets/images/
+<f+++++++++ out/assets/images/favicon-32.png
+          1,824 100%    2.89kB/s    0:00:00            1,824 100%    2.89kB/s    0:00:00 (xfr#157, to-chk=110/324)
+<f+++++++++ out/assets/images/favicon-64.png
+          5,233 100%    8.28kB/s    0:00:00            5,233 100%    8.28kB/s    0:00:00 (xfr#158, to-chk=109/324)
+<f+++++++++ out/assets/images/favicon.ico
+            702 100%    1.11kB/s    0:00:00              702 100%    1.11kB/s    0:00:00 (xfr#159, to-chk=108/324)
+<f+++++++++ out/assets/images/logo-120x40.png
+         11,202 100%   17.73kB/s    0:00:00           11,202 100%   17.73kB/s    0:00:00 (xfr#160, to-chk=107/324)
+<f+++++++++ out/assets/images/logo-120x40.webp
+          2,456 100%    3.89kB/s    0:00:00            2,456 100%    3.89kB/s    0:00:00 (xfr#161, to-chk=106/324)
+<f+++++++++ out/assets/images/logo-240x80.png
+         32,768  83%   51.86kB/s    0:00:00           39,236 100%   62.00kB/s    0:00:00 (xfr#162, to-chk=105/324)
+<f+++++++++ out/assets/images/logo-240x80.webp
+          6,660 100%   10.52kB/s    0:00:00            6,660 100%   10.52kB/s    0:00:00 (xfr#163, to-chk=104/324)
+<f+++++++++ out/assets/images/logo-placeholder.svg
+            595 100%    0.94kB/s    0:00:00              595 100%    0.94kB/s    0:00:00 (xfr#164, to-chk=103/324)
+<f+++++++++ out/assets/images/logo-test.svg
+          1,118 100%    1.77kB/s    0:00:00            1,118 100%    1.77kB/s    0:00:00 (xfr#165, to-chk=102/324)
+<f+++++++++ out/assets/images/logo.png
+            452 100%    0.71kB/s    0:00:00              452 100%    0.71kB/s    0:00:00 (xfr#166, to-chk=101/324)
+<f+++++++++ out/assets/images/logo.svg
+          1,118 100%    1.77kB/s    0:00:00            1,118 100%    1.77kB/s    0:00:00 (xfr#167, to-chk=100/324)
+<f+++++++++ out/assets/images/logo.webp
+            445 100%    0.70kB/s    0:00:00              445 100%    0.70kB/s    0:00:00 (xfr#168, to-chk=99/324)
+<f+++++++++ out/assets/images/mega-hero.jpg
+         32,768   1%   51.78kB/s    0:00:49        1,703,936  66%    1.60MB/s    0:00:00        2,579,307 100%    2.01MB/s    0:00:01 (xfr#169, to-chk=98/324)
+<f+++++++++ out/assets/images/new-shark-logo.png
+         32,768  83%  152.38kB/s    0:00:00           39,236 100%  158.99kB/s    0:00:00 (xfr#170, to-chk=97/324)
+<f+++++++++ out/assets/images/shark-cursor-emoji.svg
+            455 100%    1.84kB/s    0:00:00              455 100%    1.84kB/s    0:00:00 (xfr#171, to-chk=96/324)
+<f+++++++++ out/assets/images/shark-cursor.cur
+          1,508 100%    6.11kB/s    0:00:00            1,508 100%    6.11kB/s    0:00:00 (xfr#172, to-chk=95/324)
+<f+++++++++ out/assets/images/shark-cursor.png
+          1,486 100%    6.02kB/s    0:00:00            1,486 100%    6.02kB/s    0:00:00 (xfr#173, to-chk=94/324)
+<f+++++++++ out/assets/images/shark-cursor.svg
+            608 100%    2.46kB/s    0:00:00              608 100%    2.46kB/s    0:00:00 (xfr#174, to-chk=93/324)
+<f+++++++++ out/assets/images/shark-hero-lqip.txt
+            979 100%    3.97kB/s    0:00:00              979 100%    3.97kB/s    0:00:00 (xfr#175, to-chk=92/324)
+<f+++++++++ out/assets/images/shark-hero.jpg
+         32,768   1%  132.78kB/s    0:00:19        2,579,307 100%    2.94MB/s    0:00:00 (xfr#176, to-chk=91/324)
+<f+++++++++ out/assets/images/shark.jpg
+         32,768   1%   38.23kB/s    0:00:48          786,432  41%  761.90kB/s    0:00:01        1,883,518 100%    1.38MB/s    0:00:01 (xfr#177, to-chk=90/324)
+cd+++++++++ pages/
+cd+++++++++ pages/api/
+<f+++++++++ pages/api/debug-headers.ts
+            238 100%    0.80kB/s    0:00:00              238 100%    0.80kB/s    0:00:00 (xfr#178, to-chk=88/324)
+cd+++++++++ pages/api/whmcs/
+<f+++++++++ pages/api/whmcs/plans.ts
+          3,391 100%   11.34kB/s    0:00:00            3,391 100%   11.34kB/s    0:00:00 (xfr#179, to-chk=86/324)
+cd+++++++++ pricing/
+<f+++++++++ pricing/index.html
+          5,291 100%   17.70kB/s    0:00:00            5,291 100%   17.70kB/s    0:00:00 (xfr#180, to-chk=85/324)
+cd+++++++++ privacy-policy/
+<f+++++++++ privacy-policy/index.html
+              0 100%    0.00kB/s    0:00:00 (xfr#181, to-chk=84/324)
+cd+++++++++ public/
+cd+++++++++ public/assets/
+cd+++++++++ public/assets/images/
+<f+++++++++ public/assets/images/favicon-32.png
+          1,824 100%    6.10kB/s    0:00:00            1,824 100%    6.10kB/s    0:00:00 (xfr#182, to-chk=81/324)
+<f+++++++++ public/assets/images/favicon-64.png
+          5,233 100%   17.50kB/s    0:00:00            5,233 100%   17.50kB/s    0:00:00 (xfr#183, to-chk=80/324)
+<f+++++++++ public/assets/images/favicon.ico
+            702 100%    2.35kB/s    0:00:00              702 100%    2.35kB/s    0:00:00 (xfr#184, to-chk=79/324)
+<f+++++++++ public/assets/images/logo-120x40.png
+         11,202 100%   37.46kB/s    0:00:00           11,202 100%   37.46kB/s    0:00:00 (xfr#185, to-chk=78/324)
+<f+++++++++ public/assets/images/logo-120x40.webp
+          2,456 100%    8.21kB/s    0:00:00            2,456 100%    8.21kB/s    0:00:00 (xfr#186, to-chk=77/324)
+<f+++++++++ public/assets/images/logo-240x80.png
+         32,768  83%  109.59kB/s    0:00:00           39,236 100%  131.22kB/s    0:00:00 (xfr#187, to-chk=76/324)
+<f+++++++++ public/assets/images/logo-240x80.webp
+          6,660 100%   22.27kB/s    0:00:00            6,660 100%   22.27kB/s    0:00:00 (xfr#188, to-chk=75/324)
+<f+++++++++ public/assets/images/logo-placeholder.svg
+            595 100%    1.98kB/s    0:00:00              595 100%    1.98kB/s    0:00:00 (xfr#189, to-chk=74/324)
+<f+++++++++ public/assets/images/logo-test.svg
+          1,118 100%    3.73kB/s    0:00:00            1,118 100%    3.73kB/s    0:00:00 (xfr#190, to-chk=73/324)
+<f+++++++++ public/assets/images/logo.png
+            452 100%    1.51kB/s    0:00:00              452 100%    1.51kB/s    0:00:00 (xfr#191, to-chk=72/324)
+<f+++++++++ public/assets/images/logo.svg
+          1,118 100%    3.73kB/s    0:00:00            1,118 100%    3.73kB/s    0:00:00 (xfr#192, to-chk=71/324)
+<f+++++++++ public/assets/images/logo.webp
+            445 100%    1.48kB/s    0:00:00              445 100%    1.48kB/s    0:00:00 (xfr#193, to-chk=70/324)
+<f+++++++++ public/assets/images/mega-hero.jpg
+         32,768   1%  109.22kB/s    0:00:23        2,579,307 100%    2.64MB/s    0:00:00 (xfr#194, to-chk=69/324)
+<f+++++++++ public/assets/images/new-shark-logo.png
+         32,768  83%   34.33kB/s    0:00:00           39,236 100%   39.95kB/s    0:00:00 (xfr#195, to-chk=68/324)
+<f+++++++++ public/assets/images/shark-cursor-emoji.svg
+            455 100%    0.46kB/s    0:00:00              455 100%    0.46kB/s    0:00:00 (xfr#196, to-chk=67/324)
+<f+++++++++ public/assets/images/shark-cursor.cur
+          1,508 100%    1.53kB/s    0:00:00            1,508 100%    1.53kB/s    0:00:00 (xfr#197, to-chk=66/324)
+<f+++++++++ public/assets/images/shark-cursor.png
+          1,486 100%    1.51kB/s    0:00:00            1,486 100%    1.51kB/s    0:00:00 (xfr#198, to-chk=65/324)
+<f+++++++++ public/assets/images/shark-cursor.svg
+            608 100%    0.62kB/s    0:00:00              608 100%    0.62kB/s    0:00:00 (xfr#199, to-chk=64/324)
+<f+++++++++ public/assets/images/shark-hero-lqip.txt
+            979 100%    1.00kB/s    0:00:00              979 100%    1.00kB/s    0:00:00 (xfr#200, to-chk=63/324)
+<f+++++++++ public/assets/images/shark-hero.jpg
+         32,768   1%   33.33kB/s    0:01:16          262,144  10%  253.72kB/s    0:00:09        2,579,307 100%    1.55MB/s    0:00:01 (xfr#201, to-chk=62/324)
+<f+++++++++ public/assets/images/shark.jpg
+         32,768   1%   55.56kB/s    0:00:33        1,179,648  62%  995.68kB/s    0:00:00        1,883,518 100%    1.52MB/s    0:00:01 (xfr#202, to-chk=61/324)
+cd+++++++++ public_html/
+<f+++++++++ public_html/.gitignore
+            847 100%   37.60kB/s    0:00:00              847 100%   37.60kB/s    0:00:00 (xfr#203, to-chk=60/324)
+<f+++++++++ public_html/README-GIT.md
+            469 100%   20.82kB/s    0:00:00              469 100%   20.82kB/s    0:00:00 (xfr#204, to-chk=59/324)
+<f+++++++++ public_html/cart.php
+              0 100%    0.00kB/s    0:00:00 (xfr#205, to-chk=58/324)
+<f+++++++++ public_html/whmcs_theme_snippet.html
+              0 100%    0.00kB/s    0:00:00 (xfr#206, to-chk=57/324)
+cd+++++++++ public_html/assets/
+cd+++++++++ public_html/assets/css/
+<f+++++++++ public_html/assets/css/styles.css
+              0 100%    0.00kB/s    0:00:00 (xfr#207, to-chk=48/324)
+cd+++++++++ public_html/assets/js/
+<f+++++++++ public_html/assets/js/main.js
+              0 100%    0.00kB/s    0:00:00 (xfr#208, to-chk=47/324)
+cd+++++++++ public_html/domains/
+<f+++++++++ public_html/domains/index.html
+              0 100%    0.00kB/s    0:00:00 (xfr#209, to-chk=46/324)
+cd+++++++++ public_html/kb/
+<f+++++++++ public_html/kb/README.md
+              0 100%    0.00kB/s    0:00:00 (xfr#210, to-chk=45/324)
+<f+++++++++ public_html/kb/index.php
+              0 100%    0.00kB/s    0:00:00 (xfr#211, to-chk=44/324)
+<f+++++++++ public_html/kb/lib.php
+              0 100%    0.00kB/s    0:00:00 (xfr#212, to-chk=43/324)
+<f+++++++++ public_html/kb/view.php
+              0 100%    0.00kB/s    0:00:00 (xfr#213, to-chk=42/324)
+cd+++++++++ public_html/kb/admin/
+<f+++++++++ public_html/kb/admin/config.php
+              0 100%    0.00kB/s    0:00:00 (xfr#214, to-chk=38/324)
+<f+++++++++ public_html/kb/admin/create.php
+              0 100%    0.00kB/s    0:00:00 (xfr#215, to-chk=37/324)
+<f+++++++++ public_html/kb/admin/edit.php
+              0 100%    0.00kB/s    0:00:00 (xfr#216, to-chk=36/324)
+<f+++++++++ public_html/kb/admin/index.php
+              0 100%    0.00kB/s    0:00:00 (xfr#217, to-chk=35/324)
+<f+++++++++ public_html/kb/admin/login.php
+              0 100%    0.00kB/s    0:00:00 (xfr#218, to-chk=34/324)
+<f+++++++++ public_html/kb/admin/logout.php
+              0 100%    0.00kB/s    0:00:00 (xfr#219, to-chk=33/324)
+cd+++++++++ public_html/kb/assets/
+<f+++++++++ public_html/kb/assets/style.css
+              0 100%    0.00kB/s    0:00:00 (xfr#220, to-chk=32/324)
+cd+++++++++ public_html/kb/teletran1/
+<f+++++++++ public_html/kb/teletran1/config.php
+              0 100%    0.00kB/s    0:00:00 (xfr#221, to-chk=31/324)
+<f+++++++++ public_html/kb/teletran1/create.php
+              0 100%    0.00kB/s    0:00:00 (xfr#222, to-chk=30/324)
+<f+++++++++ public_html/kb/teletran1/edit.php
+              0 100%    0.00kB/s    0:00:00 (xfr#223, to-chk=29/324)
+<f+++++++++ public_html/kb/teletran1/index.php
+              0 100%    0.00kB/s    0:00:00 (xfr#224, to-chk=28/324)
+<f+++++++++ public_html/kb/teletran1/login.php
+              0 100%    0.00kB/s    0:00:00 (xfr#225, to-chk=27/324)
+<f+++++++++ public_html/kb/teletran1/logout.php
+              0 100%    0.00kB/s    0:00:00 (xfr#226, to-chk=26/324)
+cd+++++++++ public_html/megaladonhosting/
+<f+++++++++ public_html/megaladonhosting/index.html
+              0 100%    0.00kB/s    0:00:00 (xfr#227, to-chk=25/324)
+cd+++++++++ public_html/megaladonhosting/assets/
+cd+++++++++ public_html/megaladonhosting/assets/css/
+<f+++++++++ public_html/megaladonhosting/assets/css/styles.css
+              0 100%    0.00kB/s    0:00:00 (xfr#228, to-chk=21/324)
+cd+++++++++ public_html/megaladonhosting/assets/js/
+<f+++++++++ public_html/megaladonhosting/assets/js/main.js
+              0 100%    0.00kB/s    0:00:00 (xfr#229, to-chk=20/324)
+cd+++++++++ public_html/pricing/
+<f+++++++++ public_html/pricing/index.html
+              0 100%    0.00kB/s    0:00:00 (xfr#230, to-chk=19/324)
+cd+++++++++ public_html/support/
+<f+++++++++ public_html/support/index.html
+              0 100%    0.00kB/s    0:00:00 (xfr#231, to-chk=18/324)
+cd+++++++++ refunds/
+<f+++++++++ refunds/index.html
+              0 100%    0.00kB/s    0:00:00 (xfr#232, to-chk=17/324)
+cd+++++++++ scripts/
+<f+++++++++ scripts/auto_deploy.sh
+          2,004 100%   88.96kB/s    0:00:00            2,004 100%   88.96kB/s    0:00:00 (xfr#233, to-chk=16/324)
+cd+++++++++ server/
+<f+++++++++ server/domain_lookup.py
+          2,578 100%  114.44kB/s    0:00:00            2,578 100%  114.44kB/s    0:00:00 (xfr#234, to-chk=15/324)
+<f+++++++++ server/requirements.txt
+             30 100%    1.33kB/s    0:00:00               30 100%    1.33kB/s    0:00:00 (xfr#235, to-chk=14/324)
+cd+++++++++ styles/
+<f+++++++++ styles/globals.css
+            499 100%   22.15kB/s    0:00:00              499 100%   22.15kB/s    0:00:00 (xfr#236, to-chk=13/324)
+cd+++++++++ support/
+<f+++++++++ support/index.html
+          2,944 100%  130.68kB/s    0:00:00            2,944 100%  130.68kB/s    0:00:00 (xfr#237, to-chk=12/324)
+cd+++++++++ teletran1/
+<f+++++++++ teletran1/create.php
+              0 100%    0.00kB/s    0:00:00 (xfr#238, to-chk=11/324)
+<f+++++++++ teletran1/edit.php
+              0 100%    0.00kB/s    0:00:00 (xfr#239, to-chk=10/324)
+<f+++++++++ teletran1/index.php
+              0 100%    0.00kB/s    0:00:00 (xfr#240, to-chk=9/324)
+<f+++++++++ teletran1/login.php
+              0 100%    0.00kB/s    0:00:00 (xfr#241, to-chk=8/324)
+<f+++++++++ teletran1/logout.php
+              0 100%    0.00kB/s    0:00:00 (xfr#242, to-chk=7/324)
+<f+++++++++ teletran1/stats.php
+              0 100%    0.00kB/s    0:00:00 (xfr#243, to-chk=6/324)
+<f+++++++++ teletran1/telemetry.php
+              0 100%    0.00kB/s    0:00:00 (xfr#244, to-chk=5/324)
+cd+++++++++ teletran1/assets/
+<f+++++++++ teletran1/assets/style.css
+              0 100%    0.00kB/s    0:00:00 (xfr#245, to-chk=2/324)
+cd+++++++++ teletran1/data/
+<f+++++++++ teletran1/data/stats.json
+              0 100%    0.00kB/s    0:00:00 (xfr#246, to-chk=1/324)
+cd+++++++++ terms/
+<f+++++++++ terms/index.html
+              0 100%    0.00kB/s    0:00:00 (xfr#247, to-chk=0/324)
+
+sent 26,686,504 bytes  received 5,068 bytes  3,558,876.27 bytes/sec
+total size is 27,976,300  speedup is 1.05

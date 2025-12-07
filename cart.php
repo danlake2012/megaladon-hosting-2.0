@@ -21,7 +21,7 @@
     <header class="site-header sticky">
       <div class="container header-row">
         <a class="logo" href="index.html">
-          <img class="logo-img" src="assets/images/shark.jpg" alt="Megaladon Hosting logo" onerror="this.onerror=null;this.src='assets/images/logo-placeholder.svg'"/>
+          <img class="logo-img" src="/assets/images/logo.svg" alt="Megaladon Hosting logo" onerror="this.onerror=null;this.src='/assets/images/logo-placeholder.svg'"/>
           <span class="logo-text">Megaladon Hosting</span>
         </a>
         <nav class="nav">

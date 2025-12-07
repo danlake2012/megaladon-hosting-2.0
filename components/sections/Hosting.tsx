@@ -1,5 +1,5 @@
 import React from 'react'
-import Tile from '../../components/Tile'
+import WHMCSPlans from '../WHMCSPlans'
 
 export default function Hosting(){
   return (
@@ -8,24 +8,20 @@ export default function Hosting(){
         <h2 className="text-3xl font-extrabold mb-3">Hosting</h2>
         <p className="text-white/80 mb-6">Fast SSD Hosting — Free SSL Included — One-click WordPress — Secure Firewall + Backups — Veteran Owned Support</p>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          <Tile title="Shared Hosting" description="Fast, secure hosting perfect for websites and WordPress." cta="Get Started" href="#hosting-plans" />
-          <Tile title="WordPress Hosting" description="One-click installs and performance tuned stacks for WP." cta="Choose WP" href="#hosting-plans" />
-          <Tile title="VPS (Upcoming)" description="High performance virtual servers for larger projects." cta="Notify me" />
-        </div>
+        <WHMCSPlans />
 
-        <div className="mt-10 grid md:grid-cols-3 gap-6">
-          <div className="card p-6 rounded-xl bg-black/30">
-            <h3 className="font-bold">Reef Starter</h3>
-            <div className="text-2xl font-extrabold mt-2">$3.99<span className="text-sm">/mo</span></div>
+        <div className="mt-10 reveal grid md:grid-cols-3 gap-6">
+          <div className="card p-6 rounded-xl bg-black/30 border-2 border-cyan-400/18">
+            <h3 className="font-bold">Why Megaladon Hosting</h3>
+            <p className="text-white/80 mt-2">Enterprise-grade hardware, DDoS mitigation, automatic backups & free SSL.</p>
           </div>
-          <div className="card p-6 rounded-xl bg-gradient-to-r from-accent to-teal text-black">
-            <h3 className="font-bold">Creator Current</h3>
-            <div className="text-2xl font-extrabold mt-2">$7.99<span className="text-sm">/mo</span></div>
+          <div className="card p-6 rounded-xl bg-[#021018]/60 border-2 border-cyan-400/22">
+            <h3 className="font-bold">Powered for WordPress</h3>
+            <p className="text-white/80 mt-2">Caching, tuned PHP, and 1-click installer for rapid launches.</p>
           </div>
-          <div className="card p-6 rounded-xl bg-black/30">
-            <h3 className="font-bold">Apex Predator</h3>
-            <div className="text-2xl font-extrabold mt-2">$19.99<span className="text-sm">/mo</span></div>
+          <div className="card p-6 rounded-xl bg-black/30 border-2 border-cyan-400/18">
+            <h3 className="font-bold">Trusted & Secure</h3>
+            <p className="text-white/80 mt-2">Veteran-owned, transparent pricing, and priority support for paid plans.</p>
           </div>
         </div>
       </div>

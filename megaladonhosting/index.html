@@ -21,7 +21,7 @@
     <header class="site-header sticky">
       <div class="container header-row">
         <a class="logo" href="index.html">
-          <img class="logo-img" src="assets/images/shark.jpg" alt="Megaladon Hosting logo" onerror="this.onerror=null;this.src='assets/images/logo-placeholder.svg'"/>
+          <img class="logo-img" src="/assets/images/logo.svg" alt="Megaladon Hosting logo" onerror="this.onerror=null;this.src='/assets/images/logo-placeholder.svg'"/>
           <span class="logo-text">Megaladon Hosting</span>
         </a>
         <nav class="nav">
@@ -42,15 +42,14 @@
     <main>
       <section class="hero">
         <div class="container hero-inner">
-          <div class="hero-copy">
+            <div class="hero-copy">
             <h1>Shark-Fast Hosting for Serious Websites</h1>
             <p class="lead">Ditch slow, bloated hosts. Megaladon Hosting gives you lightning-fast servers, free SSL, and human support that actually answers — so your site can finally breathe.</p>
             <div class="hero-ctas">
               <a class="btn btn-cta" href="pricing/index.html">Get Hosting Now</a>
               <a class="btn btn-ghost" href="#plans">View Plans</a>
             </div>
-            <!-- Instant-visibility tile for the hero image (useful for verification & fallbacks) -->
-            <div class="hero-tile" aria-hidden="true" title="Hero preview"></div>
+            <!-- hero-tile removed to avoid showing the shark inside a tile (hero image remains in visual area) -->
             <p class="trust">99.9% uptime • Free SSL • cPanel access</p>
           </div>
           <div class="hero-visual" aria-hidden="true">
@@ -61,13 +60,9 @@
                 <img class="hero-img" src="/assets/images/shark-hero.jpg" alt="Shark wave background" loading="eager" />
             </picture>
             <!-- Foreground subject (transparent PNG or webp) sits above background. Add your transparent version as mega-hero-alpha.png or mega-hero-alpha.webp in assets/images/ -->
-            <picture class="hero-subject-picture" aria-hidden="true">
-              <!-- transparent subject not present; fallback to the site hero image until a transparent subject is provided -->
-              <img class="hero-subject" src="/assets/images/shark-hero.jpg" alt="" />
-            </picture>
+            <!-- hero-subject-picture removed to avoid duplicate tile uses of the shark image (hero visual keeps the image) -->
             <div class="hero-overlay" aria-hidden="true"></div>
-            <!-- Temporary visual tile inside hero-visual to make the hero image obvious immediately -->
-            <div class="hero-tile-visual" aria-hidden="true" title="Hero preview visual"></div>
+            <!-- hero-tile-visual removed so the hero image is not used inside tiles -->
           </div>
         </div>
       </section>

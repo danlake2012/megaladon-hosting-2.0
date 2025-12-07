@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>shark cursor</title>
+  <desc>Simple stylized shark silhouette for cursor/branding.</desc>
+  <defs>
+    <linearGradient id="g1" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#0EA5A5"/>
+    </linearGradient>
+    <filter id="f1" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+    <rect width="64" height="64" rx="8" fill="transparent"/>
+    <!-- shark body -->
+    <path d="M6 36c8-6 18-10 28-8 6 1 10 4 16 6 2 0 4-1 6-2 0 6-4 10-8 13-6 4-14 5-24 2-8-2-16-6-18-11z" fill="url(#g1)" filter="url(#f1)"/>
+    <!-- fin -->
+    <path d="M30 14c5 2 8 6 11 10-6-1-11-1-16 2 2-6 2-9 5-12z" fill="#ffffff" opacity="0.08"/>
+    <!-- eye -->
+    <circle cx="22" cy="30" r="2" fill="#041022" />
+    <!-- smile / mouth -->
+    <path d="M22 34c6 2 10 1 14-1" stroke="#041022" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.9"/>
+  </g>
+</svg>

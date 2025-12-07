@@ -49,22 +49,42 @@ echo "Deploy: $SRC -> $REMOTE (release: $RELEASE_DIR)"
 if [ "$DRY_RUN" = true ]; then
   echo "DRY RUN: will perform checks and rsync with --dry-run"
   ssh -o BatchMode=yes "${REMOTE%%:*}" "mkdir -p \"${REMOTE#*:}/releases\"" || true
-  rsync -av --delete --dry-run --exclude=.git "$SRC/" "$REMOTE:$RELEASE_DIR/"
+  rsync -av --delete --dry-run --exclude=.git "$SRC/" "${REMOTE%%:*}:${REMOTE#*:}/$RELEASE_DIR/"
   echo "DRY RUN complete"
   exit 0
 fi
 
 # Ensure remote releases dir exists
 echo "Creating remote releases dir and $RELEASE_DIR on target..."
-ssh "$REMOTE" "mkdir -p \"${REMOTE#*:}/releases\"; mkdir -p \"${REMOTE#*:}/$RELEASE_DIR\""
+# Use only the SSH host part when running remote shell commands
+REMOTE_HOST="${REMOTE%%:*}"
+REMOTE_PATH="${REMOTE#*:}"
+ssh "$REMOTE_HOST" "mkdir -p \"${REMOTE_PATH}/releases\"; mkdir -p \"${REMOTE_PATH}/$RELEASE_DIR\""
 
 # Rsync files
 echo "Uploading files with rsync..."
-rsync -az --delete --exclude=.git "$SRC/" "$REMOTE:$RELEASE_DIR/"
+# Safety: avoid accidental deletion of dynamic directories (WHMCS, billing, user uploads)
+# by default exclude commonly-sensitive folders from transfer when deploying from a static
+# source. You can override by setting DEPLOY_EXCLUDES (space-separated patterns).
+DEFAULT_EXCLUDES=(".git" "billing/***" "billing" "uploads/***" "uploads" ".env")
+if [ -n "${DEPLOY_EXCLUDES:-}" ]; then
+  EXCLUDES=(${DEPLOY_EXCLUDES})
+else
+  EXCLUDES=(${DEFAULT_EXCLUDES[@]})
+fi
+
+# Build rsync exclude flags
+RSYNC_EXCLUDE_FLAGS=()
+for e in "${EXCLUDES[@]}"; do
+  RSYNC_EXCLUDE_FLAGS+=("--exclude=$e")
+done
+
+rsync -az --delete "${RSYNC_EXCLUDE_FLAGS[@]}" "$SRC/" "${REMOTE_HOST}:${REMOTE_PATH}/$RELEASE_DIR/"
 
 echo "Ensuring permissions (remote) and switching symlink atomically..."
 # Use a safe ln -sfn to update symlink (modern POSIX-compliant behavior on most distros)
-ssh "$REMOTE" "cd '${REMOTE#*:}' && chmod -R g-rwX,o-rwX '$RELEASE_DIR' || true && ln -sfn '$RELEASE_DIR' current && echo 'current -> $RELEASE_DIR'"
+# Set release dir to 755 for dirs, 644 for files so Apache can serve them
+ssh "$REMOTE_HOST" "cd '${REMOTE_PATH}' && find '$RELEASE_DIR' -type d -exec chmod 755 {} + && find '$RELEASE_DIR' -type f -exec chmod 644 {} + && ln -sfn '$RELEASE_DIR' current && echo 'current -> $RELEASE_DIR'"
 
 echo "Deploy finished: $REMOTE -> current -> $RELEASE_DIR"
 echo "You can rollback by pointing current -> a previous releases/<ts> or remove old releases as needed."

@@ -1,5 +1,5 @@
 <a href="index.php" class="logo" title="{$_ADMINLANG.home.title}">
-    <img src="templates/{$template}/images/logo.png">
+    <img src="templates/{$template}/images/logo.svg" onerror="this.src='templates/{$template}/images/logo.png'" />
 </a>
 
 <ul class="left-nav">

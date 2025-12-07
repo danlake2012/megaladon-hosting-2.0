@@ -6,37 +6,30 @@ export default function Hero() {
     <section id="home" className="min-h-screen flex items-center bg-gradient-to-b from-[#020817] to-[#061023] py-12">
       <div className="w-full">
         <div className="max-w-7xl mx-auto px-6 py-10">
-          <div className="px-6 p-6 md:p-10 flex flex-col md:flex-row items-stretch gap-6">
+          <div className="flex flex-col gap-8">
 
-            <div className="flex-shrink-0 w-full md:w-[250px] flex items-center justify-center rounded-lg overflow-hidden border-2 border-cyan-400/40 bg-gradient-to-r from-black/0 via-black/5 to-black/0 p-4">
-              <div className="w-full h-44 md:w-[250px] md:h-[250px] flex items-center justify-center bg-black/0 rounded-xl overflow-hidden">
-                <img src="/assets/images/shark-hero.jpg" alt="Shark hero" className="w-auto max-w-full max-h-full object-contain" />
+            {/* Long hero tile with headline, subline, and CTAs */}
+            <div className="big-tile rounded-xl p-8 shadow-lg">
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="flex-1">
+                  <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-white">Start Your Website Today — Fast, Secure Veteran-Owned Hosting</h1>
+                  <p className="mt-3 text-white/80 max-w-3xl">Domain, Hosting, Email, SSL — Everything You Need in One Place.</p>
+                  <div className="mt-6 flex gap-3">
+                    <a href="#hosting-plans" onClick={(e)=>{ e.preventDefault(); document.querySelector('#hosting-plans')?.scrollIntoView({behavior:'smooth'}) }} className="btn btn-cta">Get Hosting</a>
+                    <a href="#kb" onClick={(e)=>{ e.preventDefault(); document.querySelector('#kb')?.scrollIntoView({behavior:'smooth'}) }} className="btn btn-ghost">Learn How To Start</a>
+                  </div>
+                </div>
+                <div className="hidden md:block w-64">
+                  <img src="/assets/images/shark-hero.jpg" alt="Shark hero" className="w-full h-auto rounded-md shadow-xl" style={{maxHeight: '200px', objectFit: 'cover'}} />
+                </div>
               </div>
             </div>
 
-            <div className="flex-1 flex flex-col justify-center text-white">
-              <div className="w-full mb-6">
-                <div className="p-8 rounded-xl bg-[#071018] border-2 border-cyan-400/30 shadow-inner">
-                  <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-white">Start Your Website Today — Fast, Secure Veteran-Owned Hosting</h1>
-                  <p className="mt-3 text-white/80 max-w-2xl">Domain registration, lightning-fast hosting, email, and free SSL — everything you need to get online quickly and reliably.</p>
-                </div>
-              </div>
-
-              <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-6 justify-items-center">
-                <Tile href="#home" title="Meet the Shark" icon={<span className="text-2xl">🦈</span>} floatIcon={<span className="text-xl">🦈</span>} square />
-                <Tile href="#domains" title="Domain Search" icon={<span className="text-2xl">🔎</span>} floatIcon={<span className="text-xl">🔎</span>} square />
-                <a href="#kb" className="tile block shark-cursor">
-                  <div className="p-4 rounded-xl bg-[#08101a] border-2 border-cyan-400/35 shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-3 flex items-center justify-center" style={{minHeight: '160px'}}>
-                    <div className="cube-scene">
-                      <div className="cube">
-                        <div className="cube-face front">Start</div>
-                        <div className="cube-face right">Build</div>
-                        <div className="cube-face top">Launch</div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
+            {/* Three tiles underneath */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <Tile href="#domains" title="Choose Your Domain" icon={<span className="text-3xl">✔️</span>} description="Find the perfect domain name for your website" cta="Search Domains" />
+              <Tile href="#hosting" title="Select Hosting Plan" icon={<span className="text-3xl">🚀</span>} description="Fast SSD hosting with free SSL included" cta="View Plans" />
+              <Tile href="#kb" title="Build Your Website" icon={<span className="text-3xl">🎨</span>} description="One-click WordPress and site builder tools" cta="Get Started" />
             </div>
 
           </div>

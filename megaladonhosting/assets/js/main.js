@@ -164,9 +164,8 @@ document.addEventListener('DOMContentLoaded', function(){
     if(heroImg.complete && heroImg.naturalWidth > 0){ heroImg.classList.add('visible'); return; }
     heroImg.addEventListener('load', function(){ heroImg.classList.add('visible'); });
     heroImg.addEventListener('error', function(){
-      // try webp fallback if the browser failed to load jpg
-      var alt = new Image(); alt.src = '/assets/images/shark-hero.jpg';
-      alt.onload = function(){ heroImg.src = alt.src; heroImg.classList.add('visible'); };
+      // hero image failed to load — do not fallback to show the shark inside tiles; leave blank or use CSS fallback
+      console.warn('Hero image failed to load; no shark fallback will be applied.');
     });
   })();
 
