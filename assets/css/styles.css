@@ -572,17 +572,55 @@ body {
     margin-bottom: 4rem;
 }
 
+.plans-section {
+    /* make section full-bleed while keeping an inner centered container */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: linear-gradient(180deg, rgba(6,18,32,0.95), rgba(4,12,22,0.95));
+    padding: 48px 0; /* vertical spacing for full-bleed area */
+}
+
+.plans-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 18px;
+}
+
 .plans-grid {
     display: grid;
-    /* Force five compact columns at wide sizes so all plans appear on a single row */
-    grid-template-columns: repeat(5, minmax(120px, 1fr));
-    gap: 1rem;
+    /* Force five compact columns at wide sizes so all plans appear on one row */
+    /* Use a slightly larger min for better readability on large screens */
+    grid-template-columns: repeat(5, minmax(140px, 1fr));
+    gap: clamp(10px, 1.5vw, 20px);
     margin-top: 2rem;
+    align-items: start;
+}
+
+/* Use a progressive reduction at breakpoints to keep five cards visible while staying legible */
+@media (max-width: 1500px) {
+    .plans-grid { grid-template-columns: repeat(5, minmax(120px, 1fr)); }
 }
 
 /* On smaller screens fall back to an auto-fit layout for comfortable stacking */
 @media (max-width: 1100px) {
-    .plans-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
+    .plans-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
+    .plans-section { padding: 36px 0; }
+}
+
+/* Tighter plan card style for compact layout */
+.plan {
+    padding: 14px;
+    border-radius: 12px;
+    min-height: 150px;
+}
+
+@media (min-width: 1200px) {
+    .plan .price { font-size: 20px; }
+    .plan h3 { font-size: 14px; }
 }
 
 .plan-card {
