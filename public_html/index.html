@@ -63,14 +63,16 @@
             .section-head h2{font-family:Orbitron,Inter;font-size:28px;margin:0}
             .lead{color:var(--muted);max-width:900px;margin-top:6px}
 
-            /* Force all 5 plans on a single row for large screens, but keep responsive fallback */
-            /* tighter grid so 5 plans fit on one row at wide sizes */
-            /* aggressive compact grid so 5 plans fit on one row at wide sizes */
-            .plans-grid{display:grid;grid-template-columns:repeat(5,minmax(120px,1fr));gap:10px;margin-top:12px;align-items:start}
+            /* Plans: full width section with inner constrained content */
+            .plans-section{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background:linear-gradient(180deg,rgba(6,18,32,0.95),rgba(4,12,22,0.95));padding:48px 0}
+            .plans-inner{max-width:var(--max);margin:0 auto;padding:0 18px}
 
-            /* On smaller screens fall back to auto-fit for comfortable stacking */
-            @media (max-width:1100px){.plans-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}}
-            .plan{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:2px solid rgba(255,255,255,0.03);padding:8px;border-radius:10px;--plan-accent:var(--cyan);position:relative;overflow:hidden;min-height:140px}
+            /* Force all 5 plans on a single row for large screens, but keep responsive fallback */
+            .plans-grid{display:grid;grid-template-columns:repeat(5,minmax(140px,1fr));gap:clamp(10px,1.5vw,20px);margin-top:2rem;align-items:start}
+
+            @media (max-width:1500px){.plans-grid{grid-template-columns:repeat(5,minmax(120px,1fr))}}
+            @media (max-width:1100px){.plans-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem}.plans-section{padding:36px 0}}
+            .plan{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:2px solid rgba(255,255,255,0.03);padding:14px;border-radius:12px;--plan-accent:var(--cyan);position:relative;overflow:hidden;min-height:150px}
             .plan .price{font-size:20px;color:var(--plan-accent);font-weight:800}
             .plan h3{font-size:15px;margin-bottom:6px}
             .plan::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--plan-accent),rgba(255,255,255,0.03));opacity:0.9;border-top-left-radius:10px;border-top-right-radius:10px}
