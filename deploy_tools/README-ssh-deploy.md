@@ -43,3 +43,11 @@ Rollback
 
 Notes
 - This script is intentionally small and opinionated. If HostGator doesn't allow `ln -s` for your account, we can adapt to copy or use an apache config rewrite instead.
+
+Deploy source note
+-------------------
+Be careful which *local source directory* you deploy from. Some repos include both `public/` (static site) and `public_html/` (deploy-ready copy) or other duplicate asset folders. The `ssh_rsync_deploy.sh` script uploads the directory you pass it — if that directory is missing images (e.g. `shark-hero.jpg`) the remote release will not contain them and the site will return 404s.
+
+Best practices:
+- Always verify that the directory you pass to the script contains `assets/images` and other required static files. Example: `./ssh_rsync_deploy.sh ./public_html user@host:/home/user/public_html`.
+- Keep a single deploy source (recommended: `public_html/`) and update source-of-truth files there to avoid duplication drift.

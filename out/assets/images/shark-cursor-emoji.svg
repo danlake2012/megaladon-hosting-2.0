@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- emoji-only cursor for modern browsers (transparent) -->
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <rect width="100%" height="100%" fill="none" />
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Segoe UI Emoji, Noto Color Emoji, Apple Color Emoji, 'EmojiOne Color', 'Twemoji Mozilla', sans-serif" font-size="40">🦈</text>
-</svg>
