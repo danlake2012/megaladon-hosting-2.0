@@ -65,9 +65,9 @@ ssh "$SSH_HOST" "mkdir -p \"${REMOTE_PATH}/releases\"; mkdir -p \"${REMOTE_PATH}
 echo "Uploading files with rsync..."
 rsync -az --delete --exclude=.git "$SRC/" "$SSH_HOST:$REMOTE_PATH/$RELEASE_DIR/"
 
-echo "Ensuring permissions (remote) and switching symlink atomically..."
-# Use a safe ln -sfn to update symlink (modern POSIX-compliant behavior on most distros)
-ssh "$SSH_HOST" "cd '${REMOTE_PATH}' && chmod -R g-rwX,o-rwX '$RELEASE_DIR' || true && ln -sfn '$RELEASE_DIR' current && echo 'current -> $RELEASE_DIR'"
+echo "Ensuring sensible permissions (remote) and switching symlink atomically..."
+# Make files world-readable (644) and directories searchable (755) so the webserver can serve them.
+ssh "$SSH_HOST" "cd '${REMOTE_PATH}' && find '$RELEASE_DIR' -type d -exec chmod 0755 {} + && find '$RELEASE_DIR' -type f -exec chmod 0644 {} + && ln -sfn '$RELEASE_DIR' current && echo 'current -> $RELEASE_DIR'"
 
 echo "Deploy finished: $REMOTE -> current -> $RELEASE_DIR"
 echo "You can rollback by pointing current -> a previous releases/<ts> or remove old releases as needed."
