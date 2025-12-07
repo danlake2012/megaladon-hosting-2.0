@@ -129,109 +129,109 @@
                 </div>
             </div>
         </nav>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Megaladon Hosting — Fast, Secure, and Human-Powered</title>
+        <meta name="description" content="Megaladon Hosting — veteran-owned, performance-first web hosting with expert human support. NVMe storage, free SSL, automatic backups and optimized WordPress hosting." />
 
-        <main class="page" id="home">
-            <!-- HERO block: big headline, title tile on right, shark left -->
-            <div class="hero">
-                <div class="hero-media">
-                    <img src="/assets/images/shark-hero.jpg" alt="Megaladon shark hero" />
-                    <div class="talk-bubbles" aria-hidden="true">
-                        <div class="bubble">🫧</div>
-                        <div class="bubble">💬</div>
-                        <div class="bubble">✨</div>
-                    </div>
-                </div>
+        <style>
+            /* Embedded single-file stylesheet — dark ocean / tile aesthetic */
+            :root{--bg:#040b10;--panel:#071018;--muted:#96a7b8;--text:#eaffff;--cyan:#05cbe0;--accent:#00f1d0;--radius:14px;--max:1180px}
+            html,body{height:100%}
+            body{margin:0;background:linear-gradient(180deg,#03060a 0,#051018 100%);font-family:Inter,system-ui,Arial;color:var(--text);-webkit-font-smoothing:antialiased}
 
-                <div class="title-tile">
-                    <div class="title-badge">VETERAN-OWNED • PERFORMANCE • TRUST</div>
-                    <h1 class="title-head">Megaladon Hosting — Fast, secure web hosting with human support</h1>
-                    <div class="title-sub">We remove the hosting headaches so you can focus on growth. Predictable performance, automatic backups, and real people who understand your site and your goals.</div>
+            /* NAVBAR - fixed so header remains visible while scrolling */
+            :root{--site-header-height:72px}
+            body{padding-top:var(--site-header-height)}
+            .navbar{position:fixed;top:0;left:0;right:0;height:var(--site-header-height);z-index:140;background:linear-gradient(180deg,rgba(1,3,6,0.18),rgba(2,6,10,0.6));border-bottom:1px solid rgba(6,182,212,0.06);backdrop-filter:blur(6px)}
+            .nav-inner{max-width:var(--max);margin:0 auto;padding:10px 18px;display:flex;align-items:center;gap:12px}
+            .brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:1px}
+            .brand-icon{width:40px;height:40px;border-radius:9px;background:linear-gradient(180deg,#00f1d0,#06b6d4);display:flex;align-items:center;justify-content:center;color:#011418;font-weight:900}
+            .nav-links{display:flex;gap:12px;margin-left:18px}
+            .nav-links a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
+            .nav-links a:hover{color:var(--text);background:rgba(255,255,255,0.02)}
+            .cta-row{margin-left:auto;display:flex;gap:10px}
+            .btn{padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:700;cursor:pointer}
+            .btn-primary{background:linear-gradient(90deg,var(--cyan),var(--accent));color:#051418;border:0}
+            .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
 
-                    <div style="margin-top:18px;color:var(--muted);font-size:14px;">Whether you’re launching a simple portfolio or running traffic-intensive production apps, our infrastructure is designed to scale without surprises. We combine tuned server stacks, NVMe storage, and sensible defaults to deliver consistent, measurable speed for your site visitors.</div>
+            /* page container */
+            .page{max-width:var(--max);margin:0 auto;padding:26px 18px}
 
-                    <div class="title-ctas" style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;">
-                        <a class="btn btn-primary" href="#hosting">View Plans</a>
-                        <a class="btn btn-ghost" href="#contact">Talk to Sales</a>
-                    </div>
+            /* HERO */
+            .hero{display:flex;gap:18px;align-items:stretch;padding:38px 0 10px}
+            .hero-media{flex:1 1 62%;position:relative;border-radius:12px;overflow:visible}
+            .hero-media img{max-width:100%;display:block;border-radius:10px}
+            .talk-bubbles{position:absolute;right:-10px;top:26%;display:flex;flex-direction:column;gap:10px;pointer-events:none}
+            .bubble{width:44px;height:44px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(0,235,192,0.08), rgba(0,235,192,0.03));border:1px solid rgba(0,235,192,0.14);color:#eafffb;font-size:18px}
 
-                    <div style="margin-top:18px;opacity:0.95;color:var(--muted);font-size:14px">
-                        <strong>Built for reliability:</strong>
-                        <ul style="margin:8px 0 0 17px;color:var(--muted)">
-                            <li>Transparent pricing and clear limits</li>
-                            <li>Free SSL + DDoS protection and daily backups</li>
-                            <li>Real, responsive human support 24/7/365</li>
-                        </ul>
-                    </div>
-                </div>
+            .title-tile{flex:0 0 480px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:2px solid rgba(6,182,212,0.14);padding:28px;border-radius:16px;display:flex;flex-direction:column;justify-content:center;min-height:420px}
+            .title-badge{display:inline-block;background:rgba(6,182,212,0.08);color:var(--cyan);padding:6px 12px;border-radius:999px;font-weight:700;font-size:13px;margin-bottom:14px}
+            .title-head{font-family:Orbitron,Inter;font-size:34px;margin:0;color:linear-gradient(90deg,#fff,#e6ffff);line-height:1.02}
+            .title-sub{color:var(--muted);margin-top:12px}
 
-            </div>
+            /* tiles */
+            .hero-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:22px}
+            .tile{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border-radius:12px;padding:16px;border:2px solid rgba(6,182,212,0.18);box-shadow:0 10px 40px rgba(0,0,0,0.45)}
+            .tile h3{margin:8px 0 6px}
+            /* small icon badges */
+            .icon-badge{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:9px;font-size:16px;margin-right:10px}
+            .icon-rocket{background:linear-gradient(180deg,#ff7a59,#ff4d9f);color:white}
+            .icon-lock{background:linear-gradient(180deg,#00c2ff,#06b6d4);color:white}
+            .icon-support{background:linear-gradient(180deg,#8b5cf6,#ec4899);color:white}
+            .icon-panel{background:linear-gradient(180deg,#34d399,#06b6d4);color:#021418}
 
-            <!-- Hero tiles / value props -->
-            <div style="margin-top:12px">
-                <div class="hero-tiles">
-                    <div class="tile">
-                        <div style="font-size:18px;font-weight:700"><span class="icon-badge icon-rocket" aria-hidden="true">🚀</span>Performance tuned like a race motor</div>
-                        <p>We tune every layer — PHP-FPM, HTTP/2, edge caching and NVMe disk — to remove bottlenecks and boost real user performance. That matters for conversion, retention, and search rankings.</p>
-                        <p style="color:var(--muted)">We keep metrics visible and measurable. No magic black boxes — we show you what we measure and how it’s improving over time.</p>
-                    </div>
+            /* pros/cons removed — plans are displayed in a compact, scannable format */
+            .tile p{color:var(--muted);font-size:14px}
+            .tile:hover{transform:translateY(-6px);box-shadow:0 18px 70px rgba(0,0,0,0.62);border-color:rgba(6,182,212,0.48)}
 
-                    <div class="tile">
-                        <div style="font-size:18px;font-weight:700"><span class="icon-badge icon-lock" aria-hidden="true">🔒</span>Security done right — not annoying</div>
-                        <p>Protecting your site shouldn’t be complex. Free SSL, automated security updates, malware scanning, and network-level protections are included. When we see something suspicious, we act — and we’ll tell you why and what we fixed.</p>
-                        <p style="color:var(--muted)">The goal is secure defaults and honest explanations — not endless, confusing alerts you have to decipher.</p>
-                    </div>
+            /* sections */
+            section{padding:56px 0;border-top:1px solid rgba(255,255,255,0.02)}
+            .section-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
+            .section-head h2{font-family:Orbitron,Inter;font-size:28px;margin:0}
+            .lead{color:var(--muted);max-width:900px;margin-top:6px}
 
-                    <div class="tile">
-                        <div style="font-size:18px;font-weight:700"><span class="icon-badge icon-support" aria-hidden="true">💬</span>Human-first support with real insights</div>
-                        <p>Support that reads like it was written by a human instead of a script. Our team provides actionable answers that solve problems quickly. We’re available by ticket and email — and we’re known for clear follow-through.</p>
-                        <p style="color:var(--muted)">If needed, we'll use our migration tools and hands-on help to transfer your site with minimal downtime.</p>
-                    </div>
+            /* Plans: full width section with inner constrained content */
+            .plans-section{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background-color:#06101a;background-image:linear-gradient(180deg,rgba(6,18,32,0.98),rgba(3,9,15,0.96)),linear-gradient(135deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.00) 40%);box-shadow:inset 0 40px 60px rgba(0,0,0,0.35);padding:64px 0}
+            .plans-inner{max-width:var(--max);margin:0 auto;padding:0 18px}
 
-                    <div class="tile">
-                        <div style="font-size:18px;font-weight:700"><span class="icon-badge icon-panel" aria-hidden="true">🧩</span>Flexible control panels</div>
-                        <p>Pick the control panel you prefer — cPanel for compatibility or CyberPanel for speed and modern stacks. We’ll work with your stack rather than forcing you into one choice.</p>
-                        <p style="color:var(--muted)">Control panels come with one-click managers, SSL and helpful guides so you own the process.</p>
-                    </div>
-                </div>
+            /* Force all 5 plans on a single row for large screens, but keep responsive fallback */
+            .plans-grid{display:grid;grid-template-columns:repeat(5,minmax(120px,1fr));gap:clamp(10px,1.2vw,20px);margin-top:1.25rem;align-items:start}
 
-                <div style="margin-top:18px;color:var(--muted);font-size:15px;line-height:1.6">
-                    Megaladon Hosting is designed for teams and individuals who value stability, clarity, and tangible performance improvements. Our infrastructure and processes remove the guesswork so you can ship faster and sleep easier knowing your site is backed by experts who care.
-                </div>
-            </div>
+            @media (max-width:1500px){.plans-grid{grid-template-columns:repeat(5,minmax(120px,1fr))}}
+            @media (max-width:1100px){.plans-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem}.plans-section{padding:36px 0}}
+            .plan{background-image:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.005));border:2px solid rgba(255,255,255,0.03);padding:14px;border-radius:12px;--plan-accent:var(--cyan);position:relative;overflow:hidden;min-height:150px;box-shadow:0 8px 30px rgba(0,0,0,0.5)}
+            .plan .price{font-size:20px;color:var(--plan-accent);font-weight:800}
+            .plan h3{font-size:15px;margin-bottom:6px}
+            .plans-inner .section-head { display:flex; justify-content:space-between; gap:20px; align-items:flex-start; margin-bottom: 12px; }
+            .plans-inner .section-head h2 { margin: 0; }
+            .plan::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--plan-accent),rgba(255,255,255,0.03));opacity:0.9;border-top-left-radius:10px;border-top-right-radius:10px}
+            /* per-plan accent overrides */
+            .plan--pup{--plan-accent:#7ee787}
+            .plan--reef{--plan-accent:#05cbe0}
+            .plan--tiger{--plan-accent:#ffb86b}
+            .plan--hammer{--plan-accent:#a78bfa}
+            .plan--mega{--plan-accent:#ff6b6b}
+            .plan ul{color:var(--muted)}
 
-            <!-- HOSTING PLANS SECTION (expanded) -->
-            <section id="hosting" class="plans-section">
-                <div class="plans-inner">
-                    <div class="section-head">
-                    <div>
-                        <h2>Hosting Plans — Clear, powerful, and built to scale</h2>
-                        <p class="lead">We offer a set of thoughtfully designed plans that make it easy to pick the right option for your site. Each plan includes fast NVMe storage, SSL, backups, and our human-first support — pick what fits and upgrade as you grow.</p>
-                    </div>
-                </div>
+            .domains-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:12px}
+            .domain-card{padding:14px;border-radius:10px;border:2px solid rgba(6,182,212,0.14);text-align:center;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)}
 
-                    <div class="tile">
-                    <!-- Carousel wrapper: shows 5 slides per view on wide screens, swipe/scroll on small screens -->
-                    <div class="plans-carousel" data-carousel role="region" aria-roledescription="carousel" aria-label="Hosting plans carousel">
-                        <button class="carousel-btn carousel-prev" aria-label="Previous plans">‹</button>
-                        <div class="carousel-viewport">
-                            <div class="carousel-track">
-                    <div class="plan plan--pup">
-                        <div style="font-weight:900;letter-spacing:1px">Pup Plan</div>
-                        <div class="price">$3.99/mo</div>
-                        <p style="margin-top:6px;color:var(--muted)">Starter plan for personal sites and portfolios.</p>
-                        <ul>
-                            <li>1 Website • 20 GB NVMe</li>
-                            <li>Free SSL • Daily Backups</li>
-                            <li>One‑click WordPress • cPanel</li>
-                            <li>Community & email support</li>
-                        </ul>
-                        <a class="btn btn-primary" href="#contact">Get Pup Plan</a>
-                        <!-- pros/cons removed to keep plans focused & scannable -->
-                            </div><!-- /.carousel-track -->
-                        </div><!-- /.carousel-viewport -->
-                        <button class="carousel-btn carousel-next" aria-label="Next plans">›</button>
-                        <div class="carousel-dots" aria-hidden="false"></div>
-                    </div><!-- /.plans-carousel -->
+            .kb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:18px}
+            .kb-card{padding:18px;border-radius:12px;border:2px solid rgba(255,255,255,0.03);background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)}
+
+            .support-grid{display:grid;grid-template-columns:2fr 320px;gap:18px}
+            .contact-form{padding:18px;border-radius:12px;border:2px solid rgba(255,255,255,0.03)}
+            input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text);margin-bottom:8px}
+
+            footer{padding:30px 0;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,0.02);margin-top:40px}
+
+            @media (max-width:1000px){.hero{flex-direction:column-reverse}.title-tile{width:100%;min-height:auto;padding:18px}.support-grid{grid-template-columns:1fr}}
+            @media (max-width:600px){.nav-links{display:none}.talk-bubbles{display:none}}
+        </style>
 
                     <div class="plan plan--reef">
                         <div style="font-weight:900;letter-spacing:1px">ReefShark</div>
