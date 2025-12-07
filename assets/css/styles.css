@@ -574,9 +574,15 @@ body {
 
 .plans-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+    /* Force five compact columns at wide sizes so all plans appear on a single row */
+    grid-template-columns: repeat(5, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* On smaller screens fall back to an auto-fit layout for comfortable stacking */
+@media (max-width: 1100px) {
+    .plans-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
 }
 
 .plan-card {
