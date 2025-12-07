@@ -5,3 +5,10 @@ dist/
 .DS_Store
 /.sftp.json
 .deploy_keys/
+
+# Local environment — do not commit
+.env.local
+
+# Ignore build output and generated static export
+.next/
+out/
