@@ -39,6 +39,96 @@
     }catch(e){/* fail gracefully */}
   })();
 
+  /* ===== Plans carousel ===== */
+  (function plansCarousel(){
+    function initCarousel(root){
+      var track = root.querySelector('.carousel-track');
+      var viewport = root.querySelector('.carousel-viewport');
+      var slides = Array.prototype.slice.call(track.children);
+      var prev = root.querySelector('.carousel-prev');
+      var next = root.querySelector('.carousel-next');
+      var dotsWrap = root.querySelector('.carousel-dots');
+      var index = 0;
+      var slideW = 0;
+
+      function getGap(){
+        try{ var cs = getComputedStyle(track); return parseFloat(cs.gap) || 16; }catch(e){return 16}
+      }
+
+      function slidesToShowFor(width){
+        if(width >= 1500) return 5;
+        if(width >= 1100) return 5;
+        if(width >= 900) return 4;
+        if(width >= 700) return 3;
+        if(width >= 480) return 2;
+        return 1;
+      }
+
+      function updateSizes(){
+        var vpw = Math.max(1, viewport.clientWidth);
+        var show = Math.min(slides.length, slidesToShowFor(window.innerWidth));
+        var gap = getGap();
+        slideW = Math.floor((vpw - (show - 1) * gap) / show);
+        slides.forEach(function(s){ s.style.minWidth = slideW + 'px'; });
+
+        // recompute max index and adjust index if needed
+        var maxIndex = Math.max(0, slides.length - show);
+        if(index > maxIndex) index = maxIndex;
+        goTo(index, true);
+
+        // show/hide controls
+        if(slides.length <= show){ root.setAttribute('data-all-fit','true'); } else { root.removeAttribute('data-all-fit'); }
+        renderDots(maxIndex + 1);
+      }
+
+      function goTo(i, snap){
+        var gap = getGap();
+        var show = Math.min(slides.length, slidesToShowFor(window.innerWidth));
+        var maxIndex = Math.max(0, slides.length - show);
+        index = Math.max(0, Math.min(i, maxIndex));
+        var offset = (slideW + gap) * index;
+        track.style.transform = 'translateX(-' + offset + 'px)';
+        // update active dot
+        if(dotsWrap){ Array.prototype.slice.call(dotsWrap.children).forEach(function(b,j){ b.classList.toggle('active', j === index); }); }
+        if(!snap){ /* animation uses CSS transition */ }
+      }
+
+      function renderDots(total){
+        if(!dotsWrap) return;
+        dotsWrap.innerHTML = '';
+        for(var i=0;i<total;i++){
+          var btn = document.createElement('button');
+          btn.setAttribute('aria-label','Go to page ' + (i+1));
+          (function(ii){ btn.addEventListener('click', function(){ goTo(ii); }); })(i);
+          if(i===index) btn.classList.add('active');
+          dotsWrap.appendChild(btn);
+        }
+      }
+
+      // prev/next
+      if(prev){ prev.addEventListener('click', function(){ goTo(index-1); }); }
+      if(next){ next.addEventListener('click', function(){ goTo(index+1); }); }
+
+      // keyboard left/right
+      root.addEventListener('keydown', function(e){ if(e.key === 'ArrowLeft'){ e.preventDefault(); goTo(index-1); } else if(e.key==='ArrowRight'){ e.preventDefault(); goTo(index+1); }});
+
+      // touch swipe
+      var startX=0, deltaX=0, dragging=false;
+      track.addEventListener('pointerdown', function(e){ dragging=true; startX = e.clientX; track.style.transition = 'none'; });
+      window.addEventListener('pointermove', function(e){ if(!dragging) return; deltaX = e.clientX - startX; track.style.transform = 'translateX(' + ( - (index*(slideW + getGap())) + deltaX ) + 'px)'; });
+      window.addEventListener('pointerup', function(){ if(!dragging) return; dragging=false; track.style.transition = ''; if(Math.abs(deltaX) > 60){ if(deltaX < 0) goTo(index+1); else goTo(index-1); } else { goTo(index); } deltaX = 0; });
+
+      var resizeTimer;
+      function onResize(){ clearTimeout(resizeTimer); resizeTimer = setTimeout(updateSizes, 90); }
+      window.addEventListener('resize', onResize);
+
+      updateSizes();
+    }
+
+    // init all carousels on the page
+    document.querySelectorAll('[data-carousel]').forEach(function(node){ try{ node.setAttribute('tabindex', '0'); initCarousel(node); }catch(e){ console.error('carousel init error', e); } });
+  })();
+
   // Domain search: redirect using the configured provider/template (WHMCS, HostGator, or custom)
   // support both homepage search form (#domainForm) and top-of-domains page (#domainFormTop)
   Array.prototype.slice.call(document.querySelectorAll('#domainForm, #domainFormTop')).forEach(function(form){

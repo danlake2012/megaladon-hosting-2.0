@@ -603,6 +603,27 @@ body {
     align-items: start;
 }
 
+/* Carousel specific styles */
+.plans-carousel{display:flex;align-items:center;position:relative}
+.carousel-viewport{overflow:hidden;width:100%}
+.carousel-track{display:flex;align-items:stretch;gap:1rem;transition:transform .36s cubic-bezier(.22,.98,.38,1);will-change:transform;padding-bottom:6px}
+.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:40;border-radius:999px;border:0;background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));width:42px;height:42px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text);font-size:22px;box-shadow:0 6px 18px rgba(0,0,0,0.4)}
+.carousel-prev{left:12px}
+.carousel-next{right:12px}
+.carousel-btn:focus{outline:2px solid rgba(5,199,230,0.5);outline-offset:3px}
+.carousel-dots{display:flex;gap:8px;justify-content:center;margin-top:14px}
+.carousel-dots button{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.12);border:0;cursor:pointer}
+.carousel-dots button.active{background:var(--cyan)}
+
+/* Slide sizing: slides are min-width controlled by JS, but default flexible fallback */
+.carousel-track .plan{flex:0 0 auto}
+
+/* Remove prev/next if all slides fit */
+.plans-carousel[data-all-fit="true"] .carousel-btn{display:none}
+
+/* small-screen tweaks for buttons & dots */
+@media (max-width:700px){.carousel-btn{width:36px;height:36px;font-size:18px}.carousel-dots{margin-top:10px}}
+
 /* Use a progressive reduction at breakpoints to keep five cards visible while staying legible */
 @media (max-width: 1500px) {
     .plans-grid { grid-template-columns: repeat(5, minmax(120px, 1fr)); }

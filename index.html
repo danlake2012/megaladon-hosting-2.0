@@ -210,7 +210,11 @@
                 </div>
 
                     <div class="tile">
-                    <div class="plans-grid">
+                    <!-- Carousel wrapper: shows 5 slides per view on wide screens, swipe/scroll on small screens -->
+                    <div class="plans-carousel" data-carousel role="region" aria-roledescription="carousel" aria-label="Hosting plans carousel">
+                        <button class="carousel-btn carousel-prev" aria-label="Previous plans">‹</button>
+                        <div class="carousel-viewport">
+                            <div class="carousel-track">
                     <div class="plan plan--pup">
                         <div style="font-weight:900;letter-spacing:1px">Pup Plan</div>
                         <div class="price">$3.99/mo</div>
@@ -223,7 +227,11 @@
                         </ul>
                         <a class="btn btn-primary" href="#contact">Get Pup Plan</a>
                         <!-- pros/cons removed to keep plans focused & scannable -->
-                    </div>
+                            </div><!-- /.carousel-track -->
+                        </div><!-- /.carousel-viewport -->
+                        <button class="carousel-btn carousel-next" aria-label="Next plans">›</button>
+                        <div class="carousel-dots" aria-hidden="false"></div>
+                    </div><!-- /.plans-carousel -->
 
                     <div class="plan plan--reef">
                         <div style="font-weight:900;letter-spacing:1px">ReefShark</div>
@@ -480,6 +488,8 @@
             </footer>
 
         </main>
+
+        <script src="/assets/js/main.js" defer></script>
 
         <script>
             // Smooth scrolling for anchor links
