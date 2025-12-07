@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="240" height="64" viewBox="0 0 240 64">
-  <rect width="240" height="64" rx="10" fill="#051827" />
-  <g transform="translate(12,12)">
-    <path d="M10 28 C20 18 36 12 54 12 C72 12 88 18 104 28 C120 38 136 42 152 32" stroke="#06B6D4" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="68" y="22" font-family="Poppins, sans-serif" font-size="14" fill="#E5E7EB" font-weight="700">Megaladon</text>
-    <text x="68" y="38" font-family="Inter, sans-serif" font-size="10" fill="#9CA3AF">Hosting</text>
-  </g>
-</svg>

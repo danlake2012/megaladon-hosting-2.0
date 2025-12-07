@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- small placeholder saved with .png extension so server responds 200 for requests -->
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="80" viewBox="0 0 400 80">
-  <rect width="100%" height="100%" fill="#0b6efd" rx="8"/>
-  <text x="20" y="52" font-family="Segoe UI, Roboto, Arial, sans-serif" font-size="36" fill="white">Megaladon</text>
-</svg>
