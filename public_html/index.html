@@ -64,17 +64,19 @@
             .lead{color:var(--muted);max-width:900px;margin-top:6px}
 
             /* Plans: full width section with inner constrained content */
-            .plans-section{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background:linear-gradient(180deg,rgba(6,18,32,0.95),rgba(4,12,22,0.95));padding:48px 0}
+            .plans-section{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background-color:#06101a;background-image:linear-gradient(180deg,rgba(6,18,32,0.98),rgba(3,9,15,0.96)),linear-gradient(135deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.00) 40%);box-shadow:inset 0 40px 60px rgba(0,0,0,0.35);padding:64px 0}
             .plans-inner{max-width:var(--max);margin:0 auto;padding:0 18px}
 
             /* Force all 5 plans on a single row for large screens, but keep responsive fallback */
-            .plans-grid{display:grid;grid-template-columns:repeat(5,minmax(140px,1fr));gap:clamp(10px,1.5vw,20px);margin-top:2rem;align-items:start}
+            .plans-grid{display:grid;grid-template-columns:repeat(5,minmax(120px,1fr));gap:clamp(10px,1.2vw,20px);margin-top:1.25rem;align-items:start}
 
             @media (max-width:1500px){.plans-grid{grid-template-columns:repeat(5,minmax(120px,1fr))}}
             @media (max-width:1100px){.plans-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem}.plans-section{padding:36px 0}}
-            .plan{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:2px solid rgba(255,255,255,0.03);padding:14px;border-radius:12px;--plan-accent:var(--cyan);position:relative;overflow:hidden;min-height:150px}
+            .plan{background-image:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.005));border:2px solid rgba(255,255,255,0.03);padding:14px;border-radius:12px;--plan-accent:var(--cyan);position:relative;overflow:hidden;min-height:150px;box-shadow:0 8px 30px rgba(0,0,0,0.5)}
             .plan .price{font-size:20px;color:var(--plan-accent);font-weight:800}
             .plan h3{font-size:15px;margin-bottom:6px}
+            .plans-inner .section-head { display:flex; justify-content:space-between; gap:20px; align-items:flex-start; margin-bottom: 12px; }
+            .plans-inner .section-head h2 { margin: 0; }
             .plan::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--plan-accent),rgba(255,255,255,0.03));opacity:0.9;border-top-left-radius:10px;border-top-right-radius:10px}
             /* per-plan accent overrides */
             .plan--pup{--plan-accent:#7ee787}
@@ -198,14 +200,15 @@
 
             <!-- HOSTING PLANS SECTION (expanded) -->
             <section id="hosting" class="plans-section">
-                <div class="section-head">
+                <div class="plans-inner">
+                    <div class="section-head">
                     <div>
                         <h2>Hosting Plans — Clear, powerful, and built to scale</h2>
                         <p class="lead">We offer a set of thoughtfully designed plans that make it easy to pick the right option for your site. Each plan includes fast NVMe storage, SSL, backups, and our human-first support — pick what fits and upgrade as you grow.</p>
                     </div>
                 </div>
 
-                <div class="tile plans-inner">
+                    <div class="tile">
                     <div class="plans-grid">
                     <div class="plan plan--pup">
                         <div style="font-weight:900;letter-spacing:1px">Pup Plan</div>
@@ -281,7 +284,8 @@
             </div>
         </div>
 
-                <div class="tile plans-inner" style="margin-top:18px;color:var(--muted);line-height:1.7">
+                        <div class="tile" style="margin-top:18px;color:var(--muted);line-height:1.7">
+                    </div>
                     Our plans are deliberately simple. We avoid “gotchas” and expose limits clearly. This means you can plan growth without surprise bandwidth throttles or account lockouts. If your application needs special resources, our Sales and Support teams will work with you to architect a tailored solution.
                 </div>
             </section>

@@ -573,15 +573,18 @@ body {
 }
 
 .plans-section {
-    /* make section full-bleed while keeping an inner centered container */
+    /* full-bleed area; inner content stays centered */
     width: 100vw;
     position: relative;
     left: 50%;
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    background: linear-gradient(180deg, rgba(6,18,32,0.95), rgba(4,12,22,0.95));
-    padding: 48px 0; /* vertical spacing for full-bleed area */
+    /* darker, layered background with a subtle diagonal shine for drama */
+    background-color: #06101a;
+    background-image: linear-gradient(180deg, rgba(6,18,32,0.98), rgba(3,9,15,0.96)), linear-gradient(135deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.00) 40%);
+    box-shadow: inset 0 40px 60px rgba(0,0,0,0.35);
+    padding: 64px 0; /* bigger vertical spacing for emphasis */
 }
 
 .plans-inner {
@@ -593,10 +596,10 @@ body {
 .plans-grid {
     display: grid;
     /* Force five compact columns at wide sizes so all plans appear on one row */
-    /* Use a slightly larger min for better readability on large screens */
-    grid-template-columns: repeat(5, minmax(140px, 1fr));
-    gap: clamp(10px, 1.5vw, 20px);
-    margin-top: 2rem;
+    /* Slightly smaller min to improve fit in narrower wide viewports */
+    grid-template-columns: repeat(5, minmax(120px, 1fr));
+    gap: clamp(10px, 1.2vw, 20px);
+    margin-top: 1.25rem;
     align-items: start;
 }
 
@@ -616,12 +619,19 @@ body {
     padding: 14px;
     border-radius: 12px;
     min-height: 150px;
+    /* subtle elevated card look for the full-bleed background */
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.005));
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
 }
 
 @media (min-width: 1200px) {
-    .plan .price { font-size: 20px; }
-    .plan h3 { font-size: 14px; }
+    .plan .price { font-size: 22px; }
+    .plan h3 { font-size: 15px; }
 }
+
+/* Ensure the section header inside plans-inner lines up with centered content */
+.plans-inner .section-head { display:flex; justify-content:space-between; gap:20px; align-items:flex-start; margin-bottom: 12px; }
+.plans-inner .section-head h2 { margin: 0; }
 
 .plan-card {
     background: rgba(10, 22, 40, 0.8);
