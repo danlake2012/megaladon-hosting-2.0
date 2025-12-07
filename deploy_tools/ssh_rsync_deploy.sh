@@ -56,15 +56,18 @@ fi
 
 # Ensure remote releases dir exists
 echo "Creating remote releases dir and $RELEASE_DIR on target..."
-ssh "$REMOTE" "mkdir -p \"${REMOTE#*:}/releases\"; mkdir -p \"${REMOTE#*:}/$RELEASE_DIR\""
+# split REMOTE into SSH_HOST and REMOTE_PATH so "ssh user@host /some/path" is used correctly
+SSH_HOST="${REMOTE%%:*}"
+REMOTE_PATH="${REMOTE#*:}"
+ssh "$SSH_HOST" "mkdir -p \"${REMOTE_PATH}/releases\"; mkdir -p \"${REMOTE_PATH}/$RELEASE_DIR\""
 
 # Rsync files
 echo "Uploading files with rsync..."
-rsync -az --delete --exclude=.git "$SRC/" "$REMOTE:$RELEASE_DIR/"
+rsync -az --delete --exclude=.git "$SRC/" "$SSH_HOST:$REMOTE_PATH/$RELEASE_DIR/"
 
 echo "Ensuring permissions (remote) and switching symlink atomically..."
 # Use a safe ln -sfn to update symlink (modern POSIX-compliant behavior on most distros)
-ssh "$REMOTE" "cd '${REMOTE#*:}' && chmod -R g-rwX,o-rwX '$RELEASE_DIR' || true && ln -sfn '$RELEASE_DIR' current && echo 'current -> $RELEASE_DIR'"
+ssh "$SSH_HOST" "cd '${REMOTE_PATH}' && chmod -R g-rwX,o-rwX '$RELEASE_DIR' || true && ln -sfn '$RELEASE_DIR' current && echo 'current -> $RELEASE_DIR'"
 
 echo "Deploy finished: $REMOTE -> current -> $RELEASE_DIR"
 echo "You can rollback by pointing current -> a previous releases/<ts> or remove old releases as needed."
