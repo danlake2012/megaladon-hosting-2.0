@@ -1,14 +1,300 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Megaladon — Futuristic Tile-First Hosting</title>
+    <meta name="description" content="Futuristic tile-first hosting for teams — NVMe performance, atomic deploys, edge delivery and human ops. All content lives inside tiles for clarity and impact." />
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+
+  <body class="tile-first futuristic">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">
+          <img src="/assets/images/logo.svg" alt="Megaladon logo" class="brand-logo" />
+          <strong>Megaladon</strong>
+        </a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#devflow">Developer flow</a>
+          <a href="#plans">Plans</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact" class="btn btn-ghost">Contact</a>
+          <a href="#" class="btn btn-primary">Start Pilot</a>
+        </nav>
+
+        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+
+    <main id="site-main">
+
+      <!-- HERO TILE -->
+      <section id="home" class="tile hero-tile">
+        <div class="container hero-inner">
+          <div class="hero-left">
+            <div class="badge">Veteran-led · Performance · Predictable</div>
+            <h1 class="hero-heading">Ship faster. Sleep easier. Welcome to futuristic, tile-first hosting. ⚡️🦈</h1>
+            <p class="lead">Megaladon brings NVMe speed, atomic deploys, edge acceleration and human ops into one small, thoughtful platform. Every decision on this page lives inside a tile so you can scan quickly, feel the rhythm, and read long-form detail when you want to — no clutter, just signal.</p>
+
+            <div class="hero-actions">
+              <a href="#plans" class="btn btn-primary large">Start a Pilot — Free Audit</a>
+              <a href="#contact" class="btn btn-ghost">Talk to an engineer</a>
+            </div>
+
+            <div class="dev-tiles" style="margin-top:18px">
+              <div class="dev-tile">Deploy from Git 🔁</div>
+              <div class="dev-tile">Live previews 👀</div>
+              <div class="dev-tile">Fast NVMe storage ⚡️</div>
+              <div class="dev-tile">99.99% SLA (optional) 🛡️</div>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <img src="/assets/images/mega-hero.svg" alt="Megaladon futuristic hero" class="hero-visual" />
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUST & SOCIAL PROOF TILE -->
+      <section class="tile" aria-label="trust-strip">
+        <div class="container trust-strip">
+          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+            <div style="display:flex;align-items:center;gap:10px">
+              <strong style="color:var(--text);">Trusted by</strong>
+              <img src="/assets/images/logo.svg" alt="Customer" />
+              <img src="/assets/images/logo.svg" alt="Customer" />
+              <img src="/assets/images/logo.svg" alt="Customer" />
+            </div>
+            <div style="margin-left:auto;color:var(--muted);font-weight:700">Millions of page views served monthly • 24/7 human ops</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES GRID (tile cards) -->
+      <section id="features" class="tile grid tiles-4" aria-label="features">
+        <article class="tile-card tile-accent">
+          <div style="display:flex;gap:12px;align-items:start">
+            <div style="font-size:28px">🚀</div>
+            <div>
+              <h2>Blazing performance</h2>
+              <p>NVMe-first storage, tuned runtimes and smart caching combined with edge delivery to keep latency low — for everyone, everywhere. Real page speed shows up as better conversions and happier users.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile-card tile-contrast">
+          <div style="display:flex;gap:12px;align-items:start">
+            <div style="font-size:28px">🛡️</div>
+            <div>
+              <h2>Security & reliability</h2>
+              <p>Automatic SSL, WAF options, DDoS protection, and routine patching. We build to contain problems and remove noisy, repetitive work from your team’s backlog.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile-card tile-rose">
+          <div style="display:flex;gap:12px;align-items:start">
+            <div style="font-size:28px">⚙️</div>
+            <div>
+              <h2>Atomic deploys & staging</h2>
+              <p>Deploys are atomic and reversible. Preview environments for every PR mean you can test features in live-like staging before announcing to the world.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile-card tile-cyan">
+          <div style="display:flex;gap:12px;align-items:start">
+            <div style="font-size:28px">🤝</div>
+            <div>
+              <h2>Human ops & migration help</h2>
+              <p>Real engineers on hand for migrations, runbooks, and escalations. We don’t hide behind a maze of docs — we help you and your team every step of the way.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- LONG NARRATIVE TILE (core 1200-1500 words split across tiles) -->
+      <section class="tile tile-long" aria-label="core-narrative">
+        <div class="container">
+          <h2 class="accent-underline">A future-friendly platform — built to make engineering delightful ✨</h2>
+
+          <p>When we talk about being future-friendly, we mean three practical things: predictable performance, low cognitive load for teams, and infrastructure that adapts as your product grows. The digital world rewards speed, clarity and the ability to recover quickly when things go wrong — and those are the problems Megaladon exists to solve.</p>
+
+          <h3>Performance as a currency</h3>
+          <p>Performance is not a vanity metric. It affects SEO, conversion, user happiness and the ability to scale. We prioritize fast storage (NVMe), efficient networking, and edge-level caching so that the smallest interactions — login, search, checkout — feel instant. You don't need to implement impossible engineering projects to get performance; you need defaults that don't get in the way and observability that helps you measure real impact.</p>
+
+          <h3>Predictability & cost clarity</h3>
+          <p>Unexpected bills are a product team's worst enemy. Predictable instance types, consistent IO profiles, and clear pricing mean finance and engineering can make the same plan without arguing about surprises. We also provide tooling to show cost over time, and simple tools to allocate budgets per project so you understand what growth actually costs.</p>
+
+          <h3>Developer ergonomics</h3>
+          <p>Developer happiness scales into product velocity. We build ergonomics into the platform: Git-native deploys, preview URLs for every change, and simple local-to-prod parity. When developers can iterate and validate in minutes — not hours — teams ship more and revisit less.</p>
+
+          <h3>Resilience that adds confidence</h3>
+          <p>Resilience isn't just redundancy; it's about containment and quick recovery. We favor architectures that minimize blast radius (small, isolated instances, smart caching) and maximize rollback speed. Our restore tooling and tested backups make mistakes less scary and faster to fix.</p>
+
+          <h3>Human-in-the-loop</h3>
+          <p>Automation is powerful, but humans add context. We provide automated operations for the common cases and experienced engineers to handle the exceptional cases. If your production is complex, we’ll pair with your team to map out a migration and future-state plan so you move on a schedule that matches your business needs, not ours.</p>
+
+          <p>Below you'll find pragmatic tiles for onboarding, migration, security, and cost — all written to give direction and get things done today.</p>
+        </div>
+      </section>
+
+      <!-- OPERATIONAL TILES: onboarding / migrate / scale (each tile with emojis & actionables) -->
+      <section class="tile grid tiles-3" aria-label="operations">
+        <article class="tile-card tile-accent">
+          <div style="display:flex;gap:10px;align-items:center"><div style="font-size:22px">📦</div><h3>Onboard in hours — not days</h3></div>
+          <p>Simple migration checklists, one-click app imports, and a hands-on onboarding engineer for production migrations. We bring all the pieces together — databases, DNS, and SSL — so you don't have to.</p>
+          <ul style="color:var(--muted)">
+            <li>Quick importers for WordPress, static sites, and common frameworks</li>
+            <li>Staging previews & smoke tests before cutover</li>
+            <li>Optional migration assistance from our team</li>
+          </ul>
+        </article>
+
+        <article class="tile-card tile-rose">
+          <div style="display:flex;gap:10px;align-items:center"><div style="font-size:22px">🔁</div><h3>Safe staged migrations</h3></div>
+          <p>Move to production when you're sure. Parallel staging, feature flags, and canary rollouts remove surprises. For critical apps we can mirror traffic and validate the experience before updating DNS.</p>
+        </article>
+
+        <article class="tile-card tile-cyan">
+          <div style="display:flex;gap:10px;align-items:center"><div style="font-size:22px">📈</div><h3>Scale intentionally</h3></div>
+          <p>Scaling is a strategic choice — do you scale horizontally, partition your data, or add edge caching? We help you pick the right axis for growth and provide tooling to measure what actually matters.</p>
+        </article>
+      </section>
+
+      <!-- PRICING TILE (clean, colorful, tile-only) -->
+      <section id="plans" class="tile" aria-label="pricing">
+        <div class="container">
+          <h2 class="accent-underline">Simple plans. Honest limits. Bright future. 💡</h2>
+          <p class="lead">Pick a plan that fits where you are today — upgrade as you grow. Each plan contains fast storage, backups, and the controls teams need to run with confidence.</p>
+
+          <div class="grid pricing-grid" style="margin-top:18px">
+            <div class="price-table">
+              <div style="display:flex;align-items:center;gap:10px"><div style="font-size:26px">🐣</div><div><strong>Pup</strong><div class="price-badge">$3 /mo</div></div></div>
+              <ul style="margin-top:10px;color:var(--muted)"><li>1 site • 20 GB NVMe</li><li>Daily backups • Free SSL</li><li>Basic support</li></ul>
+              <div class="price-cta"><a class="btn btn-primary">Get Pup</a></div>
+            </div>
+
+            <div class="price-table featured">
+              <div style="display:flex;align-items:center;gap:10px"><div style="font-size:26px">🌊</div><div><strong>Reef</strong><div class="price-badge">$12 /mo</div></div></div>
+              <ul style="margin-top:10px;color:var(--muted)"><li>5 sites • 50 GB NVMe</li><li>Staging • Priority support</li><li>Better backups & performance</li></ul>
+              <div class="price-cta"><a class="btn btn-primary">Choose Reef</a></div>
+            </div>
+
+            <div class="price-table">
+              <div style="display:flex;align-items:center;gap:10px"><div style="font-size:26px">🦈</div><div><strong>Megaladon</strong><div class="price-badge">Custom</div></div></div>
+              <ul style="margin-top:10px;color:var(--muted)"><li>High throughput • Custom NVMe pools</li><li>SLA, observability & dedicated ops</li><li>Design & migration assistance</li></ul>
+              <div class="price-cta"><a class="btn btn-ghost">Talk to Sales</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Developer flow tile — visual and explainers -->
+      <section id="devflow" class="tile tile-rich" aria-label="developer-workflow">
+        <div class="container">
+          <h2 class="accent-underline">Developer-first workflow — push, preview, release 🚀</h2>
+
+          <p>We designed a simple mental model for your CI/CD: push changes, see a live preview, validate, and promote to production. That loop is intentionally short, so your team cycles through experiments faster and learns more quickly.</p>
+
+          <div class="grid tiles-3" style="margin-top:18px">
+            <div class="tile-card">
+              <div style="font-size:22px">1️⃣</div>
+              <h3>Branch & preview</h3>
+              <p>Every branch gets a preview URL so product, QA and stakeholders can review the exact environment — no guesswork.</p>
+            </div>
+
+            <div class="tile-card">
+              <div style="font-size:22px">2️⃣</div>
+              <h3>Test & validate</h3>
+              <p>Use our built-in metrics, observability and smoke tests in preview to catch issues early — before they reach users.</p>
+            </div>
+
+            <div class="tile-card">
+              <div style="font-size:22px">3️⃣</div>
+              <h3>Atomic release</h3>
+              <p>Deploys are atomic and quickly reversible. If anything goes wrong, revert in seconds and investigate with preserved logs and metrics.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ tile (accordion) — all content still inside tiles -->
+      <section id="faq" class="tile tile-rich" aria-label="faq">
+        <div class="container">
+          <h2 class="accent-underline">FAQ • quick, practical answers 💬</h2>
+
+          <details class="accordion" open>
+            <summary>How long does a migration usually take?</summary>
+            <div>Small sites often move in hours; complex systems are planned and executed with a migration window and verification steps. We help you select the right cutover times to minimize user impact.</div>
+          </details>
+
+          <details class="accordion">
+            <summary>What backup retention options are available?</summary>
+            <div>Daily backups are standard; higher tiers include longer retention and point-in-time restores. For sensitive workloads we offer increased retention and immutable backups.</div>
+          </details>
+
+          <details class="accordion">
+            <summary>Do you offer a free trial or credit?</summary>
+            <div>Yes — our pilot includes an audit, a short trial window on a production-like setup, and migration assistance for qualifying customers.</div>
+          </details>
+
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS TILE -->
+      <section class="tile tile-testimonials" aria-label="testimonials">
+        <div class="container">
+          <h2 class="accent-underline">What teams are saying ✨</h2>
+          <div class="testimonials-grid">
+            <blockquote class="testimonial">“Megaladon helped us cut our night‑time incident rate in half. The previews and performance monitoring changed how we ship.” — CTO, growing SaaS</blockquote>
+            <blockquote class="testimonial">“The migration was painless — the team paired with us and owned the cutover. They made a complicated move feel simple.” — Head of Product, ecommerce</blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA TILE (contact) -->
+      <section id="contact" class="tile tile-cta" aria-label="contact">
+        <div class="container">
+          <h2>Ready to try Megaladon? Start a Pilot 🚀</h2>
+          <p class="lead">Book a free migration audit and pilot. We'll help you size an environment, map migration steps, and show savings or performance gains in a short pilot.</p>
+
+          <div class="cta-actions">
+            <a class="btn btn-primary large" href="#">Start Pilot</a>
+            <a class="btn btn-ghost" href="#">Request Audit</a>
+          </div>
+
+          <p style="margin-top:18px;color:var(--muted)">Prefer a short conversation? Click 'Talk to an engineer' and we'll find a time to walk your stack and identify a low-risk migration plan.</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer tile" role="contentinfo">
+      <div class="container footer-inner">
+        <div style="display:flex;gap:10px;align-items:center"><img src="/assets/images/logo.svg" height="28" alt="Megaladon" /><div style="font-weight:700">Megaladon</div></div>
+        <div style="color:var(--muted);font-size:13px">© 2025 Megaladon — Veteran-owned. Built for teams that ship.</div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js" defer></script>
+  </body>
+</html>
+<!doctype html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Megaladon Hosting — Tile-First SaaS Platform</title>
-        <meta name="description" content="A single-scroll, tile-first Megaladon Hosting landing page focused on clarity, performance and conversion — every section is a tile." />
+        <title>Megaladon Hosting — Futuristic Tile-First SaaS Hosting</title>
+        <meta name="description" content="Futuristic, tile-first hosting built for modern SaaS engineering teams — fast NVMe, edge performance, and humans that care." />
         <link rel="stylesheet" href="/assets/css/styles.css">
     </head>
 
-    <body class="tile-first">
+    <body class="tile-first futuristic">
         <header class="site-header">
             <div class="container header-inner">
                 <a class="brand" href="/">
