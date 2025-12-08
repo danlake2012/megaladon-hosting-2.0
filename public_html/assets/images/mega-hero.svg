@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <defs>
+    <linearGradient id="lg" x1="0" x2="1">
+      <stop offset="0" stop-color="#0b2a2f" />
+      <stop offset="1" stop-color="#04323a" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#lg)" />
+  <g fill="#07c8d9" opacity="0.85">
+    <circle cx="960" cy="140" r="90" />
+    <rect x="110" y="360" width="860" height="120" rx="30" opacity="0.06" fill="#ffffff" />
+  </g>
+  <g transform="translate(80,100)">
+    <g fill="#fff" opacity="0.07">
+      <rect x="120" y="32" width="360" height="260" rx="18" />
+      <rect x="540" y="12" width="360" height="320" rx="18" />
+      <rect x="200" y="320" width="720" height="90" rx="12" />
+    </g>
+    <g fill="#00f1d0" font-family="sans-serif" font-weight="700" font-size="36">
+      <text x="20" y="50">Megaladon</text>
+    </g>
+  </g>
+</svg>

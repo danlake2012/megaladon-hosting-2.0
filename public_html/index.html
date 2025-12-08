@@ -3,133 +3,165 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Megaladon Hosting — Fast, Secure, and Human-Powered</title>
-        <meta name="description" content="Megaladon Hosting — veteran-owned, performance-first web hosting with expert human support. NVMe storage, free SSL, automatic backups and optimized WordPress hosting." />
-
-        <style>
-            /* Embedded single-file stylesheet — dark ocean / tile aesthetic */
-            :root{--bg:#040b10;--panel:#071018;--muted:#96a7b8;--text:#eaffff;--cyan:#05cbe0;--accent:#00f1d0;--radius:14px;--max:1180px}
-            html,body{height:100%}
-            body{margin:0;background:linear-gradient(180deg,#03060a 0,#051018 100%);font-family:Inter,system-ui,Arial;color:var(--text);-webkit-font-smoothing:antialiased}
-
-            /* NAVBAR - fixed so header remains visible while scrolling */
-            :root{--site-header-height:72px}
-            body{padding-top:var(--site-header-height)}
-            .navbar{position:fixed;top:0;left:0;right:0;height:var(--site-header-height);z-index:140;background:linear-gradient(180deg,rgba(1,3,6,0.18),rgba(2,6,10,0.6));border-bottom:1px solid rgba(6,182,212,0.06);backdrop-filter:blur(6px)}
-            .nav-inner{max-width:var(--max);margin:0 auto;padding:10px 18px;display:flex;align-items:center;gap:12px}
-            .brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:1px}
-            .brand-icon{width:40px;height:40px;border-radius:9px;background:linear-gradient(180deg,#00f1d0,#06b6d4);display:flex;align-items:center;justify-content:center;color:#011418;font-weight:900}
-            .nav-links{display:flex;gap:12px;margin-left:18px}
-            .nav-links a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
-            .nav-links a:hover{color:var(--text);background:rgba(255,255,255,0.02)}
-            .cta-row{margin-left:auto;display:flex;gap:10px}
-            .btn{padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:700;cursor:pointer}
-            .btn-primary{background:linear-gradient(90deg,var(--cyan),var(--accent));color:#051418;border:0}
-            .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
-
-            /* page container */
-            .page{max-width:var(--max);margin:0 auto;padding:26px 18px}
-
-            /* HERO */
-            .hero{display:flex;gap:18px;align-items:stretch;padding:38px 0 10px}
-            .hero-media{flex:1 1 62%;position:relative;border-radius:12px;overflow:visible}
-            .hero-media img{max-width:100%;display:block;border-radius:10px}
-            .talk-bubbles{position:absolute;right:-10px;top:26%;display:flex;flex-direction:column;gap:10px;pointer-events:none}
-            .bubble{width:44px;height:44px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(0,235,192,0.08), rgba(0,235,192,0.03));border:1px solid rgba(0,235,192,0.14);color:#eafffb;font-size:18px}
-
-            .title-tile{flex:0 0 480px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:2px solid rgba(6,182,212,0.14);padding:28px;border-radius:16px;display:flex;flex-direction:column;justify-content:center;min-height:420px}
-            .title-badge{display:inline-block;background:rgba(6,182,212,0.08);color:var(--cyan);padding:6px 12px;border-radius:999px;font-weight:700;font-size:13px;margin-bottom:14px}
-            .title-head{font-family:Orbitron,Inter;font-size:34px;margin:0;color:linear-gradient(90deg,#fff,#e6ffff);line-height:1.02}
-            .title-sub{color:var(--muted);margin-top:12px}
-
-            /* tiles */
-            .hero-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:22px}
-            .tile{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border-radius:12px;padding:16px;border:2px solid rgba(6,182,212,0.18);box-shadow:0 10px 40px rgba(0,0,0,0.45)}
-            .tile h3{margin:8px 0 6px}
-            /* small icon badges */
-            .icon-badge{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:9px;font-size:16px;margin-right:10px}
-            .icon-rocket{background:linear-gradient(180deg,#ff7a59,#ff4d9f);color:white}
-            .icon-lock{background:linear-gradient(180deg,#00c2ff,#06b6d4);color:white}
-            .icon-support{background:linear-gradient(180deg,#8b5cf6,#ec4899);color:white}
-            .icon-panel{background:linear-gradient(180deg,#34d399,#06b6d4);color:#021418}
-
-            /* pros/cons removed — plans are displayed in a compact, scannable format */
-            .tile p{color:var(--muted);font-size:14px}
-            .tile:hover{transform:translateY(-6px);box-shadow:0 18px 70px rgba(0,0,0,0.62);border-color:rgba(6,182,212,0.48)}
-
-            /* sections */
-            section{padding:56px 0;border-top:1px solid rgba(255,255,255,0.02)}
-            .section-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
-            .section-head h2{font-family:Orbitron,Inter;font-size:28px;margin:0}
-            .lead{color:var(--muted);max-width:900px;margin-top:6px}
-
-            /* Plans: full width section with inner constrained content */
-            .plans-section{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background-color:#06101a;background-image:linear-gradient(180deg,rgba(6,18,32,0.98),rgba(3,9,15,0.96)),linear-gradient(135deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.00 40%);box-shadow:inset 0 40px 60px rgba(0,0,0,0.35);padding:64px 0}
-            .plans-inner{max-width:var(--max);margin:0 auto;padding:0 18px}
-
-            /* Force all 5 plans on a single row for large screens, but keep responsive fallback */
-            .plans-grid{display:grid;grid-template-columns:repeat(5,minmax(120px,1fr));gap:clamp(10px,1.2vw,20px);margin-top:1.25rem;align-items:start}
-
-            @media (max-width:1500px){.plans-grid{grid-template-columns:repeat(5,minmax(120px,1fr))}}
-            @media (max-width:1100px){.plans-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem}.plans-section{padding:36px 0}}
-            .plan{background-image:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.005));border:2px solid rgba(255,255,255,0.03);padding:14px;border-radius:12px;--plan-accent:var(--cyan);position:relative;overflow:hidden;min-height:150px;box-shadow:0 8px 30px rgba(0,0,0,0.5)}
-            .plan .price{font-size:20px;color:var(--plan-accent);font-weight:800}
-            .plan h3{font-size:15px;margin-bottom:6px}
-            .plans-inner .section-head { display:flex; justify-content:space-between; gap:20px; align-items:flex-start; margin-bottom: 12px; }
-            .plans-inner .section-head h2 { margin: 0; }
-            .plan::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--plan-accent),rgba(255,255,255,0.03));opacity:0.9;border-top-left-radius:10px;border-top-right-radius:10px}
-            /* per-plan accent overrides */
-            .plan--pup{--plan-accent:#7ee787}
-            .plan--reef{--plan-accent:#05cbe0}
-            .plan--tiger{--plan-accent:#ffb86b}
-            .plan--hammer{--plan-accent:#a78bfa}
-            .plan--mega{--plan-accent:#ff6b6b}
-            .plan ul{color:var(--muted)}
-
-            .domains-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:12px}
-            .domain-card{padding:14px;border-radius:10px;border:2px solid rgba(6,182,212,0.14);text-align:center;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)}
-
-            .kb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:18px}
-            .kb-card{padding:18px;border-radius:12px;border:2px solid rgba(255,255,255,0.03);background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)}
-
-            .support-grid{display:grid;grid-template-columns:2fr 320px;gap:18px}
-            .contact-form{padding:18px;border-radius:12px;border:2px solid rgba(255,255,255,0.03)}
-            input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text);margin-bottom:8px}
-
-            footer{padding:30px 0;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,0.02);margin-top:40px}
-
-            @media (max-width:1000px){.hero{flex-direction:column-reverse}.title-tile{width:100%;min-height:auto;padding:18px}.support-grid{grid-template-columns:1fr}}
-            @media (max-width:600px){.nav-links{display:none}.talk-bubbles{display:none}}
-        </style>
-
+        <title>Megaladon Hosting — Shark-Fast SaaS Hosting</title>
+        <meta name="description" content="Veteran-owned, high-performance SaaS hosting — fast NVMe storage, enterprise features, and real human support." />
+        <link rel="stylesheet" href="/assets/css/styles.css">
     </head>
+
     <body>
+        <header class="site-header">
+            <div class="container header-inner">
+                <a class="brand" href="/">
+                    <img src="/assets/images/logo.svg" alt="Megaladon Hosting" class="brand-logo" />
+                    <strong>Megaladon Hosting</strong>
+                </a>
 
-        <nav class="navbar">
-            <div class="nav-inner page">
-                <div class="brand">
-                    <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit">
-                        <img src="/assets/images/logo.svg" alt="Megaladon Hosting logo" class="logo-img" style="height:36px;border-radius:6px;display:block" />
-                        <div>Megaladon Hosting</div>
-                    </a>
-                </div>
-                <div class="nav-links" id="navlinks">
-                    <a href="#home">Home</a>
+                <nav class="site-nav" aria-label="Main navigation">
                     <a href="#hosting">Hosting</a>
-                    <a href="#domains">Domains</a>
-                    <a href="#knowledge">Knowledge Base</a>
-                    <a href="#support">Support</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="cta-row">
-                    <a href="#hosting" class="btn btn-primary">Get Hosting</a>
+                    <a href="#plans">Plans</a>
+                    <a href="#features">Features</a>
+                    <a href="#docs">Docs</a>
                     <a href="#contact" class="btn btn-ghost">Contact</a>
-                </div>
-            </div>
-        </nav>
+                    <a href="#" class="btn btn-primary">Get Hosting</a>
+                </nav>
 
-        <main class="page" id="home">
+                <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
+            </div>
+        </header>
+
+        <main id="site-main">
+            <section class="hero container">
+                <div class="hero-left">
+                    <div class="eyebrow">Veteran-owned · Developer-first · Shark-fast</div>
+                    <h1 class="hero-title">Shark-Fast SaaS Hosting for modern teams.</h1>
+                    <p class="hero-sub">High-performance NVMe hosting, one-click apps, staging, free SSL and mission-grade support — built for speed, reliability and simplicity.</p>
+
+                    <div class="hero-ctas">
+                        <a href="#plans" class="btn btn-primary large">Pick a plan</a>
+                        <a href="#contact" class="btn btn-ghost">Talk to Sales</a>
+                    </div>
+
+                    <div class="trust-grid">
+                        <div class="trust-item">NVMe Storage</div>
+                        <div class="trust-item">Daily Backups</div>
+                        <div class="trust-item">Free SSL</div>
+                        <div class="trust-item">24/7 Human Support</div>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="device-mockup">
+                        <img src="/assets/images/mega-hero.svg" alt="Megaladon hero image"/>
+                    </div>
+                </div>
+            </section>
+
+            <section id="features" class="container section features">
+                <h2 class="section-title">Everything your SaaS app needs</h2>
+                <p class="lead">Fast server stacks, staging, edge caching, and security tools for startups and enterprises alike.</p>
+
+                <div class="grid tiles-4">
+                    <article class="tile">
+                        <h3>Performance-first</h3>
+                        <p>NVMe storage, tuned PHP, HTTP/2 and intelligent caching for fastest response times.</p>
+                    </article>
+
+                    <article class="tile">
+                        <h3>Secure by default</h3>
+                        <p>Free SSL, daily backups and DDoS protection with proactive scanning.</p>
+                    </article>
+
+                    <article class="tile">
+                        <h3>Scale quietly</h3>
+                        <p>From prototyping to production: predictable pricing and easy vertical scaling.</p>
+                    </article>
+
+                    <article class="tile">
+                        <h3>Human support</h3>
+                        <p>Real engineers who respond quickly and help you run reliably.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="plans" class="container section plans">
+                <h2 class="section-title">Plans for every stage</h2>
+                <p class="lead">Simple, transparent pricing. Upgrade anytime.</p>
+
+                <div class="grid plans-grid">
+                    <div class="plan-card">
+                        <div class="plan-name">Pup</div>
+                        <div class="plan-price">$3.99 <span class="period">/mo</span></div>
+                        <ul>
+                            <li>1 website</li>
+                            <li>20 GB NVMe</li>
+                            <li>Daily backups</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Get Pup</a>
+                    </div>
+
+                    <div class="plan-card featured">
+                        <div class="plan-name">Reef</div>
+                        <div class="plan-price">$7.99 <span class="period">/mo</span></div>
+                        <ul>
+                            <li>5 websites</li>
+                            <li>50 GB NVMe</li>
+                            <li>Priority support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Choose Reef</a>
+                    </div>
+
+                    <div class="plan-card">
+                        <div class="plan-name">Megaladon</div>
+                        <div class="plan-price">$29.99 <span class="period">/mo</span></div>
+                        <ul>
+                            <li>Enterprise-grade resources</li>
+                            <li>Custom monitoring & SLA</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-ghost">Talk to Sales</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="extras" class="container section">
+                <div class="grid tiles-3">
+                    <div class="tile">
+                        <h3>One-click apps</h3>
+                        <p>WordPress, Next.js, Node, and more. Launch fast.</p>
+                    </div>
+
+                    <div class="tile">
+                        <h3>Staging & CI</h3>
+                        <p>Preview environments and Git-based deploys make development predictable.</p>
+                    </div>
+
+                    <div class="tile">
+                        <h3>Observability</h3>
+                        <p>Logs, metrics and alerts so you can move from incident to insight quickly.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="container section contact cta-strong">
+                <h2>Ready to get started?</h2>
+                <p>Pick a plan or talk to sales — we’ll help you migrate with zero downtime.</p>
+                <div class="cta-row">
+                    <a class="btn btn-primary large" href="#">Get Hosting</a>
+                    <a class="btn btn-ghost" href="#">Contact Sales</a>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <div class="brand small"><img src="/assets/images/logo.svg" height="28" alt="Megaladon"/> <strong>Megaladon Hosting</strong></div>
+                <div class="copyright">© 2025 Megaladon Hosting — Veteran owned</div>
+            </div>
+        </footer>
+
+        <script src="/assets/js/main.js" defer></script>
+    </body>
+</html>
             <!-- HERO block: big headline, title tile on right, shark left -->
             <div class="hero">
                 <div class="hero-media">
