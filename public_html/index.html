@@ -85,6 +85,35 @@
                 </article>
             </section>
 
+            <!-- Trust stripe (logos) -->
+            <section class="tile" aria-label="trusted-by">
+                <div class="container trust-strip">
+                    <div style="display:flex;align-items:center;gap:10px;">
+                        <strong style="margin-right:8px;color:var(--text)">Trusted by</strong>
+                        <img src="/assets/images/logo.svg" alt="Customer logo"/>
+                        <img src="/assets/images/logo.svg" alt="Customer logo 2"/>
+                        <img src="/assets/images/logo.svg" alt="Customer logo 3"/>
+                        <img src="/assets/images/logo.svg" alt="Customer logo 4"/>
+                    </div>
+                    <div style="color:var(--muted);font-weight:700">Over 15,000 sites served worldwide</div>
+                </div>
+            </section>
+
+            <!-- Developer micro-tiles hero -->
+            <section class="tile" aria-label="developer-experience">
+                <div class="container">
+                    <div class="accent-underline"><h2>Developer-first tools that just work</h2></div>
+                    <p class="lead">Ship with confidence: deploy previews, instant rollbacks, and Git-native workflows keep development loops tight.</p>
+                    <div class="dev-tiles">
+                        <div class="dev-tile">Deploy from Git</div>
+                        <div class="dev-tile">Instant previews</div>
+                        <div class="dev-tile">CLI & API</div>
+                        <div class="dev-tile">Webhooks & Integrations</div>
+                        <div class="dev-tile">Edge-ready CDN</div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Deep-dive tile with long-form content (this and the following sections will hold majority of the 3000 words) -->
             <section class="tile tile-rich" id="why-us" aria-label="Why choose Megaladon">
                 <div class="container">
@@ -148,7 +177,7 @@
             </section>
 
             <!-- Pricing / Plans (tile grid) -->
-            <section class="tile grid tiles-3" id="plans" aria-label="Plans">
+            <section class="tile" id="plans" aria-label="Plans">
                 <article class="tile-card plan-card tile-accent">
                     <h3>Pup — Starter</h3>
                     <div class="plan-price">$4 /mo</div>
@@ -187,6 +216,31 @@
                     </ul>
                     <a class="btn btn-ghost" href="#contact">Talk to Sales</a>
                 </article>
+
+                <div style="margin-top:18px" class="price-benefits">
+                    <div class="grid pricing-grid">
+                        <div class="price-table">
+                            <h4>Why these plans?</h4>
+                            <p class="text-muted">Designed to simplify choice without surprises — predictable CPU, memory and NVMe-based storage across the tiers.</p>
+                        </div>
+                        <div class="price-table">
+                            <h4 class="accent-underline">Compare</h4>
+                            <table style="width:100%;margin-top:10px;color:var(--muted)">
+                                <thead><tr><th></th><th>Pup</th><th>Reef</th><th>Megaladon</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Sites</td><td>1</td><td>5</td><td>Custom</td></tr>
+                                    <tr><td>NVMe</td><td>20 GB</td><td>50 GB</td><td>Custom</td></tr>
+                                    <tr><td>Backups</td><td>Daily - 7d</td><td>Daily - 30d</td><td>Daily - 90d</td></tr>
+                                    <tr><td>Support</td><td>Community</td><td>Priority</td><td>24/7 SLA</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="price-table">
+                            <h4>Need help choosing?</h4>
+                            <p class="text-muted">We offer a free migration audit for production customers, and pilots to test at realistic scale.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- Long FAQ / educational content inside tiles -->

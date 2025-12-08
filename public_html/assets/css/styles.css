@@ -1,11 +1,14 @@
 /* Megaladon Hosting — basic responsive SaaS stylesheet */
 :root{
-  --bg:#041018;
+  --bg:#05131a;
   --card:#071922;
   --muted:#9fb6c2;
   --text:#eaf6f7;
   --accent:#07c8d9;
   --accent-2:#00f1d0;
+  --accent-3:#ff8ba0;
+  --accent-4:#ffd66b;
+  --glass: rgba(255,255,255,0.04);
   --radius:12px;
   --max-width:1180px;
   --container-padding:18px;
@@ -89,6 +92,39 @@ body{margin:0;background:linear-gradient(180deg,#021018 0%,#061425 100%);color:v
   .hero-inner{flex-direction:column-reverse}
   .hero-right{width:100%}
 }
+
+/* NEW: Elevation, colors, micro-interactions */
+.btn-primary{transition:transform .14s ease, box-shadow .14s ease}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(0,215,196,0.12)}
+.tile-card{transition:transform .16s cubic-bezier(.2,.9,.2,1),box-shadow .16s cubic-bezier(.2,.9,.2,1)}
+.tile-card:hover{transform:translateY(-8px);box-shadow:0 40px 80px rgba(1,6,7,0.55)}
+
+/* Trust strip */
+.trust-strip{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px;border-radius:12px;background:linear-gradient(90deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02)}
+.trust-strip img{height:28px;opacity:0.9;filter:grayscale(0.3);}
+
+/* Pricing comparison */
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+.price-table{background:linear-gradient(180deg,rgba(255,255,255,0.01),rgba(255,255,255,0.005));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.price-badge{font-weight:900;font-size:24px;color:var(--accent)}
+.price-cta{margin-top:8px}
+
+/* Developer hero micro features */
+.dev-tiles{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.dev-tiles .dev-tile{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius:10px;padding:10px 12px;font-weight:700;color:var(--muted)}
+
+/* FAQ accordion micro */
+.accordion{border-radius:10px;padding:0;margin:10px 0}
+.accordion summary{cursor:pointer;padding:12px;border-radius:8px;list-style:none;background:rgba(255,255,255,0.01);outline:none;display:flex;justify-content:space-between;align-items:center}
+.accordion[open] summary{background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.005))}
+.accordion div{padding:12px 14px;color:var(--muted)}
+
+/* subtle animated gradient accent underline for headings */
+.accent-underline{display:inline-block;position:relative}
+.accent-underline::after{content:'';position:absolute;left:0;bottom:-8px;height:4px;width:100%;border-radius:8px;background:linear-gradient(90deg,var(--accent),var(--accent-3));opacity:0.18}
+
+/* a tiny accessible focus ring for keyboard users */
+.show-focus :focus{outline:3px solid rgba(7,200,211,0.12);outline-offset:3px}
 
 /* Sections */
 .section{padding:50px 0}
