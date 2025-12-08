@@ -1,999 +1,864 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Megaladon — Futuristic Tile-First Hosting</title>
-    <meta name="description" content="Futuristic tile-first hosting for teams — NVMe performance, atomic deploys, edge delivery and human ops. All content lives inside tiles for clarity and impact." />
-    <link rel="stylesheet" href="/assets/css/styles.css">
-  </head>
-
-  <body class="tile-first futuristic">
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="/">
-          <img src="/assets/images/logo.svg" alt="Megaladon logo" class="brand-logo" />
-          <strong>Megaladon</strong>
-        </a>
-
-        <nav class="site-nav" aria-label="Main navigation">
-          <a href="#home">Home</a>
-          <a href="#features">Features</a>
-          <a href="#devflow">Developer flow</a>
-          <a href="#plans">Plans</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact" class="btn btn-ghost">Contact</a>
-          <a href="#" class="btn btn-primary">Start Pilot</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Megaladon Hosting - Reliable web hosting with bite. Fast performance, secure infrastructure, and real human support. Perfect for businesses, developers, and WordPress sites.">
+    <meta name="keywords" content="web hosting, reliable hosting, domain names, DNS, SSL, uptime, WordPress hosting, website hosting, cloud hosting, dedicated support">
+    <title>Megaladon Hosting – Reliable Web Hosting With Bite</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --cyan: #00d4ff;
+            --dark-bg: #0a1628;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --text-dark: #1a1a1a;
+            --text-gray: #666666;
+            --shadow: rgba(0, 212, 255, 0.2);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--cyan);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--cyan);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            padding: 4rem 0;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #1a2d4a 100%);
+            color: var(--white);
+            padding: 5rem 0;
+        }
+        
+        .hero-tile {
+            border: 3px solid var(--cyan);
+            padding: 3rem;
+            border-radius: 12px;
+            background: rgba(0, 212, 255, 0.05);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-subheadline {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: var(--cyan);
+            color: var(--dark-bg);
+            border: 2px solid var(--cyan);
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--cyan);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px var(--shadow);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--cyan);
+            border: 2px solid var(--cyan);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--cyan);
+            color: var(--dark-bg);
+            transform: translateY(-2px);
+        }
+        
+        /* Tiles Grid */
+        .tiles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .tile {
+            border: 3px solid var(--cyan);
+            padding: 2.5rem;
+            border-radius: 12px;
+            background: var(--white);
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+        
+        .tile h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-bg);
+        }
+        
+        .tile p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        
+        .hero-tiles {
+            background: var(--light-bg);
+            padding: 3rem 0;
+        }
+        
+        /* Section Headings */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--dark-bg);
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Hosting Plans */
+        .hosting-plans {
+            background: var(--white);
+        }
+        
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .plan-card {
+            border: 3px solid var(--cyan);
+            border-radius: 12px;
+            padding: 2.5rem;
+            background: var(--white);
+            transition: all 0.3s;
+        }
+        
+        .plan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+        
+        .plan-name {
+            font-size: 1.8rem;
+            color: var(--cyan);
+            margin-bottom: 1rem;
+        }
+        
+        .plan-description {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        
+        .plan-features li {
+            padding: 0.5rem 0;
+            color: var(--text-dark);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .plan-features li:before {
+            content: "✓";
+            color: var(--cyan);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .perfect-for {
+            background: var(--light-bg);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1.5rem;
+            font-style: italic;
+            color: var(--text-gray);
+        }
+        
+        /* Domains Section */
+        .domains {
+            background: var(--light-bg);
+        }
+        
+        .tld-tiles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .tld-tile {
+            border: 3px solid var(--cyan);
+            padding: 1.5rem;
+            border-radius: 12px;
+            background: var(--white);
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-bg);
+            transition: all 0.3s;
+        }
+        
+        .tld-tile:hover {
+            background: var(--cyan);
+            color: var(--white);
+            transform: scale(1.05);
+        }
+        
+        /* Knowledge Base */
+        .knowledge-base {
+            background: var(--white);
+        }
+        
+        .kb-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .kb-tile {
+            border: 3px solid var(--cyan);
+            padding: 2rem;
+            border-radius: 12px;
+            background: var(--light-bg);
+            transition: all 0.3s;
+        }
+        
+        .kb-tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+        
+        .kb-tile h3 {
+            font-size: 1.4rem;
+            color: var(--dark-bg);
+            margin-bottom: 1rem;
+        }
+        
+        /* Support Section */
+        .support {
+            background: var(--light-bg);
+        }
+        
+        .support-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        /* About Section */
+        .about {
+            background: var(--white);
+        }
+        
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.9;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: var(--light-bg);
+        }
+        
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-form {
+            background: var(--white);
+            padding: 2.5rem;
+            border: 3px solid var(--cyan);
+            border-radius: 12px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark-bg);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--cyan);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .contact-info {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .contact-info p {
+            margin: 0.5rem 0;
+            color: var(--text-dark);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--cyan);
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subheadline {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .tiles-grid,
+            .plans-grid,
+            .kb-categories {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <a href="#home" class="logo">🦈 Megaladon Hosting</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#hosting">Hosting Plans</a></li>
+                <li><a href="#domains">Domains</a></li>
+                <li><a href="#knowledge">Knowledge Base</a></li>
+                <li><a href="#support">Support</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-
-        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
-      </div>
     </header>
 
-    <main id="site-main">
-
-      <!-- HERO TILE -->
-      <section id="home" class="tile hero-tile">
-        <div class="container hero-inner">
-          <div class="hero-left">
-            <div class="badge">Veteran-led · Performance · Predictable</div>
-            <h1 class="hero-heading">Ship faster. Sleep easier. Welcome to futuristic, tile-first hosting. ⚡️🦈</h1>
-            <p class="lead">Megaladon brings NVMe speed, atomic deploys, edge acceleration and human ops into one small, thoughtful platform. Every decision on this page lives inside a tile so you can scan quickly, feel the rhythm, and read long-form detail when you want to — no clutter, just signal.</p>
-
-            <div class="hero-actions">
-              <a href="#plans" class="btn btn-primary large">Start a Pilot — Free Audit</a>
-              <a href="#contact" class="btn btn-ghost">Talk to an engineer</a>
-            </div>
-
-            <div class="dev-tiles" style="margin-top:18px">
-              <div class="dev-tile">Deploy from Git 🔁</div>
-              <div class="dev-tile">Live previews 👀</div>
-              <div class="dev-tile">Fast NVMe storage ⚡️</div>
-              <div class="dev-tile">99.99% SLA (optional) 🛡️</div>
-            </div>
-          </div>
-
-          <div class="hero-right">
-            <img src="/assets/images/mega-hero.svg" alt="Megaladon futuristic hero" class="hero-visual" />
-          </div>
-        </div>
-      </section>
-
-      <!-- TRUST & SOCIAL PROOF TILE -->
-      <section class="tile" aria-label="trust-strip">
-        <div class="container trust-strip">
-          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
-            <div style="display:flex;align-items:center;gap:10px">
-              <strong style="color:var(--text);">Trusted by</strong>
-              <img src="/assets/images/logo.svg" alt="Customer" />
-              <img src="/assets/images/logo.svg" alt="Customer" />
-              <img src="/assets/images/logo.svg" alt="Customer" />
-            </div>
-            <div style="margin-left:auto;color:var(--muted);font-weight:700">Millions of page views served monthly • 24/7 human ops</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FEATURES GRID (tile cards) -->
-      <section id="features" class="tile grid tiles-4" aria-label="features">
-        <article class="tile-card tile-accent">
-          <div style="display:flex;gap:12px;align-items:start">
-            <div style="font-size:28px">🚀</div>
-            <div>
-              <h2>Blazing performance</h2>
-              <p>NVMe-first storage, tuned runtimes and smart caching combined with edge delivery to keep latency low — for everyone, everywhere. Real page speed shows up as better conversions and happier users.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="tile-card tile-contrast">
-          <div style="display:flex;gap:12px;align-items:start">
-            <div style="font-size:28px">🛡️</div>
-            <div>
-              <h2>Security & reliability</h2>
-              <p>Automatic SSL, WAF options, DDoS protection, and routine patching. We build to contain problems and remove noisy, repetitive work from your team’s backlog.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="tile-card tile-rose">
-          <div style="display:flex;gap:12px;align-items:start">
-            <div style="font-size:28px">⚙️</div>
-            <div>
-              <h2>Atomic deploys & staging</h2>
-              <p>Deploys are atomic and reversible. Preview environments for every PR mean you can test features in live-like staging before announcing to the world.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="tile-card tile-cyan">
-          <div style="display:flex;gap:12px;align-items:start">
-            <div style="font-size:28px">🤝</div>
-            <div>
-              <h2>Human ops & migration help</h2>
-              <p>Real engineers on hand for migrations, runbooks, and escalations. We don’t hide behind a maze of docs — we help you and your team every step of the way.</p>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <!-- LONG NARRATIVE TILE (core 1200-1500 words split across tiles) -->
-      <section class="tile tile-long" aria-label="core-narrative">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="container">
-          <h2 class="accent-underline">A future-friendly platform — built to make engineering delightful ✨</h2>
-
-          <p>When we talk about being future-friendly, we mean three practical things: predictable performance, low cognitive load for teams, and infrastructure that adapts as your product grows. The digital world rewards speed, clarity and the ability to recover quickly when things go wrong — and those are the problems Megaladon exists to solve.</p>
-
-          <h3>Performance as a currency</h3>
-          <p>Performance is not a vanity metric. It affects SEO, conversion, user happiness and the ability to scale. We prioritize fast storage (NVMe), efficient networking, and edge-level caching so that the smallest interactions — login, search, checkout — feel instant. You don't need to implement impossible engineering projects to get performance; you need defaults that don't get in the way and observability that helps you measure real impact.</p>
-
-          <h3>Predictability & cost clarity</h3>
-          <p>Unexpected bills are a product team's worst enemy. Predictable instance types, consistent IO profiles, and clear pricing mean finance and engineering can make the same plan without arguing about surprises. We also provide tooling to show cost over time, and simple tools to allocate budgets per project so you understand what growth actually costs.</p>
-
-          <h3>Developer ergonomics</h3>
-          <p>Developer happiness scales into product velocity. We build ergonomics into the platform: Git-native deploys, preview URLs for every change, and simple local-to-prod parity. When developers can iterate and validate in minutes — not hours — teams ship more and revisit less.</p>
-
-          <h3>Resilience that adds confidence</h3>
-          <p>Resilience isn't just redundancy; it's about containment and quick recovery. We favor architectures that minimize blast radius (small, isolated instances, smart caching) and maximize rollback speed. Our restore tooling and tested backups make mistakes less scary and faster to fix.</p>
-
-          <h3>Human-in-the-loop</h3>
-          <p>Automation is powerful, but humans add context. We provide automated operations for the common cases and experienced engineers to handle the exceptional cases. If your production is complex, we’ll pair with your team to map out a migration and future-state plan so you move on a schedule that matches your business needs, not ours.</p>
-
-          <p>Below you'll find pragmatic tiles for onboarding, migration, security, and cost — all written to give direction and get things done today.</p>
+            <div class="hero-tile">
+                <h1>Megaladon Hosting – Reliable Web Hosting With Bite</h1>
+                <p class="hero-subheadline">
+                    Experience lightning-fast performance, enterprise-grade security, and real human support that actually cares. Whether you're launching your first website or managing a high-traffic application, Megaladon Hosting delivers the reliability and speed your online presence demands.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#hosting" class="btn btn-primary">View Hosting Plans</a>
+                    <a href="#contact" class="btn btn-secondary">Get Started</a>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <!-- OPERATIONAL TILES: onboarding / migrate / scale (each tile with emojis & actionables) -->
-      <section class="tile grid tiles-3" aria-label="operations">
-        <article class="tile-card tile-accent">
-          <div style="display:flex;gap:10px;align-items:center"><div style="font-size:22px">📦</div><h3>Onboard in hours — not days</h3></div>
-          <p>Simple migration checklists, one-click app imports, and a hands-on onboarding engineer for production migrations. We bring all the pieces together — databases, DNS, and SSL — so you don't have to.</p>
-          <ul style="color:var(--muted)">
-            <li>Quick importers for WordPress, static sites, and common frameworks</li>
-            <li>Staging previews & smoke tests before cutover</li>
-            <li>Optional migration assistance from our team</li>
-          </ul>
-        </article>
-
-        <article class="tile-card tile-rose">
-          <div style="display:flex;gap:10px;align-items:center"><div style="font-size:22px">🔁</div><h3>Safe staged migrations</h3></div>
-          <p>Move to production when you're sure. Parallel staging, feature flags, and canary rollouts remove surprises. For critical apps we can mirror traffic and validate the experience before updating DNS.</p>
-        </article>
-
-        <article class="tile-card tile-cyan">
-          <div style="display:flex;gap:10px;align-items:center"><div style="font-size:22px">📈</div><h3>Scale intentionally</h3></div>
-          <p>Scaling is a strategic choice — do you scale horizontally, partition your data, or add edge caching? We help you pick the right axis for growth and provide tooling to measure what actually matters.</p>
-        </article>
-      </section>
-
-      <!-- PRICING TILE (clean, colorful, tile-only) -->
-      <section id="plans" class="tile" aria-label="pricing">
+    <!-- Hero Tiles -->
+    <section class="hero-tiles">
         <div class="container">
-          <h2 class="accent-underline">Simple plans. Honest limits. Bright future. 💡</h2>
-          <p class="lead">Pick a plan that fits where you are today — upgrade as you grow. Each plan contains fast storage, backups, and the controls teams need to run with confidence.</p>
-
-          <div class="grid pricing-grid" style="margin-top:18px">
-            <div class="price-table">
-              <div style="display:flex;align-items:center;gap:10px"><div style="font-size:26px">🐣</div><div><strong>Pup</strong><div class="price-badge">$3 /mo</div></div></div>
-              <ul style="margin-top:10px;color:var(--muted)"><li>1 site • 20 GB NVMe</li><li>Daily backups • Free SSL</li><li>Basic support</li></ul>
-              <div class="price-cta"><a class="btn btn-primary">Get Pup</a></div>
+            <div class="tiles-grid">
+                <div class="tile">
+                    <h3>⚡ Lightning-Fast Hosting</h3>
+                    <p>Our NVMe SSD storage and optimized server configurations deliver blazing-fast load times. With CDN integration and advanced caching mechanisms, your website performs at peak efficiency. Experience page loads that keep visitors engaged and search engines happy. Speed isn't just a feature—it's our foundation.</p>
+                </div>
+                <div class="tile">
+                    <h3>🛡️ Secure & Monitored 24/7</h3>
+                    <p>Sleep soundly knowing your website is protected by enterprise-grade security protocols. Our systems include automatic malware scanning, DDoS protection, and real-time threat monitoring. Free SSL certificates come standard, and our security team actively monitors infrastructure around the clock to prevent breaches before they happen.</p>
+                </div>
+                <div class="tile">
+                    <h3>🚀 Easy WordPress & Site Installs</h3>
+                    <p>Launch your website in minutes with our one-click installation system. Whether you need WordPress, Joomla, Drupal, or any popular CMS, our intuitive control panel makes deployment effortless. Pre-configured settings and automatic updates mean you can focus on content, not configuration. Building your online presence has never been simpler.</p>
+                </div>
+                <div class="tile">
+                    <h3>🤝 Real Support, No Runaround</h3>
+                    <p>When you need help, you'll speak with knowledgeable technicians who respect your time and understand your concerns. No offshore call centers, no scripted responses, no blaming you for technical issues. Our veteran-owned company believes in straight talk, honest solutions, and treating customers the way we'd want to be treated.</p>
+                </div>
             </div>
-
-            <div class="price-table featured">
-              <div style="display:flex;align-items:center;gap:10px"><div style="font-size:26px">🌊</div><div><strong>Reef</strong><div class="price-badge">$12 /mo</div></div></div>
-              <ul style="margin-top:10px;color:var(--muted)"><li>5 sites • 50 GB NVMe</li><li>Staging • Priority support</li><li>Better backups & performance</li></ul>
-              <div class="price-cta"><a class="btn btn-primary">Choose Reef</a></div>
-            </div>
-
-            <div class="price-table">
-              <div style="display:flex;align-items:center;gap:10px"><div style="font-size:26px">🦈</div><div><strong>Megaladon</strong><div class="price-badge">Custom</div></div></div>
-              <ul style="margin-top:10px;color:var(--muted)"><li>High throughput • Custom NVMe pools</li><li>SLA, observability & dedicated ops</li><li>Design & migration assistance</li></ul>
-              <div class="price-cta"><a class="btn btn-ghost">Talk to Sales</a></div>
-            </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <!-- Developer flow tile — visual and explainers -->
-      <section id="devflow" class="tile tile-rich" aria-label="developer-workflow">
+    <!-- Hosting Plans Section -->
+    <section id="hosting" class="hosting-plans">
         <div class="container">
-          <h2 class="accent-underline">Developer-first workflow — push, preview, release 🚀</h2>
-
-          <p>We designed a simple mental model for your CI/CD: push changes, see a live preview, validate, and promote to production. That loop is intentionally short, so your team cycles through experiments faster and learns more quickly.</p>
-
-          <div class="grid tiles-3" style="margin-top:18px">
-            <div class="tile-card">
-              <div style="font-size:22px">1️⃣</div>
-              <h3>Branch & preview</h3>
-              <p>Every branch gets a preview URL so product, QA and stakeholders can review the exact environment — no guesswork.</p>
+            <div class="section-header">
+                <h2>Hosting Plans Built for Performance</h2>
+                <p>Every Megaladon Hosting plan includes the essentials: fast NVMe storage, free SSL certificates, automatic backups, and expert support. Choose the plan that fits your needs today, and scale effortlessly as you grow.</p>
             </div>
 
-            <div class="tile-card">
-              <div style="font-size:22px">2️⃣</div>
-              <h3>Test & validate</h3>
-              <p>Use our built-in metrics, observability and smoke tests in preview to catch issues early — before they reach users.</p>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <h3 class="plan-name">🐣 Pup Plan</h3>
+                    <p class="plan-description">Perfect for getting started with your first website or blog. Everything you need to establish your online presence with room to grow.</p>
+                    <ul class="plan-features">
+                        <li>25 GB NVMe SSD Storage</li>
+                        <li>Unmetered Bandwidth</li>
+                        <li>5 Email Accounts</li>
+                        <li>Free SSL Certificate</li>
+                        <li>Daily Automatic Backups</li>
+                        <li>One-Click App Installs</li>
+                        <li>24/7 Support Access</li>
+                    </ul>
+                    <div class="perfect-for">Perfect for: Personal blogs, portfolios, small business websites</div>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%; text-align: center;">Get Hosting</a>
+                </div>
+
+                <div class="plan-card">
+                    <h3 class="plan-name">🌊 ReefShark</h3>
+                    <p class="plan-description">Ideal for growing businesses and active websites. Enhanced resources and features to support increased traffic and functionality.</p>
+                    <ul class="plan-features">
+                        <li>100 GB NVMe SSD Storage</li>
+                        <li>Unmetered Bandwidth</li>
+                        <li>25 Email Accounts</li>
+                        <li>Free SSL Certificate</li>
+                        <li>Daily Automatic Backups</li>
+                        <li>Priority Support Queue</li>
+                        <li>Advanced Security Monitoring</li>
+                        <li>Staging Environment</li>
+                    </ul>
+                    <div class="perfect-for">Perfect for: Business websites, e-commerce stores, membership sites</div>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%; text-align: center;">Get Hosting</a>
+                </div>
+
+                <div class="plan-card">
+                    <h3 class="plan-name">🔨 Hammerhead</h3>
+                    <p class="plan-description">Built for demanding applications and high-traffic websites. Premium resources and dedicated support for mission-critical projects.</p>
+                    <ul class="plan-features">
+                        <li>250 GB NVMe SSD Storage</li>
+                        <li>Unmetered Bandwidth</li>
+                        <li>Unlimited Email Accounts</li>
+                        <li>Free SSL Certificate</li>
+                        <li>Hourly Automatic Backups</li>
+                        <li>Premium Priority Support</li>
+                        <li>Advanced DDoS Protection</li>
+                        <li>Multiple Staging Environments</li>
+                        <li>Database Optimization</li>
+                    </ul>
+                    <div class="perfect-for">Perfect for: High-traffic sites, SaaS applications, enterprise projects</div>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%; text-align: center;">Get Hosting</a>
+                </div>
+
+                <div class="plan-card">
+                    <h3 class="plan-name">🦈 Megaladon</h3>
+                    <p class="plan-description">The ultimate hosting solution for enterprises and large-scale operations. Maximum performance, dedicated resources, and white-glove support.</p>
+                    <ul class="plan-features">
+                        <li>500 GB NVMe SSD Storage</li>
+                        <li>Unmetered Bandwidth</li>
+                        <li>Unlimited Email Accounts</li>
+                        <li>Free SSL Certificate</li>
+                        <li>Real-Time Continuous Backups</li>
+                        <li>Dedicated Support Engineer</li>
+                        <li>Advanced Security Suite</li>
+                        <li>Unlimited Staging Environments</li>
+                        <li>Performance Optimization Service</li>
+                        <li>Custom Configuration Options</li>
+                    </ul>
+                    <div class="perfect-for">Perfect for: Enterprise applications, agencies, large-scale deployments</div>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%; text-align: center;">Get Hosting</a>
+                </div>
             </div>
 
-            <div class="tile-card">
-              <div style="font-size:22px">3️⃣</div>
-              <h3>Atomic release</h3>
-              <p>Deploys are atomic and quickly reversible. If anything goes wrong, revert in seconds and investigate with preserved logs and metrics.</p>
+            <div style="max-width: 900px; margin: 3rem auto 0; line-height: 1.9;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                    At Megaladon Hosting, we understand that uptime isn't just a number—it's your business continuity, your customer trust, and your revenue stream. That's why we've built our infrastructure on enterprise-grade hardware with redundant systems at every level. Our servers are housed in Tier III data centers with multiple power feeds, cooling systems, and network connections to ensure your website stays online even when the unexpected happens.
+                </p>
+                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                    Speed matters more than ever. Research shows that visitors abandon websites that take more than three seconds to load, and search engines penalize slow-loading sites in their rankings. Our NVMe SSD storage is up to six times faster than traditional SATA SSDs, while our optimized server configurations and strategic CDN partnerships ensure your content reaches visitors quickly, regardless of their location. We don't believe in overselling our servers—each hosting account gets the resources it needs to perform consistently.
+                </p>
+                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                    Backups are your insurance policy against data loss, whether from human error, software bugs, or security incidents. Every Megaladon Hosting plan includes automatic backups stored in geographically separate locations. We don't charge extra for this critical service because we believe it should be standard. Our backup systems are tested regularly to ensure we can restore your data quickly when you need it. You'll also have access to on-demand backups before making major changes to your site.
+                </p>
+                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                    Transparency isn't just a buzzword at Megaladon Hosting—it's how we do business. Our pricing is straightforward with no hidden fees or surprise renewal rates. When we say unlimited bandwidth, we mean it for legitimate website traffic. If there's ever an issue with your account, we'll explain it clearly and work with you to find a solution. You deserve to know exactly what you're paying for and what to expect from your hosting provider. That's the Megaladon difference.
+                </p>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <!-- FAQ tile (accordion) — all content still inside tiles -->
-      <section id="faq" class="tile tile-rich" aria-label="faq">
+    <!-- Domains Section -->
+    <section id="domains" class="domains">
         <div class="container">
-          <h2 class="accent-underline">FAQ • quick, practical answers 💬</h2>
+            <div class="section-header">
+                <h2>Own Your Digital Identity</h2>
+                <p>Your domain name is your digital address, your brand identity, and often your first impression. Secure the perfect domain and manage it with ease through Megaladon Hosting.</p>
+            </div>
 
-          <details class="accordion" open>
-            <summary>How long does a migration usually take?</summary>
-            <div>Small sites often move in hours; complex systems are planned and executed with a migration window and verification steps. We help you select the right cutover times to minimize user impact.</div>
-          </details>
+            <div style="max-width: 900px; margin: 0 auto 2rem; line-height: 1.9;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                    Finding and registering the right domain name is the foundation of your online presence. Whether you're launching a business, building a personal brand, or creating a community platform, your domain name tells visitors what you're about before they even see your website. At Megaladon Hosting, we make domain registration simple, affordable, and transparent. Our domain search tool checks availability across hundreds of top-level domains (TLDs) in real-time, helping you find the perfect match for your project.
+                </p>
+                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                    Owning your domain name means you control your online identity. You're not dependent on a social media platform that could change its policies or disappear overnight. You're not stuck with a subdomain that dilutes your brand. When you register a domain through Megaladon Hosting, you maintain full ownership and control. Transfer it, sell it, or keep it for decades—it's yours. We provide free WHOIS privacy protection to keep your personal information secure, and our domain management panel makes it easy to configure DNS settings, set up email forwarding, and manage renewals.
+                </p>
+                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                    DNS management might sound technical, but it's simply the system that connects your domain name to your website, email, and other services. Megaladon Hosting provides an intuitive DNS management interface that eliminates the confusion. Need to point your domain to your hosting account? One click. Want to set up a subdomain for your blog or app? Simple configuration. Migrating from another provider? We'll handle the DNS transition to minimize downtime. Our DNS servers are distributed globally for fast resolution times and built-in redundancy to prevent outages.
+                </p>
+                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                    Choosing the right domain extension matters for your brand and SEO. Traditional extensions like .com, .net, and .org remain popular and trusted, but newer TLDs like .dev, .studio, .tech, and .shop can help you stand out and immediately communicate what your site is about. Our domain experts can help you understand the advantages of different extensions and find creative alternatives if your first choice is taken. We also offer domain transfer services to bring your existing domains under the Megaladon Hosting umbrella, where you'll benefit from competitive renewal rates and integrated management with your hosting services.
+                </p>
+            </div>
 
-          <details class="accordion">
-            <summary>What backup retention options are available?</summary>
-            <div>Daily backups are standard; higher tiers include longer retention and point-in-time restores. For sensitive workloads we offer increased retention and immutable backups.</div>
-          </details>
+            <div class="tld-tiles">
+                <div class="tld-tile">.com</div>
+                <div class="tld-tile">.net</div>
+                <div class="tld-tile">.org</div>
+                <div class="tld-tile">.dev</div>
+                <div class="tld-tile">.studio</div>
+                <div class="tld-tile">.tech</div>
+                <div class="tld-tile">.shop</div>
+                <div class="tld-tile">.io</div>
+            </div>
 
-          <details class="accordion">
-            <summary>Do you offer a free trial or credit?</summary>
-            <div>Yes — our pilot includes an audit, a short trial window on a production-like setup, and migration assistance for qualifying customers.</div>
-          </details>
-
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="#contact" class="btn btn-primary">Search Domains</a>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <!-- TESTIMONIALS TILE -->
-      <section class="tile tile-testimonials" aria-label="testimonials">
+    <!-- Knowledge Base Section -->
+    <section id="knowledge" class="knowledge-base">
         <div class="container">
-          <h2 class="accent-underline">What teams are saying ✨</h2>
-          <div class="testimonials-grid">
-            <blockquote class="testimonial">“Megaladon helped us cut our night‑time incident rate in half. The previews and performance monitoring changed how we ship.” — CTO, growing SaaS</blockquote>
-            <blockquote class="testimonial">“The migration was painless — the team paired with us and owned the cutover. They made a complicated move feel simple.” — Head of Product, ecommerce</blockquote>
-          </div>
-        </div>
-      </section>
+            <div class="section-header">
+                <h2>Self-Service Help When You Need It</h2>
+                <p>Our comprehensive Knowledge Base provides clear, step-by-step guides written in plain English. Find answers quickly without wading through technical jargon.</p>
+            </div>
 
-      <!-- FINAL CTA TILE (contact) -->
-      <section id="contact" class="tile tile-cta" aria-label="contact">
+            <div class="kb-categories">
+                <div class="kb-tile">
+                    <h3>🚀 Getting Started</h3>
+                    <p>New to web hosting? Start here. Our getting started guides walk you through account setup, installing your first application, configuring email, and understanding your control panel. We've eliminated the confusion with clear screenshots and simple explanations that assume no prior technical knowledge. Within minutes, you'll feel confident managing your hosting account.</p>
+                </div>
+                <div class="kb-tile">
+                    <h3>🌐 DNS & Domains</h3>
+                    <p>Domain and DNS management can feel overwhelming, but our Knowledge Base breaks it down into understandable concepts. Learn how to point your domain to your hosting, create subdomains, configure email MX records, and troubleshoot DNS propagation issues. We explain what each setting does and why it matters, empowering you to make informed decisions about your domain configuration.</p>
+                </div>
+                <div class="kb-tile">
+                    <h3>📧 Email Setup</h3>
+                    <p>Professional email is essential for business credibility. Our email guides show you how to create email accounts, configure them in popular email clients like Outlook and Apple Mail, set up mobile devices, create forwarders, and use webmail. We also cover spam filtering, autoresponders, and email security best practices to keep your communications professional and secure.</p>
+                </div>
+                <div class="kb-tile">
+                    <h3>🔒 Security & Backups</h3>
+                    <p>Understanding security doesn't require a computer science degree. Our security articles explain SSL certificates, password best practices, two-factor authentication, and recognizing common threats. We also provide detailed backup and restoration guides so you know exactly how to protect your data and recover from unexpected issues. Security is everyone's responsibility, and we make it accessible.</p>
+                </div>
+            </div>
+
+            <div style="max-width: 900px; margin: 3rem auto 0; line-height: 1.9;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                    We believe that good documentation empowers users to solve problems independently and learn new skills. That's why every article in our Knowledge Base is written by experienced technicians who understand both the technical details and the frustration of unclear instructions. We test every guide to ensure the steps actually work, update articles when software changes, and welcome feedback from users about what could be clearer.
+                </p>
+                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                    Our Knowledge Base is organized by topic and searchable by keyword, so you can find relevant information quickly whether you know the technical term or just describe the issue in your own words. Each article includes a clear objective, prerequisites, step-by-step instructions with screenshots, and troubleshooting tips for common obstacles. Can't find what you're looking for? Our support team is ready to help and will often create new Knowledge Base articles based on common questions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="support">
         <div class="container">
-          <h2>Ready to try Megaladon? Start a Pilot 🚀</h2>
-          <p class="lead">Book a free migration audit and pilot. We'll help you size an environment, map migration steps, and show savings or performance gains in a short pilot.</p>
+            <div class="section-header">
+                <h2>Support That Respects Your Time</h2>
+                <p>When you need help, you deserve clear answers from people who care. Our support team combines technical expertise with genuine respect for your time and intelligence.</p>
+            </div>
 
-          <div class="cta-actions">
-            <a class="btn btn-primary large" href="#">Start Pilot</a>
-            <a class="btn btn-ghost" href="#">Request Audit</a>
-          </div>
+            <div class="support-content" style="line-height: 1.9;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                    Technical support shouldn't feel like an adversarial experience. At Megaladon Hosting, we've built a support culture that assumes our customers are intelligent people facing legitimate technical challenges. You won't be asked to clear your cache seventeen times before we actually investigate the issue. You won't be blamed for problems caused by software bugs or unclear interfaces. When you contact our support team, you'll work with technicians who listen carefully, ask relevant questions, and explain solutions in terms that make sense.
+                </p>
+                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                    Our support ticket system is designed for transparency and efficiency. When you submit a ticket, you'll receive a confirmation with a ticket number and realistic expectations for response time. Higher-tier plans receive priority queue placement, but every customer receives the same quality of support. Your ticket is assigned to a qualified technician who has access to your account details and server logs, eliminating the need to repeat information or explain the same issue to multiple people. We keep tickets updated with progress reports, and you can reply anytime to provide additional information or ask follow-up questions.
+                </p>
+                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                    We encourage customers to use our Knowledge Base first for common questions and routine tasks—not because we want to avoid helping you, but because we respect that you might prefer to solve simple issues immediately rather than waiting for a response. For complex problems, our support team is ready and equipped to dive deep. We can review server logs, analyze database performance, troubleshoot application errors, and collaborate with you to find solutions. Our goal is resolution, not ticket closure metrics.
+                </p>
+                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                    Communication matters. We commit to clear, honest updates about any issues affecting your hosting service. If there's scheduled maintenance, you'll know in advance. If we're experiencing an unexpected outage, you'll receive transparent information about what happened, what we're doing to fix it, and how we'll prevent it in the future. We don't hide behind corporate speak or make excuses. Megaladon Hosting is built on accountability, and that extends to every support interaction.
+                </p>
 
-          <p style="margin-top:18px;color:var(--muted)">Prefer a short conversation? Click 'Talk to an engineer' and we'll find a time to walk your stack and identify a low-risk migration plan.</p>
+                <div style="text-align: center; margin-top: 2.5rem;">
+                    <a href="#contact" class="btn btn-primary">Get Support</a>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-    </main>
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built on Principles, Not Hype</h2>
+                <p>Megaladon Hosting was founded on a simple belief: web hosting should be reliable, honest, and respectful. We're not the biggest hosting company, and that's by design.</p>
+            </div>
 
-    <footer class="site-footer tile" role="contentinfo">
-      <div class="container footer-inner">
-        <div style="display:flex;gap:10px;align-items:center"><img src="/assets/images/logo.svg" height="28" alt="Megaladon" /><div style="font-weight:700">Megaladon</div></div>
-        <div style="color:var(--muted);font-size:13px">© 2025 Megaladon — Veteran-owned. Built for teams that ship.</div>
-      </div>
+            <div class="about-content">
+                <p>
+                    Megaladon Hosting began when our founder, a military veteran with years of systems administration experience, grew frustrated with the state of the web hosting industry. Too many providers over-promised and under-delivered, cramming thousands of websites onto overloaded servers and providing support that felt more like reading from a script than solving problems. There had to be a better way—a hosting company that treated customers with respect, invested in quality infrastructure, and stood behind its service with real accountability.
+                </p>
+                <p>
+                    We started small, serving a handful of clients who valued reliability over flashy marketing claims. Word spread among people who were tired of downtime, slow support responses, and hosting providers that blamed customers for technical issues. As we grew, we made a conscious decision to scale responsibly. Instead of maximizing profit by overselling our servers, we maintain conservative resource allocation to ensure every website performs well. Instead of outsourcing support to offshore call centers, we built an in-house team of experienced technicians who have the authority to actually solve problems.
+                </p>
+                <p>
+                    Our veteran-owned background influences how we operate. Military service teaches you the importance of reliability, clear communication, and taking responsibility for your mission. When you're responsible for critical systems, "good enough" isn't acceptable—it needs to work, period. We apply that same mentality to web hosting. Your website isn't just data on a server; it's your business, your passion project, your connection to customers and community. We take that responsibility seriously.
+                </p>
+                <p>
+                    Honesty is foundational to everything we do. Our pricing is straightforward without hidden fees or dramatic price increases at renewal. When we advertise "unlimited bandwidth," we mean it for legitimate website traffic—we won't suddenly hit you with overage charges because your blog post went viral. If we make a mistake, we own it and make it right. If there's a limitation to what our service can do, we'll tell you upfront rather than letting you discover it the hard way. Trust is earned through consistency, and we're playing the long game.
+                </p>
+                <p>
+                    Our infrastructure reflects our commitment to reliability. We partner with Tier III data centers that provide redundant power, cooling, and network connectivity. Our servers use enterprise-grade hardware with NVMe SSD storage for maximum performance. We implement proactive monitoring that alerts us to potential issues before they become customer-facing problems. Our backup systems are tested regularly to ensure we can restore data quickly when needed. Every technical decision is made with one question in mind: "Will this make our hosting more reliable for customers?"
+                </p>
+                <p>
+                    We believe in continuous improvement. Technology evolves, threats change, and customer needs shift. Our team stays current with industry developments, security best practices, and emerging technologies. We regularly review our systems, seek feedback from customers, and invest in upgrades that enhance performance and security. When we identify a better way to do something, we implement it—even if it costs more or requires extra work. That's how you build a hosting company that lasts.
+                </p>
+                <p>
+                    What makes Megaladon Hosting different isn't any single feature—it's the combination of reliable infrastructure, honest business practices, and genuine respect for customers. We're not trying to be the cheapest option or the biggest provider. We're building a hosting company that we'd want to use ourselves, one that treats you like an intelligent adult, delivers consistent performance, and stands behind its service. If that resonates with you, we'd be honored to host your website.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's Talk</h2>
+                <p>Questions about hosting? Need help with your current site? Ready to get started? We're here to help and we actually enjoy talking to our customers.</p>
+            </div>
+
+            <div class="contact-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+
+                <div class="contact-info">
+                    <p style="margin-top: 2rem; font-size: 1.1rem;"><strong>Support Email:</strong> support@megaladonhosting.com</p>
+                    <p style="font-size: 1.1rem;"><strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM EST</p>
+                    <p style="margin-top: 1rem; color: var(--text-gray);">
+                        We respond to all inquiries within one business day, usually much faster. For urgent technical issues with existing accounts, please use our support ticket system for the fastest response. We're also active on social media if you prefer to connect there.
+                    </p>
+                </div>
+            </div>
+
+            <div style="max-width: 700px; margin: 2.5rem auto 0; line-height: 1.8; text-align: center;">
+                <p style="color: var(--text-dark); font-size: 1.05rem;">
+                    Whether you're exploring hosting options, troubleshooting an issue, or just want to chat about your project, we're genuinely interested in hearing from you. Every inquiry is read by a real person who cares about providing helpful information. We don't use auto-responders or canned responses—you'll get a thoughtful reply that addresses your specific question or situation. That's the Megaladon Hosting way.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Megaladon Hosting. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#terms">Terms of Service</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#acceptable-use">Acceptable Use Policy</a>
+            </div>
+        </div>
     </footer>
 
-    <script src="/assets/js/main.js" defer></script>
-  </body>
-</html>
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Megaladon Hosting — Futuristic Tile-First SaaS Hosting</title>
-        <meta name="description" content="Futuristic, tile-first hosting built for modern SaaS engineering teams — fast NVMe, edge performance, and humans that care." />
-        <link rel="stylesheet" href="/assets/css/styles.css">
-    </head>
-
-    <body class="tile-first futuristic">
-        <header class="site-header">
-            <div class="container header-inner">
-                <a class="brand" href="/">
-                    <img src="/assets/images/logo.svg" alt="Megaladon Hosting" class="brand-logo" />
-                    <strong>Megaladon Hosting</strong>
-                </a>
-
-                <nav class="site-nav" aria-label="Main navigation">
-                    <a href="#plans">Plans</a>
-                    <a href="#features">Features</a>
-                    <a href="#why-us">Why Us</a>
-                    <a href="#docs">Docs</a>
-                    <a href="#contact" class="btn btn-ghost">Contact</a>
-                    <a href="#" class="btn btn-primary">Get Hosting</a>
-                </nav>
-
-                <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
-            </div>
-        </header>
-
-        <main id="site-main">
-
-            <!-- Hero tile -->
-            <section class="tile hero-tile" id="home">
-                <div class="container hero-inner">
-                    <div class="hero-left">
-                        <div class="badge">Megaladon — Tile-First Hosting</div>
-                        <h1 class="hero-heading">A single scroll, every message inside beautiful, readable tiles</h1>
-                        <p class="lead">Megaladon combines speed, predictability and practical tools — all wrapped in a modern architecture that helps teams ship quickly. This page demonstrates a tile-first layout where every idea, feature and story lives inside its own visual tile to make content easier to scan and delightful to read.</p>
-
-                        <div class="hero-actions">
-                            <a href="#plans" class="btn btn-primary large">Choose a plan</a>
-                            <a href="#contact" class="btn btn-ghost">Talk to us</a>
-                        </div>
-
-                        <div class="hero-extras">
-                            <span class="pill">Fast NVMe storage</span>
-                            <span class="pill">Daily backups</span>
-                            <span class="pill">Free SSL / DDoS mitigation</span>
-                        </div>
-
-                    </div>
-
-                    <div class="hero-right">
-                        <img src="/assets/images/mega-hero.svg" alt="Megaladon tiles hero" class="hero-visual"/>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Features: tile grid, each tile contains content -->
-            <section class="tile grid tiles-4" id="features" aria-label="Key features">
-                <article class="tile-card tile-accent">
-                    <img class="icon" src="/assets/images/icons/performance.svg" alt="Performance icon"/>
-                    <h2>Performance that scales</h2>
-                    <p>From the moment you sign up, your app is placed on NVMe-first hosts with tuned networking and caching. We bring together modern file systems, edge-ready caching and predictable compute to deliver consistently fast responses. A focus on latency and smart defaults means fewer production surprises and better results for end-users.</p>
-                </article>
-
-                <article class="tile-card tile-contrast">
-                    <img class="icon" src="/assets/images/icons/security.svg" alt="Security icon"/>
-                    <h2>Security by practice</h2>
-                    <p>Automatic SSL, hardened kernel settings, and built-in DDoS protections form the first layer. We also provide daily backups, safe restore points, role-based access controls and optional monitoring integrations. Security is a continuing practice, not a feature toggle — our team helps you run safely at every scale.</p>
-                </article>
-
-                <article class="tile-card tile-rose">
-                    <img class="icon" src="/assets/images/icons/deploy.svg" alt="Deploy icon"/>
-                    <h2>Deployments that feel effortless</h2>
-                    <p>Our atomic deploy flow keeps your applications available during releases, with staging environments and repeatable migrations. Integrate with any Git workflow and ship previews to customers confidently. When deployments are predictable you reduce downtime, lower stress and increase team velocity.</p>
-                </article>
-
-                <article class="tile-card tile-cyan">
-                    <img class="icon" src="/assets/images/icons/support.svg" alt="Support icon"/>
-                    <h2>Human-first support</h2>
-                    <p>Ticket queues are useful but real problems need real people. You’ll reach engineers who understand hosting, application constraints, and how to recover quickly. Every plan includes proactive health checks and access to our senior ops team for troubleshooting and migrations.</p>
-                </article>
-            </section>
-
-            <!-- Trust stripe (logos) -->
-            <section class="tile" aria-label="trusted-by">
-                <div class="container trust-strip">
-                    <div style="display:flex;align-items:center;gap:10px;">
-                        <strong style="margin-right:8px;color:var(--text)">Trusted by</strong>
-                        <img src="/assets/images/logo.svg" alt="Customer logo"/>
-                        <img src="/assets/images/logo.svg" alt="Customer logo 2"/>
-                        <img src="/assets/images/logo.svg" alt="Customer logo 3"/>
-                        <img src="/assets/images/logo.svg" alt="Customer logo 4"/>
-                    </div>
-                    <div style="color:var(--muted);font-weight:700">Over 15,000 sites served worldwide</div>
-                </div>
-            </section>
-
-            <!-- Developer micro-tiles hero -->
-            <section class="tile" aria-label="developer-experience">
-                <div class="container">
-                    <div class="accent-underline"><h2>Developer-first tools that just work</h2></div>
-                    <p class="lead">Ship with confidence: deploy previews, instant rollbacks, and Git-native workflows keep development loops tight.</p>
-                    <div class="dev-tiles">
-                        <div class="dev-tile">Deploy from Git</div>
-                        <div class="dev-tile">Instant previews</div>
-                        <div class="dev-tile">CLI & API</div>
-                        <div class="dev-tile">Webhooks & Integrations</div>
-                        <div class="dev-tile">Edge-ready CDN</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Deep-dive tile with long-form content (this and the following sections will hold majority of the 3000 words) -->
-            <section class="tile tile-rich" id="why-us" aria-label="Why choose Megaladon">
-                <div class="container">
-                    <h2>Why teams choose Megaladon — a detailed look</h2>
-                    <p>Choosing a hosting platform is more than a checklist — it’s a long-term relationship. In this tile we’re going deep on the responsibilities we take on for you, the practices we follow, and the measurements we use to remain reliable and cost-effective.</p>
-
-                    <h3>Operational predictability</h3>
-                    <p>Predictability is the most underrated property for a hosting provider. Predictable performance means your engineering team can make decisions with confidence. We maintain consistent baselines for CPU, memory, and I/O across our instance types and use autoscaling only where it improves stability without surprising cost changes. Predictable instances and quotas allow businesses to forecast spend, provision for traffic spikes, and reduce the time spent firefighting transient load events.</p>
-
-                    <h3>Data protection and backups</h3>
-                    <p>Backups are a form of insurance. We run daily backups and keep rolling retention windows so you can recover quickly from accidental deletions, migrations, or incidents. Our restore tooling uses incremental snapshots which are space-efficient and quick to transfer for restores. For higher tiers we include point-in-time recovery and practice regular restores in a controlled environment to verify our backup integrity end-to-end.</p>
-
-                    <h3>Security and compliance</h3>
-                    <p>Security isn't a checkbox — it's an ongoing program. Our baseline includes automated SSL rollout for every domain, continuous vulnerability scanning, and automated patching for common platform components. For customers with compliance needs, we provide additional audit logs, role restrictions, and guidance on data handling. Our goal is to make compliance practical — not an expensive barrier — by pairing platform controls with clear operational processes.</p>
-
-                    <h3>Human processes that scale</h3>
-                    <p>Great platforms are backed by reliable operations. We run post-incident reviews, publish meaningful runbooks, and ensure engineers can access prioritized context for customer issues. Our team uses a single pane of glass for incident timelines so the right engineers can resolve incidents faster. Automation handles routine remediation; human judgement is used for complexity and edge-cases.</p>
-
-                    <h3>Developer ergonomics</h3>
-                    <p>How easy it is to get started matters. From first login to the first commit we aim to reduce friction: predictable local dev environments, easy database snapshots, and comprehensive CLI tooling. Our platform provides clear error messages, helpful documentation and sample apps to get you past the common roadblocks quickly. Less time setting up environments equals more time shipping features.</p>
-
-                    <p>The next set of tiles walk you through common flows — onboarding, migrations, scaling, and cost optimization — all in clear, tangible steps. Each tile contains practical guidance so you can make immediate progress without a steeper learning curve.</p>
-                </div>
-            </section>
-
-            <section class="tile grid tiles-3 tile-rich-compact" aria-label="Onboarding and migration steps">
-                <article class="tile-card">
-                    <img class="icon" src="/assets/images/icons/onboarding.svg" alt="Onboarding icon"/>
-                    <h3>Onboarding with zero head-ache</h3>
-                    <p>Onboarding should be short. We provide importers for common CMS and app types, automated domain setup, and a guided checklist to take you from launch in hours, not days. One click database imports, DNS setup helpers, and an experienced onboarding engineer for larger migrations remove the usual friction.</p>
-                </article>
-
-                <article class="tile-card">
-                    <img class="icon" src="/assets/images/icons/migrate.svg" alt="Migrate icon"/>
-                    <h3>Safe, staged migrations</h3>
-                    <p>Migrate in stages: import data into staging, validate, then cutover when ready. Our architecture allows independent lifecycle management for staging and production so rollbacks are safe and fast. We also offer migration assistance and pre-migration planning sessions for critical apps to avoid surprise incompatibilities.</p>
-                </article>
-
-                <article class="tile-card">
-                    <img class="icon" src="/assets/images/icons/scale.svg" alt="Scale icon"/>
-                    <h3>Scale intentionally</h3>
-                    <p>Scaling isn't just about adding CPU — it's about thinking through horizontal partitioning, caching, and managed services. We provide tools to separate concerns and let you scale the right axis for your workload — caches, read replicas, or shard-aware queues. Our team can help plan a migration path from a single instance to multi-region configurations over time.</p>
-                </article>
-            </section>
-
-            <!-- Large tile with a long narrative for SEO / engagement -->
-            <section class="tile tile-long" aria-label="Long narrative about building for scale">
-                <div class="container">
-                    <h2>Building products that last — the Megaladon approach</h2>
-
-                    <p>Great companies are built by teams that balance speed and durability. Young product teams chase velocity while mature teams hunt for reliable growth. Megaladon believes reliable infrastructure is the framework that allows product teams to iterate profitably. We operate at the intersection of systems engineering, developer experience, and customer empathy — the combination that transforms an infrastructure provider into a long-term partner.</p>
-
-                    <p>When you design for performance, you also design for failure. Instead of assuming everything will be fine, we build for graceful degradation: caches that serve stale content under pressure, circuits that prevent cascading failures, and sensible default timeouts to avoid blocking critical services. Paired with an easy-to-use deployment model and clear observable signals, teams can iterate with predictable impacts and business confidence.</p>
-
-                    <p>We treat guardrails as productivity boosters. Automated runbooks, safe-by-default configs, and clear cost observability reduce cognitive load for engineers. Productivity increases when cognitive burdens fall away — when an engineer can move from noticing an issue to resolving it in minutes instead of days. The right infrastructure helps teams spend more time on product problems and less time shoring up fragile operations.</p>
-
-                    <p>For startups: we help you iterate quickly with affordable, predictable resources and a sensible 'grow with you' roadmap. For established businesses: we provide migration planning, SLA-backed hosting and engineering support that integrates into your on-call rotations. Across all of this, our focus is to help teams reduce toil and increase the tempo of meaningful work.</p>
-
-                    <p>This page serves as a single-scroll narrative for product and technology leaders — a compact, readable set of tiles to make decisions fast. Each tile is a self-contained piece of the story, so your team can skim or deep-dive as needed. The rest of the page continues with detailed feature tiles, a full pricing walkthrough, an accessible FAQ, and a closing narrative that helps you reach the people who can help migrate or evaluate Megaladon for your organization.</p>
-                </div>
-            </section>
-
-            <!-- Pricing / Plans (tile grid) -->
-            <section class="tile" id="plans" aria-label="Plans">
-                <article class="tile-card plan-card tile-accent">
-                    <h3>Pup — Starter</h3>
-                    <div class="plan-price">$4 /mo</div>
-                    <p>Great for personal projects, prototypes and testing. Comes with the basics: 1 site, NVMe storage, and daily backups.</p>
-                    <ul class="plan-features">
-                        <li>1 site</li>
-                        <li>20 GB NVMe</li>
-                        <li>Daily backups</li>
-                        <li>Community support</li>
-                    </ul>
-                    <a class="btn btn-primary" href="#contact">Get Pup</a>
-                </article>
-
-                <article class="tile-card plan-card featured tile-rose">
-                    <h3>Reef — Growing teams</h3>
-                    <div class="plan-price">$12 /mo</div>
-                    <p>Perfect for small teams and bootstrapped SaaS businesses. Start with 5 sites and a generous NVMe pool.</p>
-                    <ul class="plan-features">
-                        <li>5 sites</li>
-                        <li>50 GB NVMe</li>
-                        <li>Priority support</li>
-                        <li>Staging environments</li>
-                    </ul>
-                    <a class="btn btn-primary" href="#contact">Choose Reef</a>
-                </article>
-
-                <article class="tile-card plan-card tile-cyan">
-                    <h3>Megaladon — Production</h3>
-                    <div class="plan-price">Custom</div>
-                    <p>For production apps that need guaranteed performance, SLA and team-assist migrations.</p>
-                    <ul class="plan-features">
-                        <li>Dedicated resources</li>
-                        <li>Custom scaling</li>
-                        <li>24/7 priority ops</li>
-                        <li>Compliance and audits</li>
-                    </ul>
-                    <a class="btn btn-ghost" href="#contact">Talk to Sales</a>
-                </article>
-
-                <div style="margin-top:18px" class="price-benefits">
-                    <div class="grid pricing-grid">
-                        <div class="price-table">
-                            <h4>Why these plans?</h4>
-                            <p class="text-muted">Designed to simplify choice without surprises — predictable CPU, memory and NVMe-based storage across the tiers.</p>
-                        </div>
-                        <div class="price-table">
-                            <h4 class="accent-underline">Compare</h4>
-                            <table style="width:100%;margin-top:10px;color:var(--muted)">
-                                <thead><tr><th></th><th>Pup</th><th>Reef</th><th>Megaladon</th></tr></thead>
-                                <tbody>
-                                    <tr><td>Sites</td><td>1</td><td>5</td><td>Custom</td></tr>
-                                    <tr><td>NVMe</td><td>20 GB</td><td>50 GB</td><td>Custom</td></tr>
-                                    <tr><td>Backups</td><td>Daily - 7d</td><td>Daily - 30d</td><td>Daily - 90d</td></tr>
-                                    <tr><td>Support</td><td>Community</td><td>Priority</td><td>24/7 SLA</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="price-table">
-                            <h4>Need help choosing?</h4>
-                            <p class="text-muted">We offer a free migration audit for production customers, and pilots to test at realistic scale.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Long FAQ / educational content inside tiles -->
-            <section class="tile tile-rich tile-qa" aria-label="FAQ and guides">
-                <div class="container">
-                    <h2>Deep FAQ, guides, and practical answers</h2>
-
-                    <div class="qa-grid">
-                        <article class="qa-card">
-                            <h3>How do I migrate an existing app safely?</h3>
-                            <p>Start in staging: import your database snapshots and run smoke tests. Use config overlays for secrets and run parallel traffic tests where practical. When ready, schedule a short cutover window and use DNS TTL adjustments to minimize downtime. We help with rollbacks by preserving the previous release directory for quick reversion if needed.</p>
-                        </article>
-
-                        <article class="qa-card">
-                            <h3>How are backups stored and restored?</h3>
-                            <p>We run daily snapshots and retain configurable history. Restores use incremental transfers wherever possible to reduce data movement and time-to-restore. For larger systems we partition backup data across storage tiers and test restore flows to ensure integrity.</p>
-                        </article>
-
-                        <article class="qa-card">
-                            <h3>What monitoring is included?</h3>
-                            <p>Basic metrics and logs are available at every plan level. Higher plans include alerting, anomaly detection and retention windows that align with compliance needs. We can integrate with your existing monitoring stack or provide a managed observability add-on.</p>
-                        </article>
-                    </div>
-
-                    <h3>Operational playbook (short)</h3>
-                    <p>In the event of an incident, our playbook prioritizes availability. We take immediate action to restore traffic, then investigate root cause in parallel. Post-incident we run a retrospective and publish a summary of the actions taken. Customers on production plans receive a tailored incident review with recommended remediations and tests to avoid recurrence.</p>
-
-                    <h3>Cost control</h3>
-                    <p>We provide a cost console that highlights spend per project and per service. Budgets can be set to alert when thresholds are hit and autoscaling policies can be tuned so you never get surprised. Predictable resource types and transparent pricing models make capacity planning straightforward for engineering and finance teams.</p>
-
-                </div>
-            </section>
-
-            <!-- Testimonials tile -->
-            <section class="tile tile-testimonials" aria-label="Testimonials">
-                <div class="container">
-                    <h2>Trusted by engineers and operators</h2>
-                    <div class="testimonials-grid">
-                        <blockquote class="testimonial">“Megaladon slashed our page latency and gave our small team the confidence to scale. The onboarding engineer made our migration painless.” — Product Lead, a fast-growing startup.</blockquote>
-                        <blockquote class="testimonial">“Infrastructure stopped being a worry. We can focus on features — the Megaladon ops team helped automate our restore and scaling strategy.” — VP Engineering, established SaaS company.</blockquote>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Closing narrative and contact tile -->
-            <section class="tile tile-cta" id="contact">
-                <div class="container">
-                    <h2>Let’s plan your migration or pilot</h2>
-                    <p>We offer a free migration audit for production customers and limited-time pilot pricing for teams that want to evaluate performance. Reach out and we’ll suggest a step-by-step plan tailored for your stack, alongside an estimated cost and timeline. If you'd rather have a quick chat, schedule a call and we’ll walk through your architecture together.</p>
-
-                    <div class="cta-actions">
-                        <a class="btn btn-primary large" href="#">Start Pilot</a>
-                        <a class="btn btn-ghost" href="#">Request Audit</a>
-                    </div>
-
-                    <div class="final-note">
-                        <p>We built this page to be straightforward, readable, and entirely tile-based because clarity matters. Every tile is a self-contained unit of value — sketchable, repeatable, and easy to reference in documentation or hand-offs. When you’re ready to get started, we’ll walk alongside your engineers and help you ship with fewer surprises.</p>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-        <footer class="site-footer">
-            <div class="container footer-inner">
-                <div class="brand small"><img src="/assets/images/logo.svg" height="24" alt="Megaladon"/> <strong>Megaladon Hosting</strong></div>
-                <div class="copyright">© 2025 Megaladon Hosting — Veteran owned</div>
-            </div>
-        </footer>
-
-        <script src="/assets/js/main.js" defer></script>
-    </body>
-</html>
-            <!-- HERO block: big headline, title tile on right, shark left -->
-            <div class="hero">
-                <div class="hero-media">
-                    <img src="/assets/images/shark-hero.jpg" alt="Megaladon shark hero" />
-                    <div class="talk-bubbles" aria-hidden="true">
-                        <div class="bubble">🫧</div>
-                        <div class="bubble">💬</div>
-                        <div class="bubble">✨</div>
-                    </div>
-                </div>
-
-                <div class="title-tile">
-                    <div class="title-badge">VETERAN-OWNED • PERFORMANCE • TRUST</div>
-                    <h1 class="title-head">Megaladon Hosting — Fast, secure web hosting with human support</h1>
-                    <div class="title-sub">We remove the hosting headaches so you can focus on growth. Predictable performance, automatic backups, and real people who understand your site and your goals.</div>
-
-                    <div style="margin-top:18px;color:var(--muted);font-size:14px;">Whether you’re launching a simple portfolio or running traffic-intensive production apps, our infrastructure is designed to scale without surprises. We combine tuned server stacks, NVMe storage, and sensible defaults to deliver consistent, measurable speed for your site visitors.</div>
-
-                    <div class="title-ctas" style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;">
-                        <a class="btn btn-primary" href="#hosting">View Plans</a>
-                        <a class="btn btn-ghost" href="#contact">Talk to Sales</a>
-                    </div>
-
-                    <div style="margin-top:18px;opacity:0.95;color:var(--muted);font-size:14px">
-                        <strong>Built for reliability:</strong>
-                        <ul style="margin:8px 0 0 17px;color:var(--muted)">
-                            <li>Transparent pricing and clear limits</li>
-                            <li>Free SSL + DDoS protection and daily backups</li>
-                            <li>Real, responsive human support 24/7/365</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Hero tiles / value props -->
-            <div style="margin-top:12px">
-                <div class="hero-tiles">
-                    <div class="tile">
-                        <div style="font-size:18px;font-weight:700"><span class="icon-badge icon-rocket" aria-hidden="true">🚀</span>Performance tuned like a race motor</div>
-                        <p>We tune every layer — PHP-FPM, HTTP/2, edge caching and NVMe disk — to remove bottlenecks and boost real user performance. That matters for conversion, retention, and search rankings.</p>
-                        <p style="color:var(--muted)">We keep metrics visible and measurable. No magic black boxes — we show you what we measure and how it’s improving over time.</p>
-                    </div>
-
-                    <div class="tile">
-                        <div style="font-size:18px;font-weight:700"><span class="icon-badge icon-lock" aria-hidden="true">🔒</span>Security done right — not annoying</div>
-                        <p>Protecting your site shouldn’t be complex. Free SSL, automated security updates, malware scanning, and network-level protections are included. When we see something suspicious, we act — and we’ll tell you why and what we fixed.</p>
-                        <p style="color:var(--muted)">The goal is secure defaults and honest explanations — not endless, confusing alerts you have to decipher.</p>
-                    </div>
-
-                    <div class="tile">
-                        <div style="font-size:18px;font-weight:700"><span class="icon-badge icon-support" aria-hidden="true">💬</span>Human-first support with real insights</div>
-                        <p>Support that reads like it was written by a human instead of a script. Our team provides actionable answers that solve problems quickly. We’re available by ticket and email — and we’re known for clear follow-through.</p>
-                        <p style="color:var(--muted)">If needed, we'll use our migration tools and hands-on help to transfer your site with minimal downtime.</p>
-                    </div>
-
-                    <div class="tile">
-                        <div style="font-size:18px;font-weight:700"><span class="icon-badge icon-panel" aria-hidden="true">🧩</span>Flexible control panels</div>
-                        <p>Pick the control panel you prefer — cPanel for compatibility or CyberPanel for speed and modern stacks. We’ll work with your stack rather than forcing you into one choice.</p>
-                        <p style="color:var(--muted)">Control panels come with one-click managers, SSL and helpful guides so you own the process.</p>
-                    </div>
-                </div>
-
-                <div style="margin-top:18px;color:var(--muted);font-size:15px;line-height:1.6">
-                    Megaladon Hosting is designed for teams and individuals who value stability, clarity, and tangible performance improvements. Our infrastructure and processes remove the guesswork so you can ship faster and sleep easier knowing your site is backed by experts who care.
-                </div>
-            </div>
-
-            <!-- HOSTING PLANS SECTION (expanded) -->
-            <section id="hosting" class="plans-section">
-                <div class="plans-inner">
-                    <div class="section-head">
-                    <div>
-                        <h2>Hosting Plans — Clear, powerful, and built to scale</h2>
-                        <p class="lead">We offer a set of thoughtfully designed plans that make it easy to pick the right option for your site. Each plan includes fast NVMe storage, SSL, backups, and our human-first support — pick what fits and upgrade as you grow.</p>
-                    </div>
-                </div>
-
-                    <div class="tile">
-                    <div class="plans-carousel" data-carousel role="region" aria-roledescription="carousel" aria-label="Hosting plans carousel">
-                        <button class="carousel-btn carousel-prev" aria-label="Previous plans">‹</button>
-                        <div class="carousel-viewport">
-                            <div class="carousel-track">
-                    <div class="plan plan--pup">
-                        <div style="font-weight:900;letter-spacing:1px">Pup Plan</div>
-                        <div class="price">$3.99/mo</div>
-                        <p style="margin-top:6px;color:var(--muted)">Starter plan for personal sites and portfolios.</p>
-                        <ul>
-                            <li>1 Website • 20 GB NVMe</li>
-                            <li>Free SSL • Daily Backups</li>
-                            <li>One‑click WordPress • cPanel</li>
-                            <li>Community & email support</li>
-                        </ul>
-                        <a class="btn btn-primary" href="#contact">Get Pup Plan</a>
-                        <!-- pros/cons removed to keep plans focused & scannable -->
-                            </div>
-                        </div>
-                        <button class="carousel-btn carousel-next" aria-label="Next plans">›</button>
-                        <div class="carousel-dots" aria-hidden="false"></div>
-                    </div>
-
-                    <div class="plan plan--reef">
-                        <div style="font-weight:900;letter-spacing:1px">ReefShark</div>
-                        <div class="price">$7.99/mo</div>
-                        <p style="margin-top:6px;color:var(--muted)">Best value for small businesses and blogs.</p>
-                        <ul>
-                            <li>5 Websites • 50 GB NVMe</li>
-                            <li>Daily Backups • Free SSL</li>
-                            <li>Staging, cache tuning & better network priority</li>
-                            <li>Priority support</li>
-                        </ul>
-                        <a class="btn btn-primary" href="#contact">Choose ReefShark</a>
-                        <!-- pros/cons removed to keep plans focused & scannable -->
-                    </div>
-
-                    <!-- New: TigerShark plan (mid-tier) -->
-                    <div class="plan plan--tiger">
-                        <div style="font-weight:900;letter-spacing:1px">TigerShark</div>
-                        <div class="price">$11.99/mo</div>
-                        <p style="margin-top:6px;color:var(--muted)">A versatile mid-tier built for growing businesses that need extra CPU and storage.</p>
-                        <ul>
-                            <li>10 Websites • 75 GB NVMe</li>
-                            <li>Daily Backups • Free SSL</li>
-                            <li>Staging, advanced cache tuning</li>
-                            <li>Priority email & ticket support</li>
-                        </ul>
-                        <a class="btn btn-primary" href="#contact">Get TigerShark</a>
-                        <div style="margin-top:10px;color:var(--muted);font-size:13px">Great balance of cost and capacity — purpose-built once you’ve outgrown ReefShark.</div>
-                    </div>
-                    </div>
-
-                    <div class="plan plan--hammer">
-                        <div style="font-weight:900;letter-spacing:1px">Hammerhead</div>
-                        <div class="price">$14.99/mo</div>
-                        <p style="margin-top:6px;color:var(--muted)">For agencies and high-traffic sites needing more power.</p>
-                        <ul>
-                            <li>Unlimited sites • 100 GB NVMe</li>
-                            <li>Priority backups • Advanced security tools</li>
-                            <li>Free site migration • choice of control panels</li>
-                            <li>Dedicated support line</li>
-                        </ul>
-                        <a class="btn btn-primary" href="#contact">Get Hammerhead</a>
-                        <!-- pros/cons removed to keep plans focused & scannable -->
-                    </div>
-
-                    <div class="plan plan--mega">
-                        <div style="font-weight:900;letter-spacing:1px">Megaladon</div>
-                        <div class="price">$29.99/mo</div>
-                        <p style="margin-top:6px;color:var(--muted)">Enterprise-ready resources and SLA-backed uptime.</p>
-                        <ul>
-                            <li>Premium performance • high throughput</li>
-                            <li>Advanced monitoring & custom infrastructure</li>
-                            <li>SLA & dedicated account manager</li>
-                            <li>Priority migrations and architecture review</li>
-                        </ul>
-                        <a class="btn btn-primary" href="#contact">Talk to Sales</a>
-                        <!-- pros/cons removed to keep plans focused & scannable -->
-                    </div>
-            </div>
-        </div>
-
-                        <div class="tile" style="margin-top:18px;color:var(--muted);line-height:1.7">
-                    </div>
-                    Our plans are deliberately simple. We avoid “gotchas” and expose limits clearly. This means you can plan growth without surprise bandwidth throttles or account lockouts. If your application needs special resources, our Sales and Support teams will work with you to architect a tailored solution.
-                </div>
-            </section>
-
-            <!-- DOMAINS SECTION -->
-            <section id="domains">
-                <div class="section-head">
-                    <div>
-                        <h2>Domains — search, register, and manage</h2>
-                        <p class="lead">The domain is the front door to your brand. Megaladon provides domain search, transfers, and management tools so you can lock in a name fast and keep DNS and email under your control.</p>
-                    </div>
-                </div>
-
-                <div class="tile">
-                    <div class="domains-grid">
-                    <div class="domain-card">
-                        <strong>.com</strong>
-                        <div style="color:var(--muted);margin-top:6px">Classic, global, and great for businesses</div>
-                        </div>
-                    </div>
-                    <div class="domain-card">
-                        <strong>.net</strong>
-                        <div style="color:var(--muted);margin-top:6px">Reliable and memorable for tech and networks</div>
-                    </div>
-                    <div class="domain-card">
-                        <strong>.org</strong>
-                        <div style="color:var(--muted);margin-top:6px">Trusted by communities and non-profits</div>
-                    </div>
-                    <div class="domain-card">
-                        <strong>.io</strong>
-                        <div style="color:var(--muted);margin-top:6px">Popular for startups and apps</div>
-                    </div>
-                    <div class="domain-card">
-                        <strong>Transfers</strong>
-                        <div style="color:var(--muted);margin-top:6px">Bring your domain and let us help manage TTLs and DNS smoothly</div>
-                    </div>
-                </div>
-
-                <div class="tile" style="margin-top:12px;color:var(--muted);line-height:1.6">
-                    Registering and managing domains should be simple. We provide DNS management, WHOIS privacy, and migration assistance so you can keep control and maintain a professional presence online. For companies with many domains, we offer management support and bulk pricing to simplify renewals and transfers.
-                </div>
-            </section>
-
-            <!-- KNOWLEDGE + LEARNING -->
-            <section id="knowledge">
-                <div class="section-head">
-                    <div>
-                        <h2>Knowledge Base & Guides</h2>
-                        <p class="lead">We believe better documentation reduces support friction. Our knowledge base contains articles and walkthroughs designed for developers and non-technical site owners alike.</p>
-                    </div>
-                </div>
-
-                <div class="tile">
-                    <div class="kb-grid">
-                    <div class="kb-card">
-                        <h3>Getting started with WordPress</h3>
-                        <p style="color:var(--muted)">One-click installs, staging, backups and cache tuning in plain English.</p>
-                        </div>
-                    </div>
-                    <div class="kb-card">
-                        <h3>How to migrate your site</h3>
-                        <p style="color:var(--muted)">Step-by-step migration guides and tips for reducing downtime.</p>
-                    </div>
-                    <div class="kb-card">
-                        <h3>Security best practices</h3>
-                        <p style="color:var(--muted)">Practical security measures you can apply instantly.</p>
-                    </div>
-                    <div class="kb-card">
-                        <h3>Performance tuning</h3>
-                        <p style="color:var(--muted)">How to measure and improve real user performance.</p>
-                    </div>
-                </div>
-
-                <div class="tile" style="margin-top:12px;color:var(--muted);line-height:1.6">
-                    Our knowledge base and tutorials are built to help you move fast. We cover everything from DNS basics to advanced caching strategies — and if something is missing, we’ll write a guide and share it with our customers.
-                </div>
-            </section>
-
-            <!-- SUPPORT SECTION -->
-            <section id="support">
-                <div class="section-head">
-                    <div>
-                        <h2>Support & Managed Services</h2>
-                        <p class="lead">People call us when they need honest, straightforward help. Our support team is veteran‑minded, pragmatic and focused on resolution — not scripts.</p>
-                    </div>
-                </div>
-
-                <div class="tile">
-                    <div class="support-grid">
-                    <div>
-                        <h3 style="margin-top:0">How we support you</h3>
-                        <p style="color:var(--muted);line-height:1.8">Every customer gets a monitored environment with access to our support team via tickets and email. For business and enterprise plans we provide prioritized attention, migration assistance, and architectural reviews. Our team logs incidents, runs forensics when needed, and communicates during outages — with the goal of restoring service quickly and preventing future recurrence.</p>
-
-                        <h4>Migration & onboarding</h4>
-                        <p style="color:var(--muted)">Moving to Megaladon is handled with care. We migrate files, databases, and emails with minimal downtime and test thoroughly before cutover. Our onboarding checkout list ensures DNS gets updated correctly and SSL is validated before you go live.</p>
-
-                        <h4>24/7 monitoring & incident response</h4>
-                        <p style="color:var(--muted)">All plans include basic monitoring. For advanced plans we add synthetic checks, page performance tracking, and escalation workflows to ensure outages are addressed quickly and transparently.</p>
-                    </div>
-
-                    <aside>
-                        <div class="contact-form">
-                            <h4>Contact Sales / Support</h4>
-                            <form action="#contact" method="POST" id="contact-form">
-                                <input type="text" placeholder="Full name" name="name" required />
-                                <input type="email" placeholder="Email address" name="email" required />
-                                <select name="topic">
-                                    <option>Choose a topic</option>
-                                    <option>New hosting</option>
-                                    <option>Domain transfer</option>
-                                    <option>Managed migration</option>
-                                    <option>Support request</option>
-                                </select>
-                                <textarea name="message" placeholder="Tell us what you need" required></textarea>
-                                <button class="btn btn-primary" type="submit">Send</button>
-                            </form>
-                            <div style="margin-top:12px;color:var(--muted);font-size:13px">Response times vary by plan — enterprise customers receive dedicated points of contact.</div>
-                        </div>
-                    </aside>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ABOUT -->
-            <section id="about">
-                <div class="section-head">
-                    <div>
-                        <h2>About Megaladon</h2>
-                        <p class="lead">We’re a veteran-owned company with a clear philosophy: build reliable infrastructure, provide honest pricing, and back it with professional support. We make hosting straightforward and dependable so teams can focus on the work that matters.</p>
-                    </div>
-                </div>
-
-                <div class="tile" style="margin-top:12px;color:var(--muted);line-height:1.7">
-                    Our team is made up of experienced operators and engineers who have been accountable for uptime and performance at scale. We bring that same discipline to every customer relationship — whether you're launching your first site or operating a globally distributed web application.
-
-                    <p style="margin-top:8px">We value transparency. That means clear documentation, honest pricing, and a commitment to protecting your data. We don’t upsell unnecessary features and we won’t hide limitations in legalese.</p>
-
-                    <p style="margin-top:8px">We also care about community. We publish technical guides, performance tutorials, and open-source tools to help the broader web performance community. Our goal is not to hoard knowledge — it's to raise the bar for everyone building online experiences.</p>
-                </div>
-            </section>
-
-            <!-- CONTACT -->
-            <section id="contact">
-                <div class="section-head">
-                    <div>
-                        <h2>Contact & Next Steps</h2>
-                        <p class="lead">Ready to move forward? Whether you need an instant plan or a custom enterprise solution, we’ll meet you where you are and help you move forward without the usual hosting headaches.</p>
-                    </div>
-                </div>
-
-                <div class="tile" style="margin-top:12px;color:var(--muted);line-height:1.8">
-                    <p>If you're evaluating hosts, consider these practical questions: What are my real peak traffic needs? How important are backups and SLAs? How much human support will I realistically need? We'll help you answer those questions and propose a plan that covers both short-term onboarding and long-term reliability.</p>
-
-                    <p>To get started quickly, click "Get Hosting" above or submit a short message using the contact box. We’ll reply with a straightforward plan, migration steps (if applicable), and pricing that’s easy to understand.</p>
-                </div>
-            </section>
-
-            <!-- FAQ: help SEO + add content -->
-            <section id="faq">
-                <div class="section-head">
-                    <div>
-                        <h2>Frequently Asked Questions</h2>
-                        <p class="lead">Answers to common questions — straightforward, no nonsense, and written for busy people who want real answers.</p>
-                    </div>
-                </div>
-
-                <div class="tile" style="margin-top:12px;color:var(--muted);line-height:1.7">
-                    <h4>Q: How fast can I migrate my site to Megaladon?</h4>
-                    <p>Most small-to-medium sites are migrated within a day once credentials are provided. For larger or complex apps, we’ll schedule a migration window and run through checks so downtime is minimized — often tested and completed overnight to avoid business disruption.</p>
-
-                    <h4>Q: What level of backup protection do you provide?</h4>
-                    <p>We perform automatic daily backups for all managed plans, and snapshots are available for higher tiers. Our restore process is tested regularly and we provide documentation and support to help you restore quickly should you need it.</p>
-
-                    <h4>Q: Do you support both cPanel and CyberPanel?</h4>
-                    <p>Yes. We support hosting with either control panel depending on your needs. cPanel offers wide compatibility and a familiar UI for many admins, while CyberPanel provides modern integrations and performance advantages in certain stacks. We’ll help you choose the one that fits your applications.</p>
-
-                    <h4>Q: How do you approach performance and caching?</h4>
-                    <p>Performance tuning is a layered approach: fast NVMe storage, tuned PHP and web server configurations, edge caching for static assets, and in some cases CDN integration. We measure performance with real-user metrics and synthetic checks so you always know how your site performs under real conditions.</p>
-
-                    <h4>Q: What if I need custom architecture or a higher SLA?</h4>
-                    <p>For businesses with specific compliance or uptime requirements, we provide consultation and tailored architecture with optional SLA agreements, dedicated IP addresses, and custom monitoring. Contact us to discuss enterprise options and a detailed quote.</p>
-                </div>
-            </section>
-
-            <footer>
-                <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-                    <div style="display:flex;gap:12px;align-items:center"><div class="brand-icon" style="width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center">🦈</div><div style="font-weight:700">Megaladon Hosting</div></div>
-                    <div style="color:var(--muted);font-size:13px">© 2025 Megaladon Hosting — Veteran Owned. All rights reserved.</div>
-                </div>
-            </footer>
-
-        </main>
-
-        <script>
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const href = this.getAttribute('href');
-                    if (!href || href === '#') return;
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                });
-            });
-
-            // Simple navbar active-link highlight
-            const sections = document.querySelectorAll('main section, main .hero');
-            const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
-
-            function onScroll() {
-                const fromTop = window.scrollY + 80;
-                let active = null;
-                sections.forEach(sec => {
-                    if (sec.offsetTop <= fromTop) active = sec;
-                });
-                if (!active) return;
-                const id = active.id ? active.id : 'home';
-                navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + id));
-            }
-
-            window.addEventListener('scroll', onScroll);
-            onScroll();
-
-            // Simple contact form demo: prevent submit and show message
-            const form = document.getElementById('contact-form');
-            if (form) form.addEventListener('submit', (e) => {
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                alert('Thank you — your request was received. Our team will respond shortly.');
-                form.reset();
-            });
-        </script>
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-    </body>
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler (placeholder)
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will respond within one business day.');
+            this.reset();
+        });
+    </script>
+</body>
 </html>
