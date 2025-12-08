@@ -17,11 +17,13 @@
         :root {
             --cyan: #00d4ff;
             --dark-bg: #0a1628;
-            --light-bg: #f8f9fa;
+            --darker-bg: #050b14;
+            --card-bg: #0f1d30;
+            --light-bg: #1a2d4a;
             --white: #ffffff;
-            --text-dark: #1a1a1a;
-            --text-gray: #666666;
-            --shadow: rgba(0, 212, 255, 0.2);
+            --text-light: #e8eef5;
+            --text-gray: #a0b4cc;
+            --shadow: rgba(0, 212, 255, 0.3);
         }
         
         html {
@@ -31,14 +33,15 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
-            background: var(--white);
+            color: var(--text-light);
+            background: var(--darker-bg);
         }
         
         /* Header & Navigation */
         header {
-            background: var(--white);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: var(--dark-bg);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -67,7 +70,7 @@
         }
         
         .nav-links a {
-            color: var(--text-dark);
+            color: var(--text-light);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
@@ -172,7 +175,7 @@
             border: 3px solid var(--cyan);
             padding: 2.5rem;
             border-radius: 12px;
-            background: var(--white);
+            background: var(--card-bg);
             transition: all 0.3s;
             text-align: center;
         }
@@ -185,7 +188,7 @@
         .tile h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: var(--dark-bg);
+            color: var(--cyan);
         }
         
         .tile p {
@@ -194,7 +197,7 @@
         }
         
         .hero-tiles {
-            background: var(--light-bg);
+            background: var(--dark-bg);
             padding: 3rem 0;
         }
         
@@ -206,7 +209,7 @@
         
         .section-header h2 {
             font-size: 2.8rem;
-            color: var(--dark-bg);
+            color: var(--white);
             margin-bottom: 1rem;
         }
         
@@ -219,7 +222,7 @@
         
         /* Hosting Plans */
         .hosting-plans {
-            background: var(--white);
+            background: var(--darker-bg);
         }
         
         .plans-grid {
@@ -233,7 +236,7 @@
             border: 3px solid var(--cyan);
             border-radius: 12px;
             padding: 2.5rem;
-            background: var(--white);
+            background: var(--card-bg);
             transition: all 0.3s;
         }
         
@@ -261,7 +264,7 @@
         
         .plan-features li {
             padding: 0.5rem 0;
-            color: var(--text-dark);
+            color: var(--text-light);
             position: relative;
             padding-left: 1.5rem;
         }
@@ -275,7 +278,7 @@
         }
         
         .perfect-for {
-            background: var(--light-bg);
+            background: var(--dark-bg);
             padding: 1rem;
             border-radius: 6px;
             margin-top: 1.5rem;
@@ -285,7 +288,7 @@
         
         /* Domains Section */
         .domains {
-            background: var(--light-bg);
+            background: var(--dark-bg);
         }
         
         .tld-tiles {
@@ -299,23 +302,23 @@
             border: 3px solid var(--cyan);
             padding: 1.5rem;
             border-radius: 12px;
-            background: var(--white);
+            background: var(--card-bg);
             text-align: center;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--dark-bg);
+            color: var(--cyan);
             transition: all 0.3s;
         }
         
         .tld-tile:hover {
             background: var(--cyan);
-            color: var(--white);
+            color: var(--dark-bg);
             transform: scale(1.05);
         }
         
         /* Knowledge Base */
         .knowledge-base {
-            background: var(--white);
+            background: var(--darker-bg);
         }
         
         .kb-categories {
@@ -328,7 +331,7 @@
             border: 3px solid var(--cyan);
             padding: 2rem;
             border-radius: 12px;
-            background: var(--light-bg);
+            background: var(--card-bg);
             transition: all 0.3s;
         }
         
@@ -339,13 +342,13 @@
         
         .kb-tile h3 {
             font-size: 1.4rem;
-            color: var(--dark-bg);
+            color: var(--cyan);
             margin-bottom: 1rem;
         }
         
         /* Support Section */
         .support {
-            background: var(--light-bg);
+            background: var(--dark-bg);
         }
         
         .support-content {
@@ -355,7 +358,7 @@
         
         /* About Section */
         .about {
-            background: var(--white);
+            background: var(--darker-bg);
         }
         
         .about-content {
@@ -366,13 +369,13 @@
         
         .about-content p {
             margin-bottom: 1.5rem;
-            color: var(--text-dark);
+            color: var(--text-light);
             font-size: 1.1rem;
         }
         
         /* Contact Section */
         .contact {
-            background: var(--light-bg);
+            background: var(--dark-bg);
         }
         
         .contact-container {
@@ -381,7 +384,7 @@
         }
         
         .contact-form {
-            background: var(--white);
+            background: var(--card-bg);
             padding: 2.5rem;
             border: 3px solid var(--cyan);
             border-radius: 12px;
@@ -395,18 +398,20 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 600;
-            color: var(--dark-bg);
+            color: var(--white);
         }
         
         .form-group input,
         .form-group textarea {
             width: 100%;
             padding: 0.8rem;
-            border: 2px solid #ddd;
+            border: 2px solid rgba(0, 212, 255, 0.3);
             border-radius: 6px;
             font-size: 1rem;
             font-family: inherit;
             transition: border-color 0.3s;
+            background: var(--dark-bg);
+            color: var(--text-light);
         }
         
         .form-group input:focus,
@@ -619,16 +624,16 @@
             </div>
 
             <div style="max-width: 900px; margin: 3rem auto 0; line-height: 1.9;">
-                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-light); font-size: 1.05rem;">
                     At Megaladon Hosting, we understand that uptime isn't just a number—it's your business continuity, your customer trust, and your revenue stream. That's why we've built our infrastructure on enterprise-grade hardware with redundant systems at every level. Our servers are housed in Tier III data centers with multiple power feeds, cooling systems, and network connections to ensure your website stays online even when the unexpected happens.
                 </p>
-                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-light); font-size: 1.05rem;">
                     Speed matters more than ever. Research shows that visitors abandon websites that take more than three seconds to load, and search engines penalize slow-loading sites in their rankings. Our NVMe SSD storage is up to six times faster than traditional SATA SSDs, while our optimized server configurations and strategic CDN partnerships ensure your content reaches visitors quickly, regardless of their location. We don't believe in overselling our servers—each hosting account gets the resources it needs to perform consistently.
                 </p>
-                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-light); font-size: 1.05rem;">
                     Backups are your insurance policy against data loss, whether from human error, software bugs, or security incidents. Every Megaladon Hosting plan includes automatic backups stored in geographically separate locations. We don't charge extra for this critical service because we believe it should be standard. Our backup systems are tested regularly to ensure we can restore your data quickly when you need it. You'll also have access to on-demand backups before making major changes to your site.
                 </p>
-                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-light); font-size: 1.05rem;">
                     Transparency isn't just a buzzword at Megaladon Hosting—it's how we do business. Our pricing is straightforward with no hidden fees or surprise renewal rates. When we say unlimited bandwidth, we mean it for legitimate website traffic. If there's ever an issue with your account, we'll explain it clearly and work with you to find a solution. You deserve to know exactly what you're paying for and what to expect from your hosting provider. That's the Megaladon difference.
                 </p>
             </div>
@@ -644,16 +649,16 @@
             </div>
 
             <div style="max-width: 900px; margin: 0 auto 2rem; line-height: 1.9;">
-                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-light); font-size: 1.05rem;">
                     Finding and registering the right domain name is the foundation of your online presence. Whether you're launching a business, building a personal brand, or creating a community platform, your domain name tells visitors what you're about before they even see your website. At Megaladon Hosting, we make domain registration simple, affordable, and transparent. Our domain search tool checks availability across hundreds of top-level domains (TLDs) in real-time, helping you find the perfect match for your project.
                 </p>
-                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-light); font-size: 1.05rem;">
                     Owning your domain name means you control your online identity. You're not dependent on a social media platform that could change its policies or disappear overnight. You're not stuck with a subdomain that dilutes your brand. When you register a domain through Megaladon Hosting, you maintain full ownership and control. Transfer it, sell it, or keep it for decades—it's yours. We provide free WHOIS privacy protection to keep your personal information secure, and our domain management panel makes it easy to configure DNS settings, set up email forwarding, and manage renewals.
                 </p>
-                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-light); font-size: 1.05rem;">
                     DNS management might sound technical, but it's simply the system that connects your domain name to your website, email, and other services. Megaladon Hosting provides an intuitive DNS management interface that eliminates the confusion. Need to point your domain to your hosting account? One click. Want to set up a subdomain for your blog or app? Simple configuration. Migrating from another provider? We'll handle the DNS transition to minimize downtime. Our DNS servers are distributed globally for fast resolution times and built-in redundancy to prevent outages.
                 </p>
-                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-light); font-size: 1.05rem;">
                     Choosing the right domain extension matters for your brand and SEO. Traditional extensions like .com, .net, and .org remain popular and trusted, but newer TLDs like .dev, .studio, .tech, and .shop can help you stand out and immediately communicate what your site is about. Our domain experts can help you understand the advantages of different extensions and find creative alternatives if your first choice is taken. We also offer domain transfer services to bring your existing domains under the Megaladon Hosting umbrella, where you'll benefit from competitive renewal rates and integrated management with your hosting services.
                 </p>
             </div>
@@ -703,10 +708,10 @@
             </div>
 
             <div style="max-width: 900px; margin: 3rem auto 0; line-height: 1.9;">
-                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-light); font-size: 1.05rem;">
                     We believe that good documentation empowers users to solve problems independently and learn new skills. That's why every article in our Knowledge Base is written by experienced technicians who understand both the technical details and the frustration of unclear instructions. We test every guide to ensure the steps actually work, update articles when software changes, and welcome feedback from users about what could be clearer.
                 </p>
-                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-light); font-size: 1.05rem;">
                     Our Knowledge Base is organized by topic and searchable by keyword, so you can find relevant information quickly whether you know the technical term or just describe the issue in your own words. Each article includes a clear objective, prerequisites, step-by-step instructions with screenshots, and troubleshooting tips for common obstacles. Can't find what you're looking for? Our support team is ready to help and will often create new Knowledge Base articles based on common questions.
                 </p>
             </div>
@@ -722,16 +727,16 @@
             </div>
 
             <div class="support-content" style="line-height: 1.9;">
-                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-light); font-size: 1.05rem;">
                     Technical support shouldn't feel like an adversarial experience. At Megaladon Hosting, we've built a support culture that assumes our customers are intelligent people facing legitimate technical challenges. You won't be asked to clear your cache seventeen times before we actually investigate the issue. You won't be blamed for problems caused by software bugs or unclear interfaces. When you contact our support team, you'll work with technicians who listen carefully, ask relevant questions, and explain solutions in terms that make sense.
                 </p>
-                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-light); font-size: 1.05rem;">
                     Our support ticket system is designed for transparency and efficiency. When you submit a ticket, you'll receive a confirmation with a ticket number and realistic expectations for response time. Higher-tier plans receive priority queue placement, but every customer receives the same quality of support. Your ticket is assigned to a qualified technician who has access to your account details and server logs, eliminating the need to repeat information or explain the same issue to multiple people. We keep tickets updated with progress reports, and you can reply anytime to provide additional information or ask follow-up questions.
                 </p>
-                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-light); font-size: 1.05rem;">
                     We encourage customers to use our Knowledge Base first for common questions and routine tasks—not because we want to avoid helping you, but because we respect that you might prefer to solve simple issues immediately rather than waiting for a response. For complex problems, our support team is ready and equipped to dive deep. We can review server logs, analyze database performance, troubleshoot application errors, and collaborate with you to find solutions. Our goal is resolution, not ticket closure metrics.
                 </p>
-                <p style="margin-bottom: 1.5rem; color: var(--text-dark); font-size: 1.05rem;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-light); font-size: 1.05rem;">
                     Communication matters. We commit to clear, honest updates about any issues affecting your hosting service. If there's scheduled maintenance, you'll know in advance. If we're experiencing an unexpected outage, you'll receive transparent information about what happened, what we're doing to fix it, and how we'll prevent it in the future. We don't hide behind corporate speak or make excuses. Megaladon Hosting is built on accountability, and that extends to every support interaction.
                 </p>
 
@@ -815,7 +820,7 @@
             </div>
 
             <div style="max-width: 700px; margin: 2.5rem auto 0; line-height: 1.8; text-align: center;">
-                <p style="color: var(--text-dark); font-size: 1.05rem;">
+                <p style="color: var(--text-light); font-size: 1.05rem;">
                     Whether you're exploring hosting options, troubleshooting an issue, or just want to chat about your project, we're genuinely interested in hearing from you. Every inquiry is read by a real person who cares about providing helpful information. We don't use auto-responders or canned responses—you'll get a thoughtful reply that addresses your specific question or situation. That's the Megaladon Hosting way.
                 </p>
             </div>
