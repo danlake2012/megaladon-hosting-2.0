@@ -43,6 +43,53 @@ body{margin:0;background:linear-gradient(180deg,#021018 0%,#061425 100%);color:v
 .device-mockup{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px;padding:12px;border:1px solid rgba(255,255,255,0.03)}
 .device-mockup img{display:block;max-width:100%;height:auto;border-radius:8px}
 
+/* Tile-first visual system */
+.tile{background:linear-gradient(180deg, rgba(8,26,30,0.75), rgba(6,20,24,0.65));border-radius:16px;padding:28px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 18px 40px rgba(2,8,12,0.55);margin-bottom:28px}
+.tile .container{padding:8px var(--container-padding)}
+.tile h2, .tile h3{margin-top:0}
+.tile-card{background:linear-gradient(180deg, rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:14px;padding:18px;border:1px solid rgba(255,255,255,0.02);display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.tile-accent{border:1px solid rgba(6,182,212,0.15);background:linear-gradient(180deg, rgba(6,182,212,0.04), rgba(2,8,10,0.25));}
+.tile-contrast{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.04)}
+.tile-rose{background:linear-gradient(180deg, rgba(255,120,170,0.04), rgba(18,8,18,0.15));border:1px solid rgba(255,120,170,0.09)}
+.tile-cyan{background:linear-gradient(180deg, rgba(7,200,211,0.03), rgba(2,8,12,0.18));border:1px solid rgba(7,200,211,0.12)}
+.tile-rich{padding:36px}
+.tile-long{padding:40px}
+.tile-rich-compact .tile-card{min-height:220px}
+
+.hero-tile{display:flex;align-items:center;padding:42px;margin-top:18px}
+.hero-inner{display:flex;gap:36px;align-items:center}
+.hero-left{flex:1}
+.hero-right{flex:0 0 420px}
+.hero-visual{border-radius:14px;border:1px solid rgba(255,255,255,0.03)}
+.badge{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:6px 10px;border-radius:999px;color:#012;font-weight:700;margin-bottom:10px}
+.hero-heading{font-size:34px;margin:0 0 8px}
+
+.tile-card .icon{width:48px;height:48px}
+.icon{display:block;margin-bottom:6px}
+
+.tiles-4{grid-template-columns:repeat(4,1fr)}
+.tiles-3{grid-template-columns:repeat(3,1fr)}
+.qa-grid{display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}
+.qa-card{padding:16px;border-radius:12px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03)}
+
+.plan-card .plan-price{font-size:22px;font-weight:900}
+.featured{box-shadow:0 20px 52px rgba(7,200,211,0.06)}
+.testimonials-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.testimonial{padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);border:1px solid rgba(255,255,255,0.02);}
+
+.tile-cta .cta-actions{display:flex;gap:12px;margin-top:16px}
+
+.final-note p{color:var(--muted);margin-top:18px}
+
+/* override for mobile readability */
+@media (max-width:1100px){
+  .tiles-4{grid-template-columns:repeat(2,1fr)}
+  .tiles-3{grid-template-columns:repeat(1,1fr)}
+  .qa-grid{grid-template-columns:1fr}
+  .hero-inner{flex-direction:column-reverse}
+  .hero-right{width:100%}
+}
+
 /* Sections */
 .section{padding:50px 0}
 .section-title{font-size:22px;margin:0;color:var(--text)}
